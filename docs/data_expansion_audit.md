@@ -207,11 +207,11 @@ All five raster bands were scanned in windows, including nodata accounting:
 
 | Raster | Columns × rows | Encoding | Observed valid range | Declared nodata |
 |---|---|---|---|---|
-| DEM | 12,768 × 16,409 | float32 | −6 to 3,887 | −3.402823466e38 |
-| Epicenter distance | 38,736 × 42,911 | uint8 | 15 to 255 | 0 |
-| Fault distance | 38,778 × 48,334 | uint8 | 15 to 195 | 255 |
-| Lithology | 26,225 × 32,818 | uint8 | 1 to 13 | 15 |
-| PGV | 25,533 × 32,818 | uint8 | 4 to 168 | 255 |
+| DEM | 16,409 × 12,768 | float32 | −6 to 3,887 | −3.402823466e38 |
+| Epicenter distance | 42,911 × 38,736 | uint8 | 15 to 255 | 0 |
+| Fault distance | 48,334 × 38,778 | uint8 | 15 to 195 | 255 |
+| Lithology | 32,818 × 26,225 | uint8 | 1 to 13 | 15 |
+| PGV | 32,818 × 25,533 | uint8 | 4 to 168 | 255 |
 
 They use geographic WGS84, with scale=1, offset=0 and no declared physical band
 units. Full uint8 value histograms and pixel accounting are retained. **Do not
