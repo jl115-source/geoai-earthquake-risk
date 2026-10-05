@@ -1,0 +1,44 @@
+events:
+  erzincan_1992:
+    country: Turkey
+    date: 1992-03-13
+    mw: 6.7
+    usgs_event_id: usp000547c
+    geid: true
+
+  duzce_1999:
+    country: Turkey
+    date: 1999-11-12
+    mw: 7.2
+    usgs_event_id: usp0009hev
+    geid: true
+
+  bingol_2003:
+    country: Turkey
+    date: 2003-05-01
+    mw: 6.3
+    usgs_atlas_product_id: atlas20030501002706
+    usgs_atlas_product_version: "1491979606892"
+    geid: false
+
+  pisco_2007:
+    country: Peru
+    date: 2007-08-15
+    mw: 7.9
+    usgs_event_id: usp000fjta
+    geid: true
+
+  wenchuan_2008:
+    country: China
+    date: 2008-05-12
+    mw: 7.9
+    usgs_event_id: usp000g650
+    usgs_atlas_product_version: "1594174375811"
+    geid: false
+
+  haiti_2010:
+    country: Haiti
+    date: 2010-01-12
+    mw: 7.0
+    usgs_event_id: usp000h60h
+    geid: true
