@@ -255,3 +255,29 @@ sequence cannot establish cross-earthquake spatial transfer.
 
 For an offline check using only versioned survey data, append
 `--datasets turkiye_survey` to both new module commands. This is also the CI path.
+
+
+## Research gate: literature review and modelling freeze
+
+**Modelling is frozen after Milestone 1D.** The project is now in a literature
+positioning/research-design gate. See [the literature review](docs/literature_review.md)
+and [paper matrix](docs/literature_matrix.csv).
+
+The review finds substantial prior art for empirical fragility, Nepal/Türkiye
+tree-based ML, host-to-target regional transfer, site/geology covariates and
+GNN-based seismic-damage prediction. The intended contribution is therefore not
+a new classifier. Subject to an independent target, the strongest candidate
+question is whether **verified pre-event spatial/neighbourhood context adds
+calibrated predictive information beyond H+X under leakage-safe geographic
+distribution shift**.
+
+A critical provenance correction is now explicit: the 30,122
+`spatial_this_study` labels are outputs of the Liu et al. (2026) methodology,
+not independent field ground truth. They are not approved as the headline
+supervised target. The manually annotated `Visual_interpretation` product is
+the candidate independent target, but its damage-label semantics and assessment
+coverage must be recovered before spatial modelling.
+
+No model fitting should resume until the literature-review gates for target
+independence, feature chronology, physical hazard definition, final estimand and
+feature allowlists are resolved or explicitly scoped out.
