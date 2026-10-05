@@ -13,16 +13,28 @@ datasets:
     spatial_resolution: building coordinates
     status: ready
 
+  nepal_2015_geid_detailed:
+    region: Nepal
+    event: 2015 Gorkha earthquake
+    role: core large-scale second-region damage dataset
+    access: open_via_GEM_GEID
+    license: CC-BY-NC-SA-4.0
+    source_repository: gem/geid
+    file: Impact_Buildings_Detailed.csv
+    size_bytes: 78448526
+    spatial_resolution: detailed_building_impact
+    status: one_command_download_ready
+
   nepal_2015_hrhrs:
     region: Nepal
     event: 2015 Gorkha earthquake
-    role: large-scale second-region training/generalization
+    role: optional source/validation dataset
     access: public-use microdata subject to NSO terms
     redistribution: prohibited_without_written_agreement
     official_study_id: NPL-CBS-HRHRS-2016-v01
     target: building damage assessment / damage grade
     spatial_resolution: administrative/ward identifiers
-    status: acquire_from_official_portal
+    status: optional_manual_acquisition
 
   multi_event_rc_616:
     region: multi-region
@@ -62,3 +74,22 @@ supporting:
     role: conventional_fragility_vulnerability_baseline
   gem_geid:
     role: aggregate_event_validation
+
+  turkiye_2026_context:
+    region: Turkiye
+    event: 2023 Kahramanmaras earthquake sequence
+    role: optional GeoAI spatial-context augmentation
+    source: Zenodo
+    doi: 10.5281/zenodo.18437501
+    archive: 2023Turkey_earthquake_data.zip
+    compressed_size_mb: 584.8
+    includes:
+      - building_footprints
+      - multi_source_damage
+      - DEM
+      - epicentral_distance
+      - fault_distance
+      - lithology
+      - PGV
+    redistribution: local_only_due_to_unspecified_record_license
+    status: one_command_download_ready
