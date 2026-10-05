@@ -1,8 +1,10 @@
 # GeoAI Earthquake Risk
 
-Research-quality project on **transferable earthquake vulnerability and portfolio loss modelling**.
+Research-quality project on **GeoAI for transferable earthquake vulnerability and catastrophe risk under incomplete exposure information**.
 
 ## Current milestone: 1F design frozen; B0 synthetic mechanics
+
+**New locked direction:** the headline Track-A problem is now incomplete/heterogeneous exposure information across geographies. Common hazard `H` + transferable pre-event GeoAI representation `Z` form the backbone; `X` may be rich, coarse or absent. The 498-record Türkiye cohort remains a pilot/validation asset rather than the sole headline training corpus. See [the project direction](docs/project_direction_incomplete_exposure.md). No learned vulnerability model is authorized yet.
 
 PRs #4 and #5 are consolidated on `main`. The next modelling milestone is **2A**, after the [two-event amendment and encoder preflight](docs/protocol_amendment_1f.md) and protocol review. **No damage models are fitted in 1F.** Primary H now contains separate M7.8 and M7.5 log-PGA; D≥3 diagnostics and a training-only PCA64 sensitivity are prespecified. The actual SatMAE ten-city preflight passed seed-repeat and fresh-process byte-identity checks. The fallback uses the independent 559-record survey; ACI133 stays external. CSB access is investigated but unconfirmed and non-blocking. Neither spatial damage product is independent primary ground truth.
 
@@ -29,7 +31,7 @@ B0 uses only declared synthetic fragility, asset values, damage-ratio distributi
 
 ## Research question
 
-Can learned geospatial representations improve earthquake damage and loss estimation in unseen regions beyond conventional intensity-measure + building-taxonomy fragility models?
+Can common pre-event geospatial representations recover useful earthquake-vulnerability information when detailed building/exposure attributes are missing in an unseen region, and does that recovery improve portfolio loss and tail-risk estimates?
 
 ## Project structure
 
