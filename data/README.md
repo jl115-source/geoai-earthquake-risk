@@ -15,7 +15,11 @@ Raw third-party data are kept out of Git by default. This keeps the repository r
 - File: `ShakeMapUpd.xml.gz`
 - Used to reproduce/interrogate spatial intensity measures.
 
-Run:
+The small CC BY 4.0 engineering-survey workbook is also mirrored in this repository at:
+
+`data/reference/turkiye_2023/Jaiswal_2023TurkiyeEQ_us6000jllz_field_str_damage_data.xlsx`
+
+Run the downloader to fetch the larger ShakeMap and create a local raw-data copy:
 
 ```bash
 python scripts/download_turkiye.py
