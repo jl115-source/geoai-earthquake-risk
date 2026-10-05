@@ -7,8 +7,14 @@ datasets:
     license: CC-BY-4.0
     source_repository: maxandersonloake/TUR2023_02_06
     files:
-      - Jaiswal_2023TurkiyeEQ_us6000jllz_field_str_damage_data.xlsx
-      - ShakeMapUpd.xml.gz
+      survey:
+        name: Jaiswal_2023TurkiyeEQ_us6000jllz_field_str_damage_data.xlsx
+        storage: versioned_reference_and_local_raw
+        expected_size_bytes: 218642
+      shakemap:
+        name: ShakeMapUpd.xml.gz
+        storage: local_raw_only
+        expected_size_bytes: 14980986
     target: ordinal building damage state 0-4
     n_survey_records: 559
     n_with_damage_and_structure: 527
@@ -17,7 +23,7 @@ datasets:
     eda: python -m src.data.turkiye_eda
     schema_documentation: docs/turkiye_2023_columns.md
     spatial_resolution: building coordinates
-    status: ready
+    status: ready_via_make_data_core
 
   nepal_2015_geid_detailed:
     region: Nepal
@@ -51,6 +57,11 @@ datasets:
     metadata_acquired: true
     building_microdata_acquired: false
     status: awaiting_authorized_NSO_delivery_public_endpoint_empty
+    local_docs:
+      - metadata JSON
+      - English questionnaire
+      - 14-district key-findings report
+      - affected-districts map
 
   multi_event_rc_616:
     region: multi-region
@@ -93,12 +104,12 @@ datasets:
   italy_dado:
     region: Italy
     event: multiple earthquakes
-    role: third-region multi-event external generalization
+    role: optional later external-generalization extension
     access: registration_required
     use: qualified_scientific_users
     target: harmonized observed damage grades
     spatial_resolution: georeferenced buildings / administrative location depending record
-    status: planned
+    status: deferred
 
 supporting:
   usgs_shakemap:
@@ -118,6 +129,7 @@ supporting:
     doi: 10.5281/zenodo.18437501
     archive: 2023Turkey_earthquake_data.zip
     compressed_size_mb: 584.8
+    md5: f3a3a9982cf63bd954616a898c7416b9
     includes:
       - building_footprints
       - multi_source_damage

@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Download large/open external datasets used by the project.
+"""Download large/open external datasets and documentation used by the project.
 
 Large third-party datasets are intentionally kept out of Git history.
 This script places them under data/raw/.
 
-Usage examples
---------------
+Examples
+--------
 python scripts/download_external_data.py nepal-geid
+python scripts/download_external_data.py nepal-docs
 python scripts/download_external_data.py rc616
 python scripts/download_external_data.py turkiye-context
-python scripts/download_external_data.py nepal-metadata
 python scripts/download_external_data.py all
 
 Notes
@@ -28,13 +28,11 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import shutil
 import sys
 import zipfile
 from pathlib import Path
 
 import requests
-
 
 RAW = Path("data/raw")
 
@@ -47,6 +45,7 @@ SOURCES = {
         ),
         "path": RAW / "nepal_2015" / "Impact_Buildings_Detailed.csv",
         "expected_size": 78_448_526,
+        "format": "csv",
     },
     "rc616": {},  # Delegated to the selective, checksum-pinned table acquisition.
     "turkiye-context": {
@@ -57,6 +56,7 @@ SOURCES = {
         "path": RAW / "turkiye_2023_context" / "2023Turkey_earthquake_data.zip",
         "extract_to": RAW / "turkiye_2023_context" / "extracted",
         "md5": "f3a3a9982cf63bd954616a898c7416b9",
+        "format": "zip",
     },
     "nepal-shakemap": {
         "url": (
@@ -64,14 +64,43 @@ SOURCES = {
             "us20002926/atlas/1594162031303/download/grid.xml"
         ),
         "path": RAW / "nepal_2015" / "usgs_shakemap_grid.xml",
+        "min_size": 100_000,
+        "format": "xml",
     },
     "nepal-metadata": {
-        "url": (
-            "https://microdata.nsonepal.gov.np/index.php/"
-            "metadata/export/69/json"
-        ),
+        "url": "https://microdata.nsonepal.gov.np/index.php/metadata/export/69/json",
         "path": RAW / "nepal_2015" / "NSO_HRHRS_metadata.json",
+        "min_size": 10_000,
+        "format": "json",
     },
+    "nepal-questionnaire-en": {
+        "url": "https://microdata.nsonepal.gov.np/index.php/catalog/69/download/989",
+        "path": RAW / "nepal_2015" / "docs" / "HRHRS_questionnaire_en.pdf",
+        "min_size": 100_000,
+        "format": "pdf",
+    },
+    "nepal-key-findings-14": {
+        "url": "https://microdata.nsonepal.gov.np/index.php/catalog/69/download/991",
+        "path": RAW / "nepal_2015" / "docs" / "HRHRS_key_findings_14_districts.pdf",
+        "min_size": 300_000,
+        "format": "pdf",
+    },
+    "nepal-affected-districts-map": {
+        "url": "https://microdata.nsonepal.gov.np/index.php/catalog/69/download/994",
+        "path": RAW / "nepal_2015" / "docs" / "HRHRS_affected_districts_map.pdf",
+        "min_size": 100_000,
+        "format": "pdf",
+    },
+}
+
+GROUPS = {
+    "nepal-docs": [
+        "nepal-metadata",
+        "nepal-questionnaire-en",
+        "nepal-key-findings-14",
+        "nepal-affected-districts-map",
+    ],
+    "all": list(SOURCES),
 }
 
 
@@ -100,26 +129,64 @@ def download(url: str, path: Path) -> None:
                 done += len(chunk)
                 if total:
                     pct = 100 * done / total
-                    print(f"\r{path.name}: {done/1e6:.1f}/{total/1e6:.1f} MB ({pct:.1f}%)", end="")
+                    print(
+                        f"\r{path.name}: {done/1e6:.1f}/{total/1e6:.1f} MB "
+                        f"({pct:.1f}%)",
+                        end="",
+                    )
                 else:
                     print(f"\r{path.name}: {done/1e6:.1f} MB", end="")
     print()
     tmp.replace(path)
 
 
+def validate_format(path: Path, fmt: str) -> None:
+    if fmt == "zip":
+        if not zipfile.is_zipfile(path):
+            raise RuntimeError("not a valid ZIP archive")
+        return
+
+    with path.open("rb") as fh:
+        head = fh.read(4096)
+
+    if fmt == "pdf" and not head.startswith(b"%PDF"):
+        raise RuntimeError("download is not a PDF")
+    if fmt == "xml" and b"<" not in head:
+        raise RuntimeError("download does not look like XML")
+    if fmt == "csv" and b"," not in head:
+        raise RuntimeError("download does not look like CSV")
+    if fmt == "json":
+        try:
+            json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            raise RuntimeError("download is not valid JSON") from exc
+
+
 def validate(name: str, spec: dict) -> None:
     path: Path = spec["path"]
-    if "expected_size" in spec and path.stat().st_size != spec["expected_size"]:
+    size = path.stat().st_size
+
+    if "expected_size" in spec and size != spec["expected_size"]:
         raise RuntimeError(
-            f"{name}: size mismatch: got {path.stat().st_size:,}, "
+            f"{name}: size mismatch: got {size:,}, "
             f"expected {spec['expected_size']:,}"
         )
+
+    if "min_size" in spec and size < spec["min_size"]:
+        raise RuntimeError(
+            f"{name}: suspiciously small download: got {size:,}, "
+            f"minimum {spec['min_size']:,}"
+        )
+
     if "md5" in spec:
         digest = md5sum(path)
         if digest.lower() != spec["md5"].lower():
             raise RuntimeError(
                 f"{name}: MD5 mismatch: got {digest}, expected {spec['md5']}"
             )
+
+    if "format" in spec:
+        validate_format(path, spec["format"])
 
 
 def extract_if_needed(name: str, spec: dict) -> None:
@@ -128,7 +195,6 @@ def extract_if_needed(name: str, spec: dict) -> None:
 
     archive: Path = spec["path"]
     out: Path = spec["extract_to"]
-    out.mkdir(parents=True, exist_ok=True)
 
     if not zipfile.is_zipfile(archive):
         raise RuntimeError(
@@ -141,6 +207,7 @@ def extract_if_needed(name: str, spec: dict) -> None:
         print(f"[exists] {out}")
         return
 
+    out.mkdir(parents=True, exist_ok=True)
     print(f"[extract] {archive} -> {out}")
     with zipfile.ZipFile(archive) as zf:
         zf.extractall(out)
@@ -171,24 +238,26 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "dataset",
-        choices=[*SOURCES.keys(), "all"],
-        help="Dataset to download",
+        choices=[*SOURCES.keys(), *GROUPS.keys()],
+        help="Dataset or dataset group to download",
     )
     args = parser.parse_args()
 
-    names = list(SOURCES) if args.dataset == "all" else [args.dataset]
-    failed = []
+    names = GROUPS.get(args.dataset, [args.dataset])
+    failures: list[str] = []
+
     for name in names:
         print(f"\n=== {name} ===")
         try:
             acquire(name)
         except Exception as exc:
-            failed.append(name)
+            failures.append(name)
             print(f"[ERROR] {name}: {exc}", file=sys.stderr)
-            if args.dataset != "all":
-                raise
-    if failed:
-        raise SystemExit(f"Acquisition incomplete: {failed}")
+
+    if failures:
+        raise SystemExit(
+            "Acquisition failed for: " + ", ".join(failures)
+        )
 
 
 if __name__ == "__main__":
