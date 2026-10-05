@@ -1,0 +1,20 @@
+# Raw and processed data
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Notebooks / local outputs
+.ipynb_checkpoints/
+results/*
+!results/.gitkeep
+
+# OS
+.DS_Store
