@@ -7,11 +7,17 @@ datasets:
     license: CC-BY-4.0
     source_repository: maxandersonloake/TUR2023_02_06
     files:
-      - Jaiswal_2023TurkiyeEQ_us6000jllz_field_str_damage_data.xlsx
-      - ShakeMapUpd.xml.gz
+      survey:
+        name: Jaiswal_2023TurkiyeEQ_us6000jllz_field_str_damage_data.xlsx
+        storage: versioned_reference_and_local_raw
+        expected_size_bytes: 218642
+      shakemap:
+        name: ShakeMapUpd.xml.gz
+        storage: local_raw_only
+        expected_size_bytes: 14980986
     target: ordinal building damage state 0-4
     spatial_resolution: building coordinates
-    status: ready
+    status: ready_via_make_data_core
 
   nepal_2015_geid_detailed:
     region: Nepal
@@ -28,13 +34,18 @@ datasets:
   nepal_2015_hrhrs:
     region: Nepal
     event: 2015 Gorkha earthquake
-    role: optional source/validation dataset
+    role: optional source/validation dataset and authoritative schema documentation
     access: public-use microdata subject to NSO terms
     redistribution: prohibited_without_written_agreement
     official_study_id: NPL-CBS-HRHRS-2016-v01
     target: building damage assessment / damage grade
     spatial_resolution: administrative/ward identifiers
-    status: optional_manual_acquisition
+    local_docs:
+      - metadata JSON
+      - English questionnaire
+      - 14-district key-findings report
+      - affected-districts map
+    status: docs_one_command_download_microdata_manual_if_used
 
   multi_event_rc_616:
     region: multi-region
@@ -53,17 +64,17 @@ datasets:
     n_buildings: 616
     target: four-class structural damage
     spatial_resolution: building latitude_longitude_when_available
-    status: acquisition_pending
+    status: one_command_download_ready
 
   italy_dado:
     region: Italy
     event: multiple earthquakes
-    role: third-region multi-event external generalization
+    role: optional later external-generalization extension
     access: registration_required
     use: qualified_scientific_users
     target: harmonized observed damage grades
     spatial_resolution: georeferenced buildings / administrative location depending record
-    status: planned
+    status: deferred
 
 supporting:
   usgs_shakemap:
@@ -83,6 +94,7 @@ supporting:
     doi: 10.5281/zenodo.18437501
     archive: 2023Turkey_earthquake_data.zip
     compressed_size_mb: 584.8
+    md5: f3a3a9982cf63bd954616a898c7416b9
     includes:
       - building_footprints
       - multi_source_damage
