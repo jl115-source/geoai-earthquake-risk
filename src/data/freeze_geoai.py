@@ -43,13 +43,15 @@ def eligible_manifest(survey, audit, hazard, config):
         "incomplete_pre_event_EO": frame.eo_status.ne("complete_clear_composite"),
         "incomplete_WorldCover": frame.worldcover_coverage.ne(1),
         "incomplete_DSM": frame.dem_coverage.ne(1),
-        "invalid_primary_H": ~frame.in_grid | ~np.isfinite(frame.PGA_g) | frame.PGA_g.le(0),
+        "invalid_primary_H": ~frame.in_grid | ~np.isfinite(frame.PGA_g) | frame.PGA_g.le(0) | ~frame.in_grid_m75 | ~np.isfinite(frame.PGA_m75_g) | frame.PGA_m75_g.le(0),
     }
     for key, flag in flags.items():
         frame[key] = flag
     frame["exclusion_reasons"] = ["|".join(k for k in flags if bool(frame.loc[i, k])) for i in frame.index]
     frame["eligible"] = frame.exclusion_reasons.eq("")
     frame["log_PGA_g"] = np.log(frame.PGA_g.where(frame.PGA_g.gt(0)))
+    frame["log_PGA_m78_g"] = frame["log_PGA_g"]
+    frame["log_PGA_m75_g"] = np.log(frame.PGA_m75_g.where(frame.PGA_m75_g.gt(0)))
     weights = frame.loc[frame.eligible].location_key.value_counts()
     frame["site_weight"] = frame.location_key.map(1 / weights).fillna(0).where(frame.eligible, 0)
     return frame
@@ -107,6 +109,8 @@ def main():
     survey = pd.read_parquet(survey_path)
     audit = pd.read_csv(OUT / "location_audit.csv")
     hazard = pd.read_parquet(OUT / "hazard.parquet")
+    second = pd.read_parquet(OUT / "hazard_m75.parquet")[["building_id", "PGA_g", "in_grid"]].rename(columns={"PGA_g":"PGA_m75_g", "in_grid":"in_grid_m75"})
+    hazard = hazard.merge(second, on="building_id", validate="one_to_one")
     frame = eligible_manifest(survey, audit, hazard, config)
     pixel = json.loads((OUT / "pixel_audit.json").read_text())
     features = {}
@@ -117,7 +121,7 @@ def main():
     paired = frame.merge(engineered, on="location_key", how="left", validate="many_to_one")
     if not np.isfinite(paired.loc[paired.eligible, config["allowlists"]["Z_engineered"]].to_numpy(float)).all():
         raise ValueError("Eligible records must have every finite engineered feature")
-    allowed = ["building_id", "city", "location_key", "latitude", "longitude", "damage_grade", "structure_family", "log_PGA_g", "eligible", "exclusion_reasons", "site_weight", "city_median_distance_m"]
+    allowed = ["building_id", "city", "location_key", "latitude", "longitude", "damage_grade", "structure_family", "log_PGA_g", "log_PGA_m78_g", "log_PGA_m75_g", "eligible", "exclusion_reasons", "site_weight", "city_median_distance_m"]
     paired[allowed + config["allowlists"]["Z_engineered"]].to_parquet(OUT / "feature_manifest.parquet", index=False)
     frame[[c for c in allowed if c in frame]].to_csv(OUT / "eligibility.csv", index=False)
     folds = partitions(frame, config)
@@ -131,7 +135,7 @@ def main():
                "observations": len(frame), "eligible_records": int(frame.eligible.sum()), "eligible_sites": frame.loc[frame.eligible, "location_key"].nunique(),
                "overlapping_exclusion_counts": counts, "all_arms_same_manifest": True, "model_fitting": False,
                "test_city_counts": folds.loc[folds.partition.eq("test")].groupby("test_city").size().reindex(config["city_domains"], fill_value=0).to_dict(),
-               "pixel_audit_sha256": digest(OUT / "pixel_audit.json"), "hazard_provenance_sha256": digest(OUT / "hazard_provenance.json")})
+               "pixel_audit_sha256": digest(OUT / "pixel_audit.json"), "hazard_provenance_sha256": digest(OUT / "hazard_provenance.json"), "hazard_m75_provenance_sha256": digest(OUT / "hazard_m75_provenance.json")})
     print((OUT / "freeze_summary.json").read_text())
 
 

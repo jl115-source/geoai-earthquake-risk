@@ -1,5 +1,5 @@
 {
-  "version": "literature-gate-2026-10-05-1f",
+  "version": "literature-gate-2026-10-05-1f-v2",
   "review_date": "2026-10-05",
   "project_mode": "GeoAI_x_Catastrophe_Risk",
   "model_fitting_allowed": false,
@@ -46,7 +46,7 @@
       ]
     },
     "physical_hazard": {
-      "status": "frozen_for_559_fallback_pinned_resampled_mainshock_XML_other_datasets_unchanged",
+      "status": "frozen_two_major_event_PGA_vector_for_559_fallback_other_datasets_unchanged",
       "requirements": [
         "Freeze event/shock/product/version and physical units",
         "Freeze sampling/interpolation/nodata treatment",
@@ -75,5 +75,5 @@
     "synthetic_first_principles_B0_allowed_now": true,
     "learned_vulnerability_fitting_allowed": false
   },
-  "resume_condition": "1F design frozen in configs/geoai_experiment_1f.json. Before 2A: reviewed protocol, deterministic checked frozen encoder extraction, audited context separation, explicit model-fitting authorization. This milestone fits nothing."
+  "resume_condition": "Final two-event protocol in configs/geoai_experiment_1f.json; actual frozen encoder preflight evidence in docs/satmae_preflight_execution.json. No learned damage models or PCA fitted. Subject to reviewed amendment and CI, next work is fixed 2A."
 }

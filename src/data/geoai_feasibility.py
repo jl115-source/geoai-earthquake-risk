@@ -226,18 +226,20 @@ def audit_location(row, items):
     return report
 
 
-def sample_hazard(survey, network):
-    path = RAW / "ShakeMapUpd.xml.gz"
+def sample_hazard(survey, network, *, filename="ShakeMapUpd.xml.gz", url=SHAKEMAP_URL, checksum=SHAKEMAP_SHA, event_id="us6000jllz", output_name="hazard"):
+    path = RAW / filename
     if not path.exists():
         if not network:
             raise FileNotFoundError("Pinned ShakeMap absent; use --network for the audit acquisition")
-        response = requests.get(SHAKEMAP_URL, timeout=180)
+        response = requests.get(url, timeout=180)
         response.raise_for_status()
         path.write_bytes(response.content)
-    if digest(path) != SHAKEMAP_SHA:
+    if digest(path) != checksum:
         raise ValueError("Pinned ShakeMap checksum mismatch")
-    with gzip.open(path) as stream:
+    with (gzip.open(path) if path.suffix == ".gz" else path.open("rb")) as stream:
         root = ET.parse(stream).getroot()
+    if root.attrib["event_id"] != event_id:
+        raise ValueError("Unexpected ShakeMap event")
     children = {c.tag.rsplit("}", 1)[-1]: c for c in root}
     fields = [c.attrib for c in root if c.tag.endswith("grid_field")]
     data = np.fromstring(children["grid_data"].text, sep=" ").reshape(-1, len(fields))
@@ -260,12 +262,19 @@ def sample_hazard(survey, network):
         col, unit = names[field]
         result[target] = np.where(within, physical_im(sampled[:, col], field, unit), np.nan)
     result["sample_distance_m"] = np.diag(haversine_distances(survey[["latitude", "longitude"]], result[["grid_latitude", "grid_longitude"]]))
-    result.to_parquet(OUT / "hazard.parquet", index=False)
-    write_json(OUT / "hazard_provenance.json", {"source_url": SHAKEMAP_URL, "sha256": SHAKEMAP_SHA,
+    result.to_parquet(OUT / f"{output_name}.parquet", index=False)
+    write_json(OUT / f"{output_name}_provenance.json", {"source_url": url, "sha256": checksum,
                "header": root.attrib, "event": children["event"].attrib, "grid": spec, "fields": fields,
                "sampling": "nearest actual grid node; ties choose lower lon/lat; outside bounds null, no extrapolation",
                "in_grid_records": int(within.sum()), "max_sample_distance_m": float(result.sample_distance_m.max()),
-               "primary_H": "natural log of PGA_g, fixed before fitting; mainshock proxy for cumulative sequence damage"})
+               "H_component": f"natural log of PGA_g for {event_id}; separate major-event component, no outcome-selected aggregation"})
+
+
+def sample_second_hazard(survey, network):
+    sample_hazard(survey, network, filename="us6000jlqa_grid.xml",
+                  url="https://earthquake.usgs.gov/product/shakemap/us6000jlqa/us/1756575631263/download/grid.xml",
+                  checksum="8847f001058139c933da760bf3eb8d6ff1dbecac154740c0492cd111f7d5a304",
+                  event_id="us6000jlqa", output_name="hazard_m75")
 
 
 def main():
@@ -310,7 +319,8 @@ def main():
                "support": "UTM37N 96x96 at10m; centre snapped10m; complete observed clear support, no nodata filling",
                "observations": len(survey), "distinct_coordinates": len(unique)})
     sample_hazard(survey, args.network)
-    print("Completed pre-event feasibility and new pinned mainshock sampling; no models fitted.")
+    sample_second_hazard(survey, args.network)
+    print("Completed pre-event feasibility and pinned two-event hazard sampling; no models fitted.")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 # 1F-C evidence: hazard and engineering-attribute chronology
 
-**Final 1F decision:** use the newly sampled, checksum-pinned XML PGA described in `geoai_experiment_1f.md`, not workbook IMs. The implemented variable is `structure_family`; unusual categories map to `OTHER`, missing/unmapped categories are explicitly excluded from the paired primary cohort. The recommendations below record the evidence considered; the JSON config is the binding protocol.
+**Final 1F decision (amended before 2A):** use separate newly sampled, checksum-pinned M7.8 and M7.5 log-PGA components described in [the amendment](protocol_amendment_1f.md), not workbook IMs. The implemented variable is `structure_family`; unusual categories map to `OTHER`, missing/unmapped categories are explicitly excluded from the paired primary cohort. The recommendations below record the evidence considered; the JSON config is the binding protocol.
 
 Checked 2026-10-05. **A retrospective vulnerability benchmark is defensible; a verified pre-earthquake inventory or operational pre-event forecasting claim is not established.** Distinguish when the represented property existed, when it was observed, and when its digital product was created.
 

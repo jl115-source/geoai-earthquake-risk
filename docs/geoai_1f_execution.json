@@ -1,6 +1,6 @@
 {
   "freeze": {
-    "config_sha256": "7d45cf638e188c16ccfbb065e21bd61787c24c3a3e7c14ea4220999eb5b5359f",
+    "config_sha256": "87cb137e74d83c43b8f1de82baa7d5d8268dbec65339447e9015facefea83486",
     "survey_sha256": "1f937341caad8a4560fb875244987405425d708079e8b4057959ea2032252142",
     "observations": 559,
     "eligible_records": 498,
@@ -26,7 +26,8 @@
       "Turkoglu": 43
     },
     "pixel_audit_sha256": "91d19f47e8de852a5f7fed17110598b501cc9ed4d0357ba8f45763ebc1c5eff0",
-    "hazard_provenance_sha256": "067ae81d27df240b66358cb7276ff497fe676d2d1ffac449c1cba4297fcde651"
+    "hazard_provenance_sha256": "6a1aead19b121c82291be13c95a8d5f348eb98c28a571baf1dd4bafeae25b095",
+    "hazard_m75_provenance_sha256": "666998d0e490766c8e4535e3f28dfee9b4d1917cceb1fa9275ffbe4f36039f40"
   },
   "selected_scenes": [
     "S2A_37SCB_20220912_0_L2A",
@@ -77,7 +78,8 @@
     "dsm": "https://copernicus-dem-30m.s3.eu-central-1.amazonaws.com/Copernicus_DSM_COG_10_N{lat:02d}_00_E{lon:03d}_00_DEM/Copernicus_DSM_COG_10_N{lat:02d}_00_E{lon:03d}_00_DEM.tif"
   },
   "audit_spec_hash": "038c5fc20f96446eaaa68823fd0d4319fcb5959bd785487dc5edea142b7266a0",
-  "offline_artifacts_byte_identical": 10,
+  "offline_artifacts_byte_identical": 12,
   "model_fitting": false,
-  "encoder_executed": false
+  "encoder_executed": true,
+  "encoder_preflight_evidence": "satmae_preflight_execution.json"
 }

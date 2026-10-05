@@ -1,6 +1,6 @@
 # Milestone 1F execution results
 
-Executed 2026-10-05 from consolidated main after PR #4 and retargeted PR #5 were merged. No model fitting or encoder inference. See [frozen protocol](geoai_experiment_1f.md) and [exact commands](../README.md).
+Executed 2026-10-05 from consolidated main after PR #4 and retargeted PR #5 were merged. No damage-model fitting. Actual frozen-encoder preflight is now complete; see [the final amendment](protocol_amendment_1f.md). See [frozen protocol](geoai_experiment_1f.md) and [exact commands](../README.md).
 
 ## Input feasibility
 
@@ -35,19 +35,23 @@ Eligible native-grade counts: **0: 97; 1: 128; 2: 161; 3: 110; 4: 2**. With only
 
 The design locks 16 engineered features and one frozen **SatMAE multispectral ViT-Large, 1024-D** representation. Structural family is a post-event-ascertained design proxy; floors, vintage, occupancy, damage products, undated footprints and other unlisted fields are prohibited. A no-survey-X sensitivity is prespecified. ACI133 stays external and unused.
 
-The fallback is workable as a **small retrospective, held-out-city pilot**. It does not supply a verified pre-event engineering inventory, population-representative vulnerability or independent-event evidence. The encoder is selected and precisely specified but has not been executed. Checkpoint verification, deterministic extraction smoke tests and reviewed 2A initiation remain prerequisites to fitting. CSB permission is unconfirmed and not a blocking dependency.
+The fallback is workable as a **small retrospective, held-out-city pilot**. It does not supply a verified pre-event engineering inventory, population-representative vulnerability or independent-event evidence. The actual encoder passed a ten-city, two-process deterministic preflight. Reviewed 2A initiation and CI remain prerequisites to fitting. CSB permission is unconfirmed and not a blocking dependency.
 
 ## Validation and B0
 
-- An offline replay reproduced **all ten processed artifacts byte-for-byte**. Cache specification and chip checksums are validated; no external reads are needed for the replay.
-- **76 tests pass**. Unit/data tests cover cloud/shadow exclusion, source scaling and physical units, exact coordinate identity, stale/tampered caches, raster-edge nodata, spectral moments, explicit exclusions, site weights, buffer purging, allowlists and synthetic catastrophe mechanics.
+- An offline replay reproduced **all twelve processed artifacts byte-for-byte**. Cache specification and chip checksums are validated; no external reads are needed for the replay.
+- **82 tests pass**. Unit/data tests cover cloud/shadow exclusion, source scaling and physical units, exact coordinate identity, stale/tampered caches, raster-edge nodata, spectral moments, explicit exclusions, site weights, buffer purging, allowlists and synthetic catastrophe mechanics.
 - B0 uses 100,000 synthetic years and 25,962 occurrences. Analytic AAL **8,283.57**, simulated AAL **8,380.73**, Monte Carlo standard error **110.33**, in synthetic replacement-value units. The difference is within one standard error. OEP/AEP tables, event/annual losses and grouping summaries were inspected. No real Türkiye financial-loss claim or learned vulnerability calibration is made.
+
+## Amendment: second-event hazard and inference
+
+Primary H is now separate M7.8/M7.5 log-PGA. The added version-12 M7.5 grid covers all 559 records (0.01611–0.08479 g, maximum sampling distance 579.895 m). Cohort, weights and folds are unchanged. Severe-or-worse Brier/reliability and fixed training-site-only PCA64 are prespecified; PCA has not been fitted. See [the amendment](protocol_amendment_1f.md) for complete provenance and deterministic encoder evidence.
 
 ## Provenance fingerprints
 
 ```json
 {
-  "config_sha256": "7d45cf638e188c16ccfbb065e21bd61787c24c3a3e7c14ea4220999eb5b5359f",
+  "config_sha256": "87cb137e74d83c43b8f1de82baa7d5d8268dbec65339447e9015facefea83486",
   "survey_sha256": "1f937341caad8a4560fb875244987405425d708079e8b4057959ea2032252142",
   "observations": 559,
   "eligible_records": 498,
@@ -73,6 +77,7 @@ The fallback is workable as a **small retrospective, held-out-city pilot**. It d
     "Turkoglu": 43
   },
   "pixel_audit_sha256": "91d19f47e8de852a5f7fed17110598b501cc9ed4d0357ba8f45763ebc1c5eff0",
-  "hazard_provenance_sha256": "067ae81d27df240b66358cb7276ff497fe676d2d1ffac449c1cba4297fcde651"
+  "hazard_provenance_sha256": "6a1aead19b121c82291be13c95a8d5f348eb98c28a571baf1dd4bafeae25b095",
+  "hazard_m75_provenance_sha256": "666998d0e490766c8e4535e3f28dfee9b4d1917cceb1fa9275ffbe4f36039f40"
 }
 ```

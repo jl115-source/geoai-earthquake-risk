@@ -1,5 +1,5 @@
 {
-  "version": "1f-v1",
+  "version": "1f-v2-two-event-preflight",
   "model_fitting_allowed": false,
   "target_dataset": "turkiye_survey",
   "external_dataset": "aci133",
@@ -15,12 +15,16 @@
     ],
     "missing": "exclude explicitly",
     "duplicate_coordinate_conflicts": "quarantine all records at conflicting coordinates",
-    "secondary": "any damage (grade > 0), prespecified"
+    "secondary": [
+      "any damage: D > 0",
+      "severe-or-worse: D >= 3"
+    ]
   },
   "event_cutoff": "2023-02-06T01:17:35Z",
   "allowlists": {
     "H": [
-      "log_PGA_g"
+      "log_PGA_m78_g",
+      "log_PGA_m75_g"
     ],
     "X": [
       "structure_family"
@@ -99,7 +103,7 @@
     "EO": "sensed 2022-06-01 through 2022-09-30",
     "WorldCover": "2021 v200",
     "DSM": "Copernicus GLO30 AWS 2021 release, main acquisition 2011-2015",
-    "H": "fixed reconstructed 2025 mainshock ShakeMap, allowed retrospective hazard exception"
+    "H": "Separate pinned reconstructed M7.8 (2025-03-20 XML) and M7.5 (2025-08-30 XML) PGAs; retrospective hazard exception; other aftershocks/sequence mechanisms remain unmodelled"
   },
   "city_domains": [
     "Antakya",
@@ -128,12 +132,14 @@
       "macro F1 over fixed five classes",
       "per-class support/recall",
       "any-damage Brier",
-      "calibration"
+      "calibration",
+      "severe-or-worse Brier: (sum p[D=3,4] - 1[D>=3])^2",
+      "severe-or-worse reliability: fixed probability bins [0,.1,...,1], site-weighted support and means, no fitted recalibrator"
     ],
     "uncertainty": "2000 paired site bootstrap draws within test cities, seed 20231005; report city fold spread; conditional uncertainty, not independent-earthquake evidence"
   },
   "future_fit_protocol": {
-    "learner": "same regularized multinomial logistic readout in all arms; fixed five-class probability output; absent training classes receive zero probability and are reported",
+    "learner": "same L2-regularized multinomial logistic readout in all arms; fixed five-class probability output; absent training classes receive zero probability and are reported",
     "C_grid": [
       0.001,
       0.01,
@@ -142,7 +148,7 @@
       10
     ],
     "selection": "minimum validation RPS, ties smaller C; no test-city selection",
-    "transforms": "train-only standard scaling; fixed structural-family vocabulary with unseen values OTHER; no PCA, no feature selection, no encoder adaptation",
+    "transforms": "primary arms: train-only standard scaling; fixed structural-family vocabulary with unseen values OTHER; no PCA, feature selection or encoder adaptation; the separately declared PCA64 sensitivity is the only compression exception",
     "calibration": "none in primary; do not fit on held-out cities",
     "site_weights": "inverse exact-coordinate multiplicity for training, validation and scoring",
     "structural_vocabulary": [
@@ -169,7 +175,7 @@
       96
     ],
     "pixel_metres": 10,
-    "status": "design frozen; weights/inference not yet executed",
+    "status": "passed: published checkpoint checksum, strict tensors, finite 10-city embeddings, seed-repeat and separate-process byte identity on pinned CPU runtime",
     "code_license": "CC BY-NC 4.0",
     "weight_license": "CC BY 4.0",
     "bands": [
@@ -227,14 +233,36 @@
       1364.38688993,
       1310.36996126,
       1087.6020813
-    ]
+    ],
+    "source_sha256": {
+      "models_mae_group_channels.py": "db35db5560af3d1e763c51218f1560c3a58b8f30dcf60194ddfcee9aa52816cd",
+      "util/pos_embed.py": "96c2448401c00c18f6d866f95c7bc8441830db8c4fb035522efde113860268df",
+      "LICENSE": "517acfe79046fca3d989a5a6f8b55b8c3919bb442609bd9ed0e81af6e25deb3a"
+    }
   },
   "2A_preflight": [
-    "Review frozen protocol and exclusions",
-    "Verify weight checksum and strict encoder-key coverage",
-    "Implement/test deterministic identity no-mask inference",
-    "Verify no cross-fold context overlap",
-    "Explicitly authorize 2A fitting; no fits in 1F"
+    "Completed: two-event hazard, frozen cohort/folds/allowlists and secondary endpoints",
+    "Completed: official checkpoint checksum and strict state/shape coverage",
+    "Completed: deterministic identity no-mask inference in two fresh CPU processes",
+    "Completed: unchanged disjoint city folds and 2km context screen",
+    "Pending: CI and reviewed initiation of fixed 2A; no damage or PCA fits in 1F"
   ],
-  "engineered_input_QA_decision": "Direct band moments fixed before fitting: pixelwise normalized differences had undefined denominators in 192/499 source-coordinate chips; no ratios filled or silently omitted."
+  "engineered_input_QA_decision": "Direct band moments fixed before fitting: pixelwise normalized differences had undefined denominators in 192/499 source-coordinate chips; no ratios filled or silently omitted.",
+  "hazard_sensitivity": {
+    "name": "M7.8-only",
+    "columns": [
+      "log_PGA_m78_g"
+    ],
+    "rule": "same fixed eligible cohort, folds and four arms; never select primary by performance"
+  },
+  "compression_sensitivity": {
+    "components": 64,
+    "solver": "deterministic full SVD",
+    "whiten": false,
+    "fit_scope": "training sites only, one exact-coordinate vector per site; centre raw 1024-D embeddings using training means only; do not pre-standardize dimensions",
+    "application": "apply training PCA unchanged to validation/test; standardize the 64 scores with training-only statistics; retain identical H and X blocks, folds, labels and C grid",
+    "selection": "64 is fixed, never tune dimensionality; no PCA in primary 1024-D arm",
+    "failure": "fail explicitly if fewer than 65 training sites; do not lower dimension silently",
+    "status": "predeclared only; no PCA fit in this milestone"
+  }
 }

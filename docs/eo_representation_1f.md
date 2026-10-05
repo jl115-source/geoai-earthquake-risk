@@ -1,6 +1,6 @@
 # Frozen EO encoder research
 
-No weights downloaded; no inference/training performed. Metadata and source links below define the design; weights and inference remain a 2A preflight.
+The initial design below is now exercised by `src/features/satmae_preflight.py`; see [the amendment and execution evidence](protocol_amendment_1f.md). No training or PCA is performed.
 
 ## Primary: original multispectral SatMAE ViT-Large
 
@@ -26,7 +26,7 @@ Instantiate `models_mae_group_channels.mae_vit_large_patch16(img_size=96,patch_s
 
 Upstream mask_ratio0 still random-sorts tokens. Use documented identity no-mask branch or equivalent explicit patch/channel/position→CLS→blocks→final-norm path. Mean pool432non-CLS final-normalized tokens into **1024-D** vector. Pooling is project choice. Record checkpoint checksum,code revision,preprocessing manifest hash,dtype/backend. No task-specific encoder adaptation. [Pinned model](https://github.com/sustainlab-group/SatMAE/blob/117135b3354fa70a81df453be7f34e3da8b36032/models_mae_group_channels.py).
 
-One frozen extraction for559short sequences is bounded, but memory/runtime not measured. Checksum and deterministic smoke test are required before full extraction. This is executable design, not an inference-tested implementation.
+The preflight checks one deterministic eligible chip per city, repeated under different RNG seeds and in two fresh processes. Full-cohort extraction is separate. Runtime and strict checkpoint coverage are recorded in the preflight report.
 
 ## Secondary candidate: Prithvi EO1.0 100M — deferred sensitivity
 
@@ -40,4 +40,4 @@ Candidate extraction `forward_features(x)[-1][:,1:,:].mean(1)`, temporal/locatio
 
 ## Leakage distinction
 
-Globally pretrained frozen features at test cities support transfer conditional on prior representation, not a claim that foundation pretraining never saw those cities. Prohibit reconstruction adaptation on test chips,test-city normalization/PCA,choice by heldout performance,ACI133-label tuning,spatial damage products,and post-event imagery. Fit all task-specific learned transforms inside training folds only. Use identical eligible records for H,H+X,engineered,GeoAI comparisons to avoid availability confounding.
+Globally pretrained frozen features at test cities support transfer conditional on prior representation, not a claim that foundation pretraining never saw those cities. The amendment predeclares PCA64 fitted on training sites only as a secondary stability check; primary 1024-D features remain unchanged. Prohibit reconstruction adaptation on test chips,test-city normalization/PCA,choice by heldout performance,ACI133-label tuning,spatial damage products,and post-event imagery. Fit all task-specific learned transforms inside training folds only. Use identical eligible records for H,H+X,engineered,GeoAI comparisons to avoid availability confounding.

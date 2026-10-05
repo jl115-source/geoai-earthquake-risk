@@ -1,6 +1,6 @@
 # Milestone 1F — frozen GeoAI fallback and input feasibility
 
-The primary target is the **independent 559-record Türkiye engineering survey**, with explicit eligibility exclusions. ACI133 remains external and unused for feature/parameter selection. `This_study` and `Visual_interpretation` remain rejected as primary vulnerability targets. CSB is a plausible, unconfirmed scale-up route; [the bounded access check](csb_access_1f.md) does not delay this experiment. No contact was sent, encoder executed, or damage model fitted in 1F.
+The primary target is the **independent 559-record Türkiye engineering survey**, with explicit eligibility exclusions. ACI133 remains external and unused for feature/parameter selection. `This_study` and `Visual_interpretation` remain rejected as primary vulnerability targets. CSB is a plausible, unconfirmed scale-up route; [the bounded access check](csb_access_1f.md) does not delay this experiment. No contact was sent or damage model fitted in 1F. The [pre-2A amendment](protocol_amendment_1f.md) adds a second hazard component and actual frozen-encoder preflight.
 
 The binding design is [configs/geoai_experiment_1f.json](../configs/geoai_experiment_1f.json). Local per-record evidence, fold membership, features and exclusions are reproducible; aggregate results are recorded in [the execution report](geoai_1f_results.md).
 
@@ -8,7 +8,7 @@ The binding design is [configs/geoai_experiment_1f.json](../configs/geoai_experi
 
 Keep native grades **0 none; 1 minor; 2 moderate/repaired; 3 severe/partial collapse; 4 complete collapse**. There are 541 known labels and 18 missing among 559 retained records. These are cumulative sequence/recovery-period observations from June 2023, not mainshock-only damage. Repaired status in grade 2 and only three grade-4 observations limit severity interpretation. Do not merge damage scales across datasets.
 
-The estimand is the incremental held-out-city predictive information of pre-event spatial representations **within this surveyed cohort**, conditional on reconstructed mainshock hazard and retrospectively ascertained structural-design proxies. It is neither causal nor population-representative vulnerability, and does not establish earthquake transfer or operational pre-event forecasting. Survey selection near stations and nonrandom engineering inspection remain limitations.
+The estimand is the incremental held-out-city predictive information of pre-event spatial representations **within this surveyed cohort**, conditional on separately reconstructed M7.8 and M7.5 hazard and retrospectively ascertained structural-design proxies. It is neither causal nor population-representative vulnerability, and does not establish earthquake transfer or operational pre-event forecasting. Survey selection near stations and nonrandom engineering inspection remain limitations.
 
 All arms use identical eligible records, fixed city folds and inverse exact-coordinate multiplicity weights. Missing labels or structure, contradictory labels at identical coordinates, incomplete input support, invalid hazard and city-coordinate outliers receive explicit reasons. Source rows are retained. Same-label duplicate coordinates are not silently deduplicated; each site has total weight one. Conflicting coordinates may represent different nearby buildings: quarantine is conservative, not proof of source error.
 
@@ -18,7 +18,7 @@ A coordinate more than **10 km from its recorded city's median coordinate** is q
 
 | Block | Frozen inputs | Time basis and limitations |
 |---|---|---|
-| H | natural log of newly sampled PGA in g | Pinned M7.8 `us6000jllz` ShakeMap reconstruction produced 2025-03-20; retrospective hazard exception, not a pre-event product |
+| H | separate log-PGA in g for M7.8 and M7.5 | Pinned `us6000jllz` 2025-03-20 XML and `us6000jlqa` version 12, 2025-08-30 XML; retrospective hazard exception |
 | X | structural family only | June 2023 ascertainment of presumed pre-existing design; height suffixes stripped; no independently verified pre-event inventory |
 | EO | Sentinel-2 L2A, 2022-06-01 through 2022-09-30 | Every contributing sensing timestamp precedes 2023-02-06 01:17:35 UTC; later archive reprocessing is allowed and disclosed |
 | Land cover | ESA WorldCover 2021 v200 | 2021 observation basis, CC BY 4.0; preserve ESA attribution |
@@ -27,7 +27,7 @@ A coordinate more than **10 km from its recorded city's median coordinate** is q
 
 The narrow X permission is an explicit scientific interpretation. Damage may still affect structural classification or missingness. The prespecified **H versus H+GeoAI** sensitivity omits survey X on the same cohort. A stronger strictly verified pre-event X claim is not supported. See [chronology evidence](survey_chronology_1f.md).
 
-H is independently resampled from the companion repository's checksum-pinned XML; it does not overwrite the original canonical workbook IMs. Use nearest actual printed grid node, lower coordinate for exact ties, no extrapolation. Convert XML PGA/PSA `%g` to g; retain PGV in cm/s. The workbook's product revision remains unproved. Physical PGA is fixed before fitting; do not repeat outcome-informed IM selection from the source paper. Other sampled IMs are audit outputs, outside the primary allowlist.
+Both H components are independently resampled from checksum-pinned XML products; it does not overwrite the original canonical workbook IMs. Use nearest actual printed grid node, lower coordinate for exact ties, no extrapolation. Convert XML PGA/PSA `%g` to g; retain PGV in cm/s. The workbook's product revision remains unproved. The two separate log-PGA components are fixed before fitting; M7.8-only is a sensitivity on the same rows/folds. No max/sum/selected scalar replaces primary H. do not repeat outcome-informed IM selection from the source paper. Other sampled IMs are audit outputs, outside the primary allowlist.
 
 ## Actual pixel audit and reproducibility
 
@@ -52,13 +52,13 @@ Input QA found undefined pixelwise normalized-difference denominators in 192 of 
 
 Use **one** frozen SatMAE multispectral ViT-Large, 1024-dimensional mean-pooled final non-CLS tokens, with strict encoder-key verification, no task-specific adaptation and deterministic identity/no-mask inference. The complete checkpoint, source revision, channel groups and exact non-z-score normalization are in [the encoder contract](eo_representation_1f.md). The checkpoint is 3.95 GB including optimizer state. Weights are CC BY 4.0; repository code is **CC BY-NC 4.0**. This research design does not establish commercial clearance.
 
-Weights were not downloaded or executed in this milestone. Checksum verification, deterministic inference smoke tests and resource measurement are explicit 2A preflight tasks; imagery feasibility is not a claim of measured encoder throughput. Prithvi is documented as a deferred alternative, not a second primary representation.
+The amendment runs actual checksum verification and deterministic inference preflight; see its execution report for scope, backend and timings. Full-cohort extraction remains part of 2A. Prithvi is documented as a deferred alternative, not a second primary representation.
 
-The four primary arms are **H → H+X → H+X+Z_engineered → H+X+Z_GeoAI**. The final arm replaces engineered Z with SatMAE Z so the source of added information is clear. A union of both Z blocks requires a separately declared sensitivity. Use the same regularized multinomial logistic readout, fixed C grid and validation RPS selection for all arms, as specified in JSON; no readout is fitted now. All task-specific scaling/encoding happens inside training folds. Unseen structural categories map to OTHER; no learned representation, normalization or PCA is fitted on validation/test imagery. No encoder selection by held-out performance.
+The four primary arms are **H → H+X → H+X+Z_engineered → H+X+Z_GeoAI**. The final arm replaces engineered Z with SatMAE Z so the source of added information is clear. A union of both Z blocks requires a separately declared sensitivity. Use the same regularized multinomial logistic readout, fixed C grid and validation RPS selection for all arms, as specified in JSON; no readout is fitted now. All task-specific scaling/encoding happens inside training folds. Unseen structural categories map to OTHER; no learned representation, normalization or PCA is fitted on validation/test imagery. No encoder selection by held-out performance. A fixed 64-component, training-site-only PCA sensitivity is prespecified; it never changes the primary 1024-D arm.
 
 Outer test cities, in order: **Antakya, Hassa, Iskendurun, Islahiye, Kahramanmaras, Kirikhan, Narli, Nurdagi, Pazarcik, Turkoglu** (source spellings retained). Validation is the next city cyclically, except Narli uses Pazarcik because Nurdagi has only three source observations. Remaining cities train. Purge both sides of any cross-partition pair less than **2 km** apart, exceeding twice the square's 679 m circumradius; no context overlap or label propagation across folds. Empty or very small city folds are reported, never replaced after results are seen.
 
-Primary scoring is normalized five-class ranked probability score; macro-average nonempty test-city scores and list every city's support. Report ordinal MAE, fixed-five-class macro F1, class recall, any-damage Brier and calibration. Use 2,000 paired within-city site-bootstrap draws (seed 20231005) plus fold spread; nearby sites are still correlated, so these are conditional uncertainty summaries, not population confidence guarantees. Rare/absent training classes require explicit reporting and fixed five-column probabilities, not changed labels. No hyperparameter choice may use outer test-city scores or ACI133 labels.
+Primary scoring is normalized five-class ranked probability score; macro-average nonempty test-city scores and list every city's support. Report ordinal MAE, fixed-five-class macro F1, class recall, any-damage and severe-or-worse (D≥3) Brier/reliability. Exceedance probabilities sum the relevant native-class probabilities; no binary classifier or recalibrator is fitted for these diagnostics. Use 2,000 paired within-city site-bootstrap draws (seed 20231005) plus fold spread; nearby sites are still correlated, so these are conditional uncertainty summaries, not population confidence guarantees. Rare/absent training classes require explicit reporting and fixed five-column probabilities, not changed labels. No hyperparameter choice may use outer test-city scores or ACI133 labels.
 
 ACI133's 242 observations stay untouched externally. Before a later external evaluation, adjudicate shared buildings, event headers and native label compatibility, and purge all training/validation sites with overlapping 960 m context (2 km screen) with retained external sites. The previous 25/100 m building-overlap checks alone are insufficient for EO context. No pooling or external score is authorized by 1F.
 
@@ -68,7 +68,7 @@ Only the named H/X/Z columns may become predictors. IDs, coordinates and cities 
 
 **Labels:** native survey grades with explicit exclusions. **Pre-event inputs:** audited 2022 Sentinel-2, 2021 WorldCover and older DSM. **Representation:** frozen SatMAE-Large contract. **Held-out cities:** the ten-city schedule above. **Prohibited variables:** everything outside the explicit allowlists, particularly post-event and target-derived information.
 
-Model fitting remains disabled in 1F. Design review and encoder preflight precede an explicitly started 2A. CSB access is not one of those blocking conditions. B0 is separately authorized synthetic catastrophe mechanics, documented in [risk_b0.md](risk_b0.md), with no learned vulnerability inputs.
+Model fitting remains disabled in 1F. The two-event amendment and completed encoder preflight precede an explicitly started 2A. CSB access is not one of those blocking conditions. B0 is separately authorized synthetic catastrophe mechanics, documented in [risk_b0.md](risk_b0.md), with no learned vulnerability inputs.
 
 ## Source and licence record
 

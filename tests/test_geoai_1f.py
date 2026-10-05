@@ -61,7 +61,7 @@ def fixture_tables():
                       'latitude':[37,37,37.001,37.001], 'longitude':[37,37,37,37],
                       'damage_grade':[1,2,0,0], 'structure_type':['RC MRF (1-3 Storeys)']*4})
     a = s[['building_id','city']].assign(location_key=['x','x','y','y'], eo_status='complete_clear_composite', worldcover_coverage=1., dem_coverage=1.)
-    h = s[['building_id']].assign(PGA_g=.2, in_grid=True)
+    h = s[['building_id']].assign(PGA_g=.2, in_grid=True, PGA_m75_g=.1, in_grid_m75=True)
     c = {'coordinate_city_median_limit_m':10000,'city_domains':['A','B'], 'validation_overrides':{}, 'cross_partition_buffer_m':2000}
     return s,a,h,c
 
@@ -94,7 +94,7 @@ def test_frozen_allowlist_and_no_training_gate():
     c = json.loads(CONFIG.read_text())
     assert c['model_fitting_allowed'] is False
     assert c['allowlists']['X'] == ['structure_family']
-    assert c['allowlists']['H'] == ['log_PGA_g']
+    assert c['allowlists']['H'] == ['log_PGA_m78_g', 'log_PGA_m75_g']
     assert 'This_study' in c['prohibited'] and 'floors' in c['prohibited']
     assert c['encoder']['published'] < c['event_cutoff']
     assert c['arms']['HX_GeoAI'] == ['H','X','Z_GeoAI']
