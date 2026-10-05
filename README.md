@@ -281,3 +281,32 @@ coverage must be recovered before spatial modelling.
 No model fitting should resume until the literature-review gates for target
 independence, feature chronology, physical hazard definition, final estimand and
 feature allowlists are resolved or explicitly scoped out.
+
+
+## Locked direction — GeoAI × Catastrophe Risk
+
+The project charter is now explicit: this is a
+**[GeoAI × Catastrophe Risk project](docs/project_charter_geoai_cat_risk.md)**,
+not solely a vulnerability paper and not a generic OpenQuake implementation.
+
+The rebuilt [roadmap](docs/roadmap_geoai_cat_risk.md) has two parallel tracks:
+
+- **Track A — GeoAI vulnerability:** (H \rightarrow H+X \rightarrow
+  H+X+Z_{engineered} \rightarrow H+X+Z_{GeoAI}), evaluated under geographic
+  shift.
+- **Track B — Catastrophe risk:** hazard → exposure → vulnerability → damage →
+  MDR/loss → stochastic event losses → AAL/OEP/AEP.
+
+They reconnect by holding hazard/exposure/event set fixed and replacing the
+conventional vulnerability component with the calibrated GeoAI vulnerability
+model, then measuring changes in event loss and portfolio tail risk.
+
+The [spatial-target gate](docs/spatial_target_gate.md) is now resolved for the
+Liu package: neither `This_study` nor `Visual_interpretation` is approved as
+the headline vulnerability target. Preferred scale-up is authorized access to
+the Turkish CSB ground survey used by Ainscoe et al. (2025); the guaranteed
+fallback is the existing independent Türkiye engineering survey with a
+small-N/frozen-representation GeoAI protocol.
+
+**Modelling remains frozen** until the updated machine-readable research gate is
+satisfied.
