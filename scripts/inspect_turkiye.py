@@ -8,17 +8,23 @@ damage classes, spatial coverage, and missingness before any feature engineering
 from pathlib import Path
 import pandas as pd
 
-SRC = Path(
+RAW_SRC = Path(
     "data/raw/turkiye_2023/"
+    "Jaiswal_2023TurkiyeEQ_us6000jllz_field_str_damage_data.xlsx"
+)
+REFERENCE_SRC = Path(
+    "data/reference/turkiye_2023/"
     "Jaiswal_2023TurkiyeEQ_us6000jllz_field_str_damage_data.xlsx"
 )
 
 
 def main() -> None:
-    if not SRC.exists():
+    src = RAW_SRC if RAW_SRC.exists() else REFERENCE_SRC
+    if not src.exists():
         raise SystemExit("Run: python scripts/download_turkiye.py")
 
-    df = pd.read_excel(SRC)
+    print(f"source={src}")
+    df = pd.read_excel(src)
 
     print(f"rows={len(df):,} columns={len(df.columns)}")
     print("\nColumns:")
