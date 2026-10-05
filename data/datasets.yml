@@ -24,6 +24,25 @@ datasets:
     spatial_resolution: administrative/ward identifiers
     status: acquire_from_official_portal
 
+  multi_event_rc_616:
+    region: multi-region
+    events:
+      - Erzincan_1992
+      - Duzce_1999
+      - Bingol_2003
+      - Peru_2007
+      - Wenchuan_2008
+      - Haiti_2010
+    role: open cross-event/cross-region engineering benchmark
+    access: open
+    license: CC-BY-SA-3.0
+    source: datacenterhub
+    doi: 10.7277/ACX0-DG18
+    n_buildings: 616
+    target: four-class structural damage
+    spatial_resolution: building latitude_longitude_when_available
+    status: acquisition_pending
+
   italy_dado:
     region: Italy
     event: multiple earthquakes
