@@ -11,17 +11,24 @@ See `reference/THIRD_PARTY_LICENSES.md` for licensing details and
 
 ### 1. Türkiye — 2023 Kahramanmaraş sequence
 
-Versioned in this repository:
+Versioned reference data:
 
 - `reference/turkiye_2023/Jaiswal_2023TurkiyeEQ_us6000jllz_field_str_damage_data.xlsx`
-  - engineering survey;
+  - 559-record engineering survey (527 with damage and structure type);
   - building coordinates, city, structure type and observed damage state;
   - ShakeMap-derived PGA/PGV/SA fields;
   - source repository: `maxandersonloake/TUR2023_02_06`;
   - survey data license: CC BY 4.0.
 
-- `reference/turkiye_2023/ShakeMapUpd.xml.gz`
-  - ShakeMap used by the companion fragility analysis.
+The companion `ShakeMapUpd.xml.gz` is about 15 MB and is downloaded locally
+rather than committed:
+
+```bash
+python scripts/download_turkiye.py
+```
+
+The downloader validates the source-published file sizes. A previous zero-byte
+placeholder is intentionally not retained in the repository.
 
 Also versioned:
 
@@ -35,7 +42,7 @@ Also versioned:
 Core large building-impact data:
 
 - GEM GEID `Impact_Buildings_Detailed.csv`;
-- approximately 78.4 MB;
+- exactly 78,448,526 bytes in the current GEID source;
 - downloaded locally by:
 
 ```bash
@@ -57,9 +64,18 @@ USGS ShakeMap grid:
 python scripts/download_external_data.py nepal-shakemap
 ```
 
-Official NSO HRHRS 2016–2017 microdata are retained as an **optional**
-validation/source dataset. Their access terms prohibit redistribution without
-written agreement, so this repository stores only public metadata/instructions.
+Official NSO HRHRS documentation:
+
+```bash
+python scripts/download_external_data.py nepal-docs
+```
+
+This fetches the public metadata JSON, English questionnaire, 14-district
+key-findings report, and affected-districts map. The HRHRS microdata themselves
+remain optional/local-only because the official terms prohibit redistribution
+without written agreement. The 11 census-model districts are the preferred
+subset if we later use the NSO microdata, because private residential buildings
+there were assessed irrespective of damage.
 
 ### 3. Multi-event RC616 benchmark
 
@@ -136,11 +152,14 @@ Everything:
 make data-all
 ```
 
-Check local status:
+Validate local status:
 
 ```bash
 make data-check
 ```
+
+The validation step checks exact sizes where the upstream source provides a
+stable value, verifies ZIP archives, and requires all six RC616 ShakeMap grids.
 
 ## Supporting reference systems
 
