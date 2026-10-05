@@ -1,0 +1,59 @@
+{
+  "version": "literature-gate-2026-10-05",
+  "review_date": "2026-10-05",
+  "model_fitting_allowed": false,
+  "reason": "Literature positioning and target/provenance gates must be resolved before Milestone 1E.",
+  "headline_candidate": "Test whether verified pre-event spatial/neighbourhood context adds calibrated predictive information beyond hazard intensity and conventional building attributes under leakage-safe geographic distribution shift.",
+  "prohibited_headline_claims": [
+    "Novelty from fitting standard fragility curves to the existing Turkiye survey",
+    "Novelty from applying XGBoost, Random Forest or CatBoost to Nepal or Turkiye damage",
+    "Novelty from host-to-target or leave-one-event-out evaluation alone",
+    "Novelty from adding geology, Vs30, fault distance or topography alone",
+    "Novelty from using a GNN architecture alone",
+    "Treating spatial_this_study as independent observed ground-truth damage"
+  ],
+  "spatial_target_status": {
+    "spatial_this_study": "method_output_pseudolabel_not_approved_as_headline_target",
+    "visual_interpretation": "candidate_independent_target_pending_damage_semantics_and_assessment_coverage"
+  },
+  "required_gates": {
+    "independent_target": {
+      "status": "blocked",
+      "requirements": [
+        "Recover Visual_interpretation annotation codebook and damage-class semantics",
+        "Verify independence from This_study methodology",
+        "Document assessed/undamaged sampling and annotation coverage"
+      ]
+    },
+    "feature_chronology": {
+      "status": "blocked",
+      "requirements": [
+        "Classify every proposed X and Z feature as verified pre-event, hazard, post-event, target-derived or unknown",
+        "Exclude post-event and target-derived variables from primary vulnerability models"
+      ]
+    },
+    "physical_hazard": {
+      "status": "blocked_for_spatial_and_rc_hx",
+      "requirements": [
+        "Freeze event/shock/product/version and physical units",
+        "Freeze sampling/interpolation/nodata treatment",
+        "Do not choose an IM or shock using held-out model performance"
+      ]
+    },
+    "estimand": {
+      "status": "blocked",
+      "requirements": [
+        "Freeze the primary supervised target and held-out domain claim before fitting",
+        "Do not claim cross-earthquake spatial transfer from one Turkiye/Syria sequence"
+      ]
+    },
+    "feature_allowlists": {
+      "status": "blocked",
+      "requirements": [
+        "Version dataset-specific allowed pre-event predictors",
+        "Version prohibited leakage variables before viewing results"
+      ]
+    }
+  },
+  "resume_condition": "All required gates must be resolved or explicitly scoped out in a reviewed configuration change."
+}
