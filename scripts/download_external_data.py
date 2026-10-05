@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 import sys
 import zipfile
 from pathlib import Path
@@ -44,6 +45,7 @@ SOURCES = {
         ),
         "path": RAW / "nepal_2015" / "Impact_Buildings_Detailed.csv",
         "expected_size": 78_448_526,
+        "format": "csv",
     },
     "rc616": {
         "url": (
@@ -54,6 +56,7 @@ SOURCES = {
         "path": RAW / "rc616" / "rc616.zip",
         "extract_to": RAW / "rc616" / "extracted",
         "min_size": 100_000,
+        "format": "zip",
     },
     "turkiye-context": {
         "url": (
@@ -63,6 +66,7 @@ SOURCES = {
         "path": RAW / "turkiye_2023_context" / "2023Turkey_earthquake_data.zip",
         "extract_to": RAW / "turkiye_2023_context" / "extracted",
         "md5": "f3a3a9982cf63bd954616a898c7416b9",
+        "format": "zip",
     },
     "nepal-shakemap": {
         "url": (
@@ -71,26 +75,31 @@ SOURCES = {
         ),
         "path": RAW / "nepal_2015" / "usgs_shakemap_grid.xml",
         "min_size": 100_000,
+        "format": "xml",
     },
     "nepal-metadata": {
         "url": "https://microdata.nsonepal.gov.np/index.php/metadata/export/69/json",
         "path": RAW / "nepal_2015" / "NSO_HRHRS_metadata.json",
         "min_size": 10_000,
+        "format": "json",
     },
     "nepal-questionnaire-en": {
         "url": "https://microdata.nsonepal.gov.np/index.php/catalog/69/download/989",
         "path": RAW / "nepal_2015" / "docs" / "HRHRS_questionnaire_en.pdf",
         "min_size": 100_000,
+        "format": "pdf",
     },
     "nepal-key-findings-14": {
         "url": "https://microdata.nsonepal.gov.np/index.php/catalog/69/download/991",
         "path": RAW / "nepal_2015" / "docs" / "HRHRS_key_findings_14_districts.pdf",
         "min_size": 300_000,
+        "format": "pdf",
     },
     "nepal-affected-districts-map": {
         "url": "https://microdata.nsonepal.gov.np/index.php/catalog/69/download/994",
         "path": RAW / "nepal_2015" / "docs" / "HRHRS_affected_districts_map.pdf",
         "min_size": 100_000,
+        "format": "pdf",
     },
 }
 
@@ -141,6 +150,28 @@ def download(url: str, path: Path) -> None:
     tmp.replace(path)
 
 
+def validate_format(path: Path, fmt: str) -> None:
+    if fmt == "zip":
+        if not zipfile.is_zipfile(path):
+            raise RuntimeError("not a valid ZIP archive")
+        return
+
+    with path.open("rb") as fh:
+        head = fh.read(4096)
+
+    if fmt == "pdf" and not head.startswith(b"%PDF"):
+        raise RuntimeError("download is not a PDF")
+    if fmt == "xml" and b"<" not in head:
+        raise RuntimeError("download does not look like XML")
+    if fmt == "csv" and b"," not in head:
+        raise RuntimeError("download does not look like CSV")
+    if fmt == "json":
+        try:
+            json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            raise RuntimeError("download is not valid JSON") from exc
+
+
 def validate(name: str, spec: dict) -> None:
     path: Path = spec["path"]
     size = path.stat().st_size
@@ -163,6 +194,9 @@ def validate(name: str, spec: dict) -> None:
             raise RuntimeError(
                 f"{name}: MD5 mismatch: got {digest}, expected {spec['md5']}"
             )
+
+    if "format" in spec:
+        validate_format(path, spec["format"])
 
 
 def extract_if_needed(name: str, spec: dict) -> None:
@@ -214,14 +248,20 @@ def main() -> None:
     args = parser.parse_args()
 
     names = GROUPS.get(args.dataset, [args.dataset])
+    failures: list[str] = []
+
     for name in names:
         print(f"\n=== {name} ===")
         try:
             acquire(name)
         except Exception as exc:
+            failures.append(name)
             print(f"[ERROR] {name}: {exc}", file=sys.stderr)
-            if args.dataset not in GROUPS:
-                raise
+
+    if failures:
+        raise SystemExit(
+            "Acquisition failed for: " + ", ".join(failures)
+        )
 
 
 if __name__ == "__main__":
