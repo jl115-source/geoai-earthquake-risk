@@ -1,3 +1,5 @@
+> **1F implementation update (2026-10-05):** [The fallback target and input design are frozen](geoai_experiment_1f.md), with actual per-location pixel coverage and explicit cohort exclusions. B0 synthetic mechanics are implemented under the user-authorized separate track. Learned vulnerability fitting remains disabled; 2A follows protocol review and deterministic encoder preflight. Earlier future-tense roadmap sections below describe planned extensions, not completed results.
+
 # Roadmap — GeoAI × Catastrophe Risk
 
 This roadmap supersedes the earlier essentially linear

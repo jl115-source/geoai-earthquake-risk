@@ -1,0 +1,83 @@
+{
+  "freeze": {
+    "config_sha256": "7d45cf638e188c16ccfbb065e21bd61787c24c3a3e7c14ea4220999eb5b5359f",
+    "survey_sha256": "1f937341caad8a4560fb875244987405425d708079e8b4057959ea2032252142",
+    "observations": 559,
+    "eligible_records": 498,
+    "eligible_sites": 445,
+    "overlapping_exclusion_counts": {
+      "coordinate_city_outlier_pending_adjudication": 33,
+      "missing_or_unmapped_structure_family": 22,
+      "missing_native_damage": 18,
+      "incomplete_DSM": 1
+    },
+    "all_arms_same_manifest": true,
+    "model_fitting": false,
+    "test_city_counts": {
+      "Antakya": 42,
+      "Hassa": 35,
+      "Iskendurun": 68,
+      "Islahiye": 56,
+      "Kahramanmaras": 108,
+      "Kirikhan": 45,
+      "Narli": 37,
+      "Nurdagi": 3,
+      "Pazarcik": 61,
+      "Turkoglu": 43
+    },
+    "pixel_audit_sha256": "91d19f47e8de852a5f7fed17110598b501cc9ed4d0357ba8f45763ebc1c5eff0",
+    "hazard_provenance_sha256": "067ae81d27df240b66358cb7276ff497fe676d2d1ffac449c1cba4297fcde651"
+  },
+  "selected_scenes": [
+    "S2A_37SCB_20220912_0_L2A",
+    "S2B_36SYF_20220828_0_L2A",
+    "S2B_37SBA_20220729_0_L2A",
+    "S2B_37SBA_20220828_0_L2A",
+    "S2B_37SBB_20220917_0_L2A",
+    "S2B_37SCA_20220818_0_L2A",
+    "S2B_37SCB_20220907_0_L2A",
+    "S2B_37SCB_20220917_0_L2A"
+  ],
+  "audit_spec": {
+    "version": "1f-pixel-v1",
+    "catalog_sha256": "2815b9a57607757aa9675a161c2d5586e4f52810e6df9db119c0fcf89193983d",
+    "window": [
+      "2022-06-01T00:00:00Z",
+      "2022-09-30T23:59:59Z"
+    ],
+    "cutoff": "2023-02-06T01:17:35Z",
+    "bands": [
+      "blue",
+      "green",
+      "red",
+      "rededge1",
+      "rededge2",
+      "rededge3",
+      "nir",
+      "nir08",
+      "swir16",
+      "swir22"
+    ],
+    "max_scenes": 12,
+    "scene_cloud_limit": 20,
+    "scl_clear": [
+      2,
+      4,
+      5,
+      6
+    ],
+    "bad_dilation_pixels": 1,
+    "grid": "EPSG32637; centre snapped10m;96x96at10m",
+    "reflectance": "STAC asset scale/offset once; bilinear",
+    "categorical": "nearest; explicit destination nodata0",
+    "continuous_nodata": "explicit destination NaN for warp",
+    "composite": "median of first ranked prefix with full clear finite 10-band support",
+    "ranking": "cloud ascending,time descending,id ascending",
+    "worldcover": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N36E036_Map.tif",
+    "dsm": "https://copernicus-dem-30m.s3.eu-central-1.amazonaws.com/Copernicus_DSM_COG_10_N{lat:02d}_00_E{lon:03d}_00_DEM/Copernicus_DSM_COG_10_N{lat:02d}_00_E{lon:03d}_00_DEM.tif"
+  },
+  "audit_spec_hash": "038c5fc20f96446eaaa68823fd0d4319fcb5959bd785487dc5edea142b7266a0",
+  "offline_artifacts_byte_identical": 10,
+  "model_fitting": false,
+  "encoder_executed": false
+}

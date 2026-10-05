@@ -1,0 +1,240 @@
+{
+  "version": "1f-v1",
+  "model_fitting_allowed": false,
+  "target_dataset": "turkiye_survey",
+  "external_dataset": "aci133",
+  "estimand": "Incremental city-transfer predictive information in independent surveyed buildings after the February 2023 sequence, conditional on retrospective structural-design proxies; not population vulnerability or prospective operational prediction.",
+  "target": {
+    "column": "damage_grade",
+    "classes": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "missing": "exclude explicitly",
+    "duplicate_coordinate_conflicts": "quarantine all records at conflicting coordinates",
+    "secondary": "any damage (grade > 0), prespecified"
+  },
+  "event_cutoff": "2023-02-06T01:17:35Z",
+  "allowlists": {
+    "H": [
+      "log_PGA_g"
+    ],
+    "X": [
+      "structure_family"
+    ],
+    "Z_engineered": [
+      "green_mean",
+      "green_std",
+      "red_mean",
+      "red_std",
+      "nir_mean",
+      "nir_std",
+      "swir1_mean",
+      "swir1_std",
+      "red_texture",
+      "built_fraction_250m",
+      "built_fraction_480m",
+      "vegetation_fraction_250m",
+      "vegetation_fraction_480m",
+      "dsm_mean",
+      "dsm_relief",
+      "dsm_slope_mean"
+    ],
+    "Z_GeoAI": [
+      "satmae_0000..satmae_1023"
+    ]
+  },
+  "arms": {
+    "H": [
+      "H"
+    ],
+    "HX": [
+      "H",
+      "X"
+    ],
+    "HX_engineered": [
+      "H",
+      "X",
+      "Z_engineered"
+    ],
+    "HX_GeoAI": [
+      "H",
+      "X",
+      "Z_GeoAI"
+    ]
+  },
+  "additional_sensitivity": "H versus H+Z_GeoAI on the same frozen cohort, omitting retrospective survey X",
+  "prohibited": [
+    "floors",
+    "basement_floors",
+    "construction_age",
+    "area",
+    "occupancy",
+    "is_occupied",
+    "existing_placard",
+    "repair",
+    "casualties_reported",
+    "survey_date",
+    "assessor_name",
+    "photo_ids",
+    "infill_wall_damage",
+    "member_damage",
+    "estimated_building_damage",
+    "damage_label_as_feature",
+    "This_study",
+    "Visual_interpretation",
+    "post-event imagery",
+    "undated footprints",
+    "city_as_predictor",
+    "coordinates_as_predictor",
+    "test-city fitted transforms",
+    "ACI133 tuning",
+    "workbook IMs with unresolved product revision"
+  ],
+  "chronology": {
+    "X": "post-event ascertainment of presumed pre-existing structural family; height brackets removed; not independently verified pre-event",
+    "EO": "sensed 2022-06-01 through 2022-09-30",
+    "WorldCover": "2021 v200",
+    "DSM": "Copernicus GLO30 AWS 2021 release, main acquisition 2011-2015",
+    "H": "fixed reconstructed 2025 mainshock ShakeMap, allowed retrospective hazard exception"
+  },
+  "city_domains": [
+    "Antakya",
+    "Hassa",
+    "Iskendurun",
+    "Islahiye",
+    "Kahramanmaras",
+    "Kirikhan",
+    "Narli",
+    "Nurdagi",
+    "Pazarcik",
+    "Turkoglu"
+  ],
+  "validation_overrides": {
+    "Narli": "Pazarcik"
+  },
+  "validation_rule": "next city cyclically unless overridden",
+  "coordinate_city_median_limit_m": 10000,
+  "cross_partition_buffer_m": 2000,
+  "comparison": "Identical eligible rows, city folds and inverse coordinate-multiplicity weights for all arms. GeoAI replaces engineered Z in the primary comparison; additive union requires a separately declared sensitivity.",
+  "metrics": {
+    "primary": "normalized ranked probability score: mean squared cumulative-probability error at thresholds 0..3",
+    "aggregation": "unweighted mean of nonempty test-city scores; list empty cities and supports, no substitution",
+    "secondary": [
+      "ordinal MAE",
+      "macro F1 over fixed five classes",
+      "per-class support/recall",
+      "any-damage Brier",
+      "calibration"
+    ],
+    "uncertainty": "2000 paired site bootstrap draws within test cities, seed 20231005; report city fold spread; conditional uncertainty, not independent-earthquake evidence"
+  },
+  "future_fit_protocol": {
+    "learner": "same regularized multinomial logistic readout in all arms; fixed five-class probability output; absent training classes receive zero probability and are reported",
+    "C_grid": [
+      0.001,
+      0.01,
+      0.1,
+      1,
+      10
+    ],
+    "selection": "minimum validation RPS, ties smaller C; no test-city selection",
+    "transforms": "train-only standard scaling; fixed structural-family vocabulary with unseen values OTHER; no PCA, no feature selection, no encoder adaptation",
+    "calibration": "none in primary; do not fit on held-out cities",
+    "site_weights": "inverse exact-coordinate multiplicity for training, validation and scoring",
+    "structural_vocabulary": [
+      "RC_MRF",
+      "RC_WALL",
+      "RC_DUAL",
+      "REINFORCED_MASONRY",
+      "UNREINFORCED_MASONRY",
+      "OTHER"
+    ]
+  },
+  "encoder": {
+    "name": "SatMAE multispectral ViT-Large",
+    "source_revision": "117135b3354fa70a81df453be7f34e3da8b36032",
+    "weights": "https://zenodo.org/records/7325339/files/pretrain-vit-large-e199.pth",
+    "md5": "436bcd815194afdae38f3e023c74e9cd",
+    "bytes": 3949597273,
+    "published": "2022-11-17",
+    "dimensions": 1024,
+    "pooling": "mean of 432 final-normalized non-CLS tokens, identity no-mask path",
+    "input_shape": [
+      10,
+      96,
+      96
+    ],
+    "pixel_metres": 10,
+    "status": "design frozen; weights/inference not yet executed",
+    "code_license": "CC BY-NC 4.0",
+    "weight_license": "CC BY 4.0",
+    "bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B8A",
+      "B11",
+      "B12"
+    ],
+    "channel_groups": [
+      [
+        0,
+        1,
+        2,
+        6
+      ],
+      [
+        3,
+        4,
+        5,
+        7
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "patch_size": 8,
+    "normalization": "DN=10000*reflectance; uint8(clip(255*(DN-(mean-2*std))/(4*std),0,255))/255",
+    "mean": [
+      1184.3824625,
+      1120.77120066,
+      1136.26026392,
+      1263.73947144,
+      1645.40315151,
+      1846.87040806,
+      1762.59530783,
+      1972.62420416,
+      1732.16362238,
+      1247.91870117
+    ],
+    "std": [
+      650.2842772,
+      712.12507725,
+      965.23119807,
+      948.9819932,
+      1108.06650639,
+      1258.36394548,
+      1233.1492281,
+      1364.38688993,
+      1310.36996126,
+      1087.6020813
+    ]
+  },
+  "2A_preflight": [
+    "Review frozen protocol and exclusions",
+    "Verify weight checksum and strict encoder-key coverage",
+    "Implement/test deterministic identity no-mask inference",
+    "Verify no cross-fold context overlap",
+    "Explicitly authorize 2A fitting; no fits in 1F"
+  ],
+  "engineered_input_QA_decision": "Direct band moments fixed before fitting: pixelwise normalized differences had undefined denominators in 192/499 source-coordinate chips; no ratios filled or silently omitted."
+}

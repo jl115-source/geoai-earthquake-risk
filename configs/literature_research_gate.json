@@ -1,5 +1,5 @@
 {
-  "version": "literature-gate-2026-10-05-v2",
+  "version": "literature-gate-2026-10-05-1f",
   "review_date": "2026-10-05",
   "project_mode": "GeoAI_x_Catastrophe_Risk",
   "model_fitting_allowed": false,
@@ -31,7 +31,7 @@
   },
   "required_gates": {
     "independent_target": {
-      "status": "blocked_pending_target_path_freeze",
+      "status": "frozen_independent_559_survey_with_explicit_eligibility",
       "requirements": [
         "Preferred: obtain and audit authorized CSB ground-survey access",
         "Fallback: explicitly freeze small-N engineering target protocol using independent survey labels",
@@ -39,14 +39,14 @@
       ]
     },
     "feature_chronology": {
-      "status": "blocked",
+      "status": "frozen_retrospective_structural_design_proxy_with_pre_event_EO_not_strict_operational_pre_event_X",
       "requirements": [
         "Classify every proposed X and Z feature as verified pre-event, hazard, post-event, target-derived or unknown",
         "Exclude post-event and target-derived variables from primary vulnerability models"
       ]
     },
     "physical_hazard": {
-      "status": "blocked_for_spatial_and_rc_hx",
+      "status": "frozen_for_559_fallback_pinned_resampled_mainshock_XML_other_datasets_unchanged",
       "requirements": [
         "Freeze event/shock/product/version and physical units",
         "Freeze sampling/interpolation/nodata treatment",
@@ -54,14 +54,14 @@
       ]
     },
     "estimand": {
-      "status": "blocked_pending_target_path",
+      "status": "frozen_surveyed_cohort_city_transfer_not_population_or_event_transfer",
       "requirements": [
         "Freeze primary supervised target and held-out geographic/event claim",
         "Do not claim cross-earthquake transfer of learned spatial representation from one Turkiye/Syria sequence"
       ]
     },
     "feature_allowlists": {
-      "status": "blocked",
+      "status": "frozen_configs_geoai_experiment_1f",
       "requirements": [
         "Version dataset-specific allowed pre-event predictors",
         "Version prohibited leakage variables before viewing results"
@@ -70,9 +70,10 @@
   },
   "catastrophe_track_policy": {
     "roadmap_design_allowed": true,
-    "first_principles_reference_implementation_allowed_after_global_model_gate": "yes",
     "use_openquake_as_black_box": false,
-    "integration_rule": "same hazard, exposure, event set and consequence mapping for conventional-vs-GeoAI risk comparison"
+    "integration_rule": "same hazard, exposure, event set and consequence mapping for conventional-vs-GeoAI risk comparison",
+    "synthetic_first_principles_B0_allowed_now": true,
+    "learned_vulnerability_fitting_allowed": false
   },
-  "resume_condition": "A reviewed configuration must freeze the independent target path, predictor chronology, hazard definition, estimand and feature allowlists before fitting."
+  "resume_condition": "1F design frozen in configs/geoai_experiment_1f.json. Before 2A: reviewed protocol, deterministic checked frozen encoder extraction, audited context separation, explicit model-fitting authorization. This milestone fits nothing."
 }

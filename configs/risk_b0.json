@@ -1,0 +1,101 @@
+{
+  "input_status": "synthetic_illustrative_not_calibrated",
+  "value_unit": "synthetic replacement-value units; not a real currency",
+  "seed": 17023,
+  "years": 100000,
+  "damage_dependence": "independent",
+  "return_periods_years": [
+    2,
+    5,
+    10,
+    20,
+    50,
+    100,
+    250
+  ],
+  "taxonomies": {
+    "synthetic_weak": {
+      "pga_medians_g": [
+        0.08,
+        0.18,
+        0.4,
+        0.8
+      ],
+      "beta": 0.45,
+      "mdr_means": [
+        0,
+        0.03,
+        0.15,
+        0.5,
+        0.95
+      ],
+      "mdr_concentration": 20
+    },
+    "synthetic_strong": {
+      "pga_medians_g": [
+        0.15,
+        0.35,
+        0.7,
+        1.2
+      ],
+      "beta": 0.45,
+      "mdr_means": [
+        0,
+        0.02,
+        0.12,
+        0.45,
+        0.9
+      ],
+      "mdr_concentration": 25
+    }
+  },
+  "assets": [
+    {
+      "id": "toy_a",
+      "taxonomy": "synthetic_weak",
+      "geography": "toy_north",
+      "value": 100000
+    },
+    {
+      "id": "toy_b",
+      "taxonomy": "synthetic_strong",
+      "geography": "toy_north",
+      "value": 200000
+    },
+    {
+      "id": "toy_c",
+      "taxonomy": "synthetic_weak",
+      "geography": "toy_south",
+      "value": 150000
+    }
+  ],
+  "events": [
+    {
+      "id": "toy_frequent",
+      "annual_rate": 0.2,
+      "pga_g": [
+        0.1,
+        0.08,
+        0.05
+      ]
+    },
+    {
+      "id": "toy_moderate",
+      "annual_rate": 0.05,
+      "pga_g": [
+        0.3,
+        0.25,
+        0.2
+      ]
+    },
+    {
+      "id": "toy_rare",
+      "annual_rate": 0.01,
+      "pga_g": [
+        0.8,
+        0.6,
+        0.9
+      ]
+    }
+  ]
+}
