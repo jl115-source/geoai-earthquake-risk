@@ -1,5 +1,14 @@
 # Project Charter — GeoAI × Catastrophe Risk
 
+> **Direction update (2026-10-05):** The central research problem is now
+> **transferable earthquake vulnerability under heterogeneous/incomplete exposure
+> information**. Hazard (H) and a common pre-event GeoAI representation (Z)
+> form the cross-region backbone; building/exposure attributes (X) may be rich,
+> coarse or absent. The project asks how much predictive and catastrophe-risk
+> information GeoAI can recover when detailed (X) is unavailable in an unseen
+> geography. See
+> [the locked direction](project_direction_incomplete_exposure.md).
+
 ## Purpose
 
 This project is intentionally a **GeoAI × Catastrophe Risk** project.
