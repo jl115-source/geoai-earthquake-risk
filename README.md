@@ -218,3 +218,40 @@ agreement has been submitted on the user's behalf.
 - **M2 — Geospatial augmentation:** add site/geology/topography/fault-distance and surrounding morphology; compare H → H+X → H+X+Z_spatial.
 - **M3 — Transfer/generalization:** harmonize Nepal and RC616; train on some regions/events and test on unseen events/countries.
 - **Later — Cat-loss:** map probabilistic damage to MDR/loss distributions and calculate event loss, AAL and EP curves.
+
+
+## Milestone 1D: harmonization and experiment design
+
+The acquisition/ingestion/audit PR stack is consolidated into `main`. Collection
+is paused. See the [harmonization and experiment protocol](docs/harmonization_experiment_design.md)
+for the cross-dataset schema, damage compatibility, intensity/coordinate readiness,
+common features, exact held-out domains, leakage controls and modelling gates.
+No model fitting or new downloads occur in this milestone.
+
+With the already acquired 1C inputs and Python 3.11+:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-audit.txt
+python -m src.data.turkiye
+python -m src.data.harmonize
+python -m src.data.design_experiments
+python -m pytest -q
+```
+
+All **793,648 records** survive in five separate canonical Parquet tables under
+ignored `data/processed/harmonized/`. The common schema preserves native damage
+and source pointers; it does not create an approved pooled target. ACI intensity
+blocks remain unresolved and Nepal receives no invented coordinates or shaking.
+
+The 36 design folds and ACI external reservation are written under ignored
+`data/processed/experiment_design/`, with exact record membership, exclusion
+reasons, site weights, grouping keys and aggregate class supports. Empty or
+underpowered folds are flagged. RC's six-event X-only design is distinct from
+the blocked hazard-based subset. Spatial city transfer is blocked until label
+semantics, independence and physical feature provenance are verified; one spatial
+sequence cannot establish cross-earthquake spatial transfer.
+
+For an offline check using only versioned survey data, append
+`--datasets turkiye_survey` to both new module commands. This is also the CI path.

@@ -1,0 +1,360 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Building/event research record 1D",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dataset_id",
+    "record_id",
+    "event_id",
+    "event_scope",
+    "country",
+    "source_path",
+    "source_sha256",
+    "source_row_unit",
+    "source_id_native",
+    "identity_status",
+    "damage_native",
+    "damage_scale",
+    "damage_mapping_status",
+    "label_provenance",
+    "coordinate_status",
+    "coordinate_method",
+    "city",
+    "admin1",
+    "admin2",
+    "admin3",
+    "floors_native",
+    "floors_time_status",
+    "structure_native",
+    "structure_family",
+    "im_status",
+    "im_source",
+    "im_transform",
+    "im_event_id",
+    "license",
+    "latitude",
+    "longitude",
+    "floors",
+    "PGA",
+    "PGV",
+    "SA_0p3",
+    "SA_1p0",
+    "source_row",
+    "damage_ordinal_native",
+    "high_damage_candidate",
+    "author_supplemented"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1d-v1",
+      "pandas_dtype": "string"
+    },
+    "dataset_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "record_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string",
+      "description": "Unique source-record key, not evidence of a unique physical building. Stable only for identical hashed input and row ordering."
+    },
+    "event_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "event_scope": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "source_path": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string",
+      "description": "Repository-relative local authoritative source containing all additional native fields; these fields are not dropped or copied to Git."
+    },
+    "source_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_row_unit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "source_id_native": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string",
+      "description": "Preserved source key. Nepal rounded IDs cannot be used for joins, splits or deduplication."
+    },
+    "identity_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "damage_native": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "damage_scale": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "damage_mapping_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "label_provenance": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "coordinate_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string",
+      "description": "Range validation only; it does not establish positional accuracy or building identity."
+    },
+    "coordinate_method": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "admin1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "admin2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "admin3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "floors_native": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "floors_time_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "structure_native": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "structure_family": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string",
+      "description": "Only explicit survey RC prefix or cohort description; Nepal multilabel flags are not collapsed into a single taxonomy."
+    },
+    "im_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "license": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string"
+    },
+    "latitude": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "pandas_dtype": "Float64",
+      "unit": "degrees_north_WGS84"
+    },
+    "longitude": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "pandas_dtype": "Float64",
+      "unit": "degrees_east_WGS84"
+    },
+    "floors": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "pandas_dtype": "Float64",
+      "description": "Parsed source floor count; time basis unverified, never assumed pre-event. Not automatically feature-approved."
+    },
+    "PGA": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "pandas_dtype": "Float64",
+      "unit": "g"
+    },
+    "PGV": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "pandas_dtype": "Float64",
+      "unit": "cm/s"
+    },
+    "SA_0p3": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "pandas_dtype": "Float64",
+      "unit": "g"
+    },
+    "SA_1p0": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "pandas_dtype": "Float64",
+      "unit": "g"
+    },
+    "source_row": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "pandas_dtype": "Int64",
+      "description": "Position within source_path, interpreted using source_row_unit. Derived Parquet source_id_native links back to original preserved source row."
+    },
+    "damage_ordinal_native": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "pandas_dtype": "Int8",
+      "description": "Dataset-specific ordinal only. Nepal 1..5; engineering 0..4; This_study null until codebook verified. Equal integers do not mean equal damage."
+    },
+    "high_damage_candidate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "pandas_dtype": "Int8",
+      "enum": [
+        0,
+        1,
+        null
+      ],
+      "description": "Provisional broad severe-or-collapse grouping within engineering sources; prohibited as a pooled target pending rubric adjudication."
+    },
+    "author_supplemented": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "pandas_dtype": "boolean"
+    },
+    "im_source": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string",
+      "description": "Native intensity provenance; im_event_id stays null when a unique shock/product identity is not verified. See im_status and source catalog."
+    },
+    "im_transform": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string",
+      "description": "Native intensity provenance; im_event_id stays null when a unique shock/product identity is not verified. See im_status and source catalog."
+    },
+    "im_event_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pandas_dtype": "string",
+      "description": "Native intensity provenance; im_event_id stays null when a unique shock/product identity is not verified. See im_status and source catalog."
+    }
+  },
+  "x-constraint": "Native scales and mapping status must accompany damage. Dataset row-level tables remain partitioned by source; there is no approved pooled label."
+}
