@@ -1,0 +1,7 @@
+# Reproducible Milestone 1A environment (Python 3.11+).
+numpy==2.2.6
+pandas==2.2.3
+openpyxl==3.1.5
+pyarrow==19.0.1
+matplotlib==3.10.1
+pytest==8.3.5

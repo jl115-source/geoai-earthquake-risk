@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: data-core data-docs data-geoai data-all data-check
+.PHONY: data-core data-docs data-geoai data-all data-check turkiye-ingest turkiye-eda test
 
 data-docs:
 	$(PYTHON) scripts/download_external_data.py nepal-docs
@@ -22,3 +22,12 @@ data-check:
 	$(PYTHON) scripts/check_data.py
 	$(PYTHON) scripts/inspect_turkiye.py
 	$(PYTHON) scripts/inspect_external_data.py
+
+turkiye-ingest:
+	$(PYTHON) -m src.data.turkiye
+
+turkiye-eda: turkiye-ingest
+	$(PYTHON) -m src.data.turkiye_eda
+
+test:
+	$(PYTHON) -m pytest -q

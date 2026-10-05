@@ -16,6 +16,12 @@ datasets:
         storage: local_raw_only
         expected_size_bytes: 14980986
     target: ordinal building damage state 0-4
+    n_survey_records: 559
+    n_with_damage_and_structure: 527
+    n_unique_coordinate_pairs: 499
+    ingestion: python -m src.data.turkiye
+    eda: python -m src.data.turkiye_eda
+    schema_documentation: docs/turkiye_2023_columns.md
     spatial_resolution: building coordinates
     status: ready_via_make_data_core
 

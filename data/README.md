@@ -14,7 +14,7 @@ See `reference/THIRD_PARTY_LICENSES.md` for licensing details and
 Versioned reference data:
 
 - `reference/turkiye_2023/Jaiswal_2023TurkiyeEQ_us6000jllz_field_str_damage_data.xlsx`
-  - 527-building engineering survey;
+  - 559-record engineering survey (527 with damage and structure type);
   - building coordinates, city, structure type and observed damage state;
   - ShakeMap-derived PGA/PGV/SA fields;
   - source repository: `maxandersonloake/TUR2023_02_06`;
