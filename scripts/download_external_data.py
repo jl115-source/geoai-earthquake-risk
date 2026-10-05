@@ -67,6 +67,13 @@ SOURCES = {
         "extract_to": RAW / "turkiye_2023_context" / "extracted",
         "md5": "f3a3a9982cf63bd954616a898c7416b9",
     },
+    "nepal-shakemap": {
+        "url": (
+            "https://earthquake.usgs.gov/product/shakemap/"
+            "us20002926/atlas/1594162031303/download/grid.xml"
+        ),
+        "path": RAW / "nepal_2015" / "usgs_shakemap_grid.xml",
+    },
     "nepal-metadata": {
         "url": (
             "https://microdata.nsonepal.gov.np/index.php/"
