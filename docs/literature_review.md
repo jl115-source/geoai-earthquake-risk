@@ -699,3 +699,52 @@ papers that overlap our actual datasets.
 Before a manuscript, perform a formal citation-forward/backward search around
 the core papers, verify bibliographic metadata, and update this review with any
 new publications appearing after 2026-10-05.
+
+
+## Gate update — Visual_interpretation resolved
+
+The follow-up provenance investigation closes the immediate
+`Visual_interpretation` question.
+
+The acquired files do **not** provide a common building-level damage state:
+
+- Antakya: 17,148 polygons with only a `Join_Count` attribute. The count is a
+  spatial-join artifact, not a documented severity scale.
+- Jindires: 2,764 polygons with only footprint source/id/height/variation/region.
+- Nurdagi: 778 polygons with the same footprint metadata and no damage field.
+
+The associated Liu research line validates SAR *damaged-building detection*
+against manually/visually interpreted damaged-building references. That is
+useful independent validation of a post-event detection method, but it does not
+establish a complete ordinal vulnerability census or prove that an unmarked
+footprint is an explicitly assessed undamaged building.
+
+Therefore:
+
+- `This_study` remains a pseudo/method-output product;
+- `Visual_interpretation` is rejected as the primary
+  (p(D\mid H,X,Z)) vulnerability target;
+- both remain useful auxiliary spatial products.
+
+A better large-scale target exists in principle. Ainscoe et al. (2025) used a
+Turkish Ministry (CSB) ground survey containing 911,181 building inspection
+points with explicit grades. Their analysis linked the observations to building
+footprints and retained 327k footprint-linked cases after quality control.
+However, they state that the ground dataset cannot be redistributed and access
+is through the Ministry. This is the preferred target-access path, not a dataset
+currently held by this project.
+
+If authorized access is unavailable, the guaranteed clean path is to use the
+existing independent engineering survey as the GeoAI target and demonstrate
+modern GeoAI with frozen/pretrained pre-event spatial representations under the
+existing city-holdout protocol. ACI133 remains external validation after overlap
+adjudication.
+
+See:
+
+- [project charter](project_charter_geoai_cat_risk.md)
+- [spatial target gate](spatial_target_gate.md)
+- [two-track roadmap](roadmap_geoai_cat_risk.md)
+
+The overall project purpose remains **GeoAI × Catastrophe Risk**. Publication
+novelty is a design aid, not a reason to remove the catastrophe-loss track.
