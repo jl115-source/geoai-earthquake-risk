@@ -1,0 +1,22 @@
+name: Türkiye ingestion and validation
+on: [push, pull_request]
+jobs:
+  turkiye:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-turkiye.txt
+      - run: python -m pip install -r requirements-turkiye.txt
+      - run: python -m src.data.turkiye
+      - run: python -m src.data.turkiye_eda
+      - run: python -m pytest -q
+      - uses: actions/upload-artifact@v4
+        with:
+          name: turkiye-2023-ingestion-eda
+          path: |
+            data/processed/turkiye_2023/
+            results/turkiye_2023/
