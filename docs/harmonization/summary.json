@@ -1,0 +1,249 @@
+{
+  "schema_version": "1d-v1",
+  "datasets": {
+    "turkiye_survey": {
+      "records": 559,
+      "events": {
+        "turkiye_syria_2023_sequence": 559
+      },
+      "cities": {
+        "Antakya": 46,
+        "Hassa": 37,
+        "Iskendurun": 68,
+        "Islahiye": 91,
+        "Kahramanmaras": 110,
+        "Kirikhan": 46,
+        "Narli": 37,
+        "Nurdagi": 3,
+        "Pazarcik": 77,
+        "Turkoglu": 44
+      },
+      "native_labels": {
+        "<missing>": 18,
+        "Complete collapse": 3,
+        "Minor (few cracks)": 147,
+        "Moderate (extensive cracks in walls)": 168,
+        "None": 111,
+        "Partial collapse (portion collapsed)": 9,
+        "Severe (structural damage to system)": 102,
+        "moderate damage but repaired": 1
+      },
+      "native_ordinal": {
+        "0": 111,
+        "1": 147,
+        "2": 169,
+        "3": 111,
+        "4": 3,
+        "<missing>": 18
+      },
+      "unmapped_present_labels": {},
+      "coordinate_status": {
+        "valid_range_only": 559
+      },
+      "floors_present": 551,
+      "floors_nonpositive": 0,
+      "floors_fractional_reported": 0,
+      "physical_IM_counts": {
+        "PGA": 559,
+        "PGV": 559,
+        "SA_0p3": 559,
+        "SA_1p0": 559
+      },
+      "source_hashes": [
+        "1f937341caad8a4560fb875244987405425d708079e8b4057959ea2032252142"
+      ],
+      "source_row_retention": "all adapter input rows retained; no imputation or pooling",
+      "parquet_sha256": "f7c2916475d9e78de7a0a8286c03e2200f706e0d91e30070d0f331f1baffe2bd",
+      "point_sampling_coordinate_candidates": 559
+    },
+    "rc619": {
+      "records": 619,
+      "events": {
+        "bingol_2003": 57,
+        "duzce_1999": 210,
+        "erzincan_1992": 49,
+        "haiti_2010": 160,
+        "pisco_2007": 27,
+        "wenchuan_2008": 116
+      },
+      "cities": {
+        "<missing>": 619
+      },
+      "native_labels": {
+        "C": 7,
+        "L": 180,
+        "Light": 62,
+        "M": 96,
+        "Moderate": 26,
+        "N": 64,
+        "None": 3,
+        "R": 1,
+        "S": 155,
+        "Severe": 25
+      },
+      "native_ordinal": {
+        "0": 67,
+        "1": 242,
+        "2": 122,
+        "3": 180,
+        "4": 7,
+        "<missing>": 1
+      },
+      "unmapped_present_labels": {
+        "R": 1
+      },
+      "coordinate_status": {
+        "missing": 266,
+        "valid_range_only": 353
+      },
+      "floors_present": 619,
+      "floors_nonpositive": 0,
+      "floors_fractional_reported": 7,
+      "physical_IM_counts": {
+        "PGA": 0,
+        "PGV": 0,
+        "SA_0p3": 0,
+        "SA_1p0": 0
+      },
+      "source_hashes": [
+        "bf3613b27de5d4bb744d1d06bf3e34d45edcfd32b10429db5efd02fe91ade824"
+      ],
+      "source_row_retention": "all adapter input rows retained; no imputation or pooling",
+      "parquet_sha256": "eb46d104ac7e9529d58a9dc2daaa50ea4b7676a51ec5f431df56766de63ecf3c",
+      "point_sampling_coordinate_candidates": 353
+    },
+    "aci133": {
+      "records": 242,
+      "events": {
+        "turkiye_syria_2023_sequence": 242
+      },
+      "cities": {
+        "<missing>": 242
+      },
+      "native_labels": {
+        "C": 6,
+        "L": 42,
+        "M": 24,
+        "N": 19,
+        "S": 151
+      },
+      "native_ordinal": {
+        "0": 19,
+        "1": 42,
+        "2": 24,
+        "3": 151,
+        "4": 6
+      },
+      "unmapped_present_labels": {},
+      "coordinate_status": {
+        "valid_range_only": 242
+      },
+      "floors_present": 242,
+      "floors_nonpositive": 0,
+      "floors_fractional_reported": 49,
+      "physical_IM_counts": {
+        "PGA": 0,
+        "PGV": 0,
+        "SA_0p3": 0,
+        "SA_1p0": 0
+      },
+      "source_hashes": [
+        "ea3dab919becdaf719227035dd7a32c38c3d75798af552e9be069879390072ad"
+      ],
+      "source_row_retention": "all adapter input rows retained; no imputation or pooling",
+      "parquet_sha256": "397fe5d625a07ef5da9bc900b1c9e252151404adb9fe0fcfa3199c0acc9f0367",
+      "point_sampling_coordinate_candidates": 242
+    },
+    "nepal_geid": {
+      "records": 762106,
+      "events": {
+        "gorkha_2015_sequence": 762106
+      },
+      "cities": {
+        "<missing>": 762106
+      },
+      "native_labels": {
+        "<missing>": 12,
+        "Grade 1": 78815,
+        "Grade 2": 87257,
+        "Grade 3": 136412,
+        "Grade 4": 183844,
+        "Grade 5": 275766
+      },
+      "native_ordinal": {
+        "1": 78815,
+        "2": 87257,
+        "3": 136412,
+        "4": 183844,
+        "5": 275766,
+        "<missing>": 12
+      },
+      "unmapped_present_labels": {},
+      "coordinate_status": {
+        "missing": 762106
+      },
+      "floors_present": 762106,
+      "floors_nonpositive": 0,
+      "floors_fractional_reported": 0,
+      "physical_IM_counts": {
+        "PGA": 0,
+        "PGV": 0,
+        "SA_0p3": 0,
+        "SA_1p0": 0
+      },
+      "source_hashes": [
+        "695762d973e9bdbf93178542333b3a0bef4328c9be036577cfd7fdcf65546d66"
+      ],
+      "source_row_retention": "all adapter input rows retained; no imputation or pooling",
+      "parquet_sha256": "083dc9a92b701844186d5e856af3c49f34ef96c05b3e3354be95238ff3f13ce8",
+      "point_sampling_coordinate_candidates": 0
+    },
+    "spatial_this_study": {
+      "records": 30122,
+      "events": {
+        "turkiye_syria_2023_sequence": 30122
+      },
+      "cities": {
+        "Antakya": 23167,
+        "Jindires": 6081,
+        "Nurdagi": 874
+      },
+      "native_labels": {
+        "1": 6646,
+        "2": 3682,
+        "3": 14884,
+        "4": 4910
+      },
+      "native_ordinal": {
+        "<missing>": 30122
+      },
+      "unmapped_present_labels": {
+        "1": 6646,
+        "2": 3682,
+        "3": 14884,
+        "4": 4910
+      },
+      "coordinate_status": {
+        "valid_range_only": 30122
+      },
+      "floors_present": 0,
+      "floors_nonpositive": 0,
+      "floors_fractional_reported": 0,
+      "physical_IM_counts": {
+        "PGA": 0,
+        "PGV": 0,
+        "SA_0p3": 0,
+        "SA_1p0": 0
+      },
+      "source_hashes": [
+        "6574c3fd8f9a9577fafa85943e92ade6d0d58a9ae8d08cb611a05ec2155e02db",
+        "c4e14826d24c696889837709db472129124c1bbba9996f3a9b81447058f12708",
+        "d62f49bdc2e90318081e9bdd45d0e16a3c3a25eed94a2c74192b7e5b4abada69"
+      ],
+      "source_row_retention": "all adapter input rows retained; no imputation or pooling",
+      "parquet_sha256": "8f1a4895a0c108a0e4e4ab8462e63b7792de7d604d671188f32d35ec80b77435",
+      "point_sampling_coordinate_candidates": 30122
+    }
+  },
+  "pooling_enabled": false
+}

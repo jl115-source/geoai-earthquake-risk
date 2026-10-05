@@ -1,0 +1,585 @@
+{
+  "aci133": [
+    {
+      "column": "c050",
+      "native_header": "M7.8_PGA",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c051",
+      "native_header": "M7.8_PGV",
+      "source_block": "kriging",
+      "declared_units": "(cm/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c052",
+      "native_header": "M7.8_PSA0.3",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c053",
+      "native_header": "M7.8_PSA0.6",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c054",
+      "native_header": "M7.8_PSA1.0",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c055",
+      "native_header": "M7.8_AI",
+      "source_block": "kriging",
+      "declared_units": "(m/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c056",
+      "native_header": "M7.8_CAV",
+      "source_block": "kriging",
+      "declared_units": "(m/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c057",
+      "native_header": "M6.7_PGA",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c058",
+      "native_header": "M6.7_PGV",
+      "source_block": "kriging",
+      "declared_units": "(cm/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c059",
+      "native_header": "M6.7_PSA0.3",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c060",
+      "native_header": "M6.7_PSA0.6",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c061",
+      "native_header": "M6.7_PSA1.0",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c062",
+      "native_header": "M6.7_AI",
+      "source_block": "kriging",
+      "declared_units": "(m/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c063",
+      "native_header": "M6.7_CAV",
+      "source_block": "kriging",
+      "declared_units": "(m/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c064",
+      "native_header": "M7.5_PGA",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c065",
+      "native_header": "M7.5_PGV",
+      "source_block": "kriging",
+      "declared_units": "(cm/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c066",
+      "native_header": "M7.7_PSA0.3",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c067",
+      "native_header": "M7.7_PSA0.6",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c068",
+      "native_header": "M7.7_PSA1.0",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c069",
+      "native_header": "M7.7_AI",
+      "source_block": "kriging",
+      "declared_units": "(m/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c070",
+      "native_header": "M7.7_CAV",
+      "source_block": "kriging",
+      "declared_units": "(m/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c071",
+      "native_header": "M6.3_PGA",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c072",
+      "native_header": "M6.3_PGV",
+      "source_block": "kriging",
+      "declared_units": "(cm/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c073",
+      "native_header": "M6.3_PSA0.3",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c074",
+      "native_header": "M6.3_PSA0.6",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c075",
+      "native_header": "M6.3_PSA1.0",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c076",
+      "native_header": "M6.3_AI",
+      "source_block": "kriging",
+      "declared_units": "(m/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c077",
+      "native_header": "M6.3_CAV",
+      "source_block": "kriging",
+      "declared_units": "(m/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c078",
+      "native_header": "M7.8_SaT1",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c079",
+      "native_header": "M6.8_SaT1",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c080",
+      "native_header": "M7.5_SaT1",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c081",
+      "native_header": "M6.4_SaT1",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c082",
+      "native_header": "PGA_max",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c083",
+      "native_header": "PGV_max",
+      "source_block": "kriging",
+      "declared_units": "(cm/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c084",
+      "native_header": "SaT1_max",
+      "source_block": "kriging",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c085",
+      "native_header": "AI_max",
+      "source_block": "kriging",
+      "declared_units": "(m/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c086",
+      "native_header": "CAV_max",
+      "source_block": "kriging",
+      "declared_units": "(m/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c087",
+      "native_header": "M7.8_PGA",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c088",
+      "native_header": "M7.8_PGV",
+      "source_block": "USGS",
+      "declared_units": "(cm/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c089",
+      "native_header": "M7.8_SA0.3",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c090",
+      "native_header": "M7.8_SA1.0",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c091",
+      "native_header": "M7.8_SA3.0",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c092",
+      "native_header": "M6.7_PGA",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c093",
+      "native_header": "M6.7_PGV",
+      "source_block": "USGS",
+      "declared_units": "(cm/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c094",
+      "native_header": "M6.7_SA0.3",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c095",
+      "native_header": "M6.7_SA1.0",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c096",
+      "native_header": "M6.7_SA3.0",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c097",
+      "native_header": "M7.8_PGA",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c098",
+      "native_header": "M7.8_PGV",
+      "source_block": "USGS",
+      "declared_units": "(cm/s)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c099",
+      "native_header": "M7.8_SA0.3",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c100",
+      "native_header": "M7.8_SA1.0",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c101",
+      "native_header": "M7.8_SA3.0",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 242,
+      "literal_NaN_records": 0,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c102",
+      "native_header": "M6.3_PGA",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 136,
+      "literal_NaN_records": 106,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c103",
+      "native_header": "M6.3_PGV",
+      "source_block": "USGS",
+      "declared_units": "(cm/s)",
+      "finite_numeric_records": 136,
+      "literal_NaN_records": 106,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c104",
+      "native_header": "M6.3_SA0.3",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 136,
+      "literal_NaN_records": 106,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c105",
+      "native_header": "M6.3_SA1.0",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 136,
+      "literal_NaN_records": 106,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    },
+    {
+      "column": "c106",
+      "native_header": "M6.3_SA3.0",
+      "source_block": "USGS",
+      "declared_units": "(g)",
+      "finite_numeric_records": 136,
+      "literal_NaN_records": 106,
+      "blank_records": 0,
+      "event_assignment": "unresolved_not_selected_for_canonical_IM"
+    }
+  ],
+  "aci133_source_sha256": "ea3dab919becdaf719227035dd7a32c38c3d75798af552e9be069879390072ad",
+  "turkiye_survey": {
+    "transform": "exp(source natural-log means)",
+    "PGA_SA_units": "g",
+    "PGV_units": "cm/s",
+    "statistic": "geometric mean/median, not arithmetic mean",
+    "event_assignment": "sequence target; exact shock/product identity not verified in canonical contract"
+  },
+  "nepal_geid": "No IMs and no point coordinates; no administrative centroid assignment",
+  "rc619": "No native IMs; 353 coordinate candidates; actual grid coverage/nodata/product checks still required",
+  "spatial_this_study": "Encoded PGV raster lacks a verified conversion to physical units; native labels may depend on this product"
+}
