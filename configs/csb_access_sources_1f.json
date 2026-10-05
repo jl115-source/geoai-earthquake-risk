@@ -1,0 +1,23 @@
+{
+  "checked_on": "2026-10-05",
+  "status": "plausible_authorized_route_unconfirmed",
+  "microdata_acquired": false,
+  "outreach_submitted": false,
+  "fallback_blocked_by_csb": false,
+  "timebox": {"business_days_from_actual_submission": 10, "maximum_initial_enquiries_per_recipient": 1, "maximum_followups_per_recipient": 1, "on_no_concrete_access_path": "deferred_external_access", "scheduled": false},
+  "sources": [
+    {"id": "ainscoe_2025", "url": "https://www.nature.com/articles/s43247-025-02623-4", "evidence_sections": ["Ground observations", "Data availability", "Corresponding author"], "supports": "Ministry access authority; author redistribution restriction; snapshot quality caveats", "retrieval": "public HTML read successfully"},
+    {"id": "csb_contact", "url": "https://csb.gov.tr/en/contact-us", "supports": "Access route linked by the paper", "retrieval": "direct web fetch timed out; route evidenced by paper only"},
+    {"id": "ministry_directory", "url": "https://turkiye.gov.tr/cevre-ve-sehircilik-bakanligi", "supports": "Official CIMER information-request channel, Ministry switchboard and authenticated service listing", "retrieval": "public HTML read successfully"},
+    {"id": "department_chart", "url": "https://yapiisleri.csb.gov.tr/teskilat-semasi", "supports": "Disaster Damage Assessment Department within Directorate of Construction Affairs", "retrieval": "indexed official content; direct fetch timed out"},
+    {"id": "request_routing", "url": "https://yapiisleri.csb.gov.tr/yonetim-hizmetleri-i-88557", "supports": "Directorate administrative unit routes CIMER and Ministry information requests", "retrieval": "indexed official content"}
+  ],
+  "published_contact_routes": {
+    "ministry_kep": "cevrevesehircilikbakanligi@hs01.kep.tr",
+    "ministry_switchboard": "+90 312 410 10 00",
+    "corresponding_author_routing_advice_only": "eleanorann.ainscoe@ntu.edu.sg",
+    "delivery_tested": false
+  },
+  "unresolved": ["applicant eligibility", "institutional agreement", "specific use and derivative-release rights", "international processing", "fees", "delivery timing", "available snapshots and fields", "data retention", "publication conditions"],
+  "inference": "Prior academic supply and named official routes justify a bounded enquiry, not a prediction of approval."
+}

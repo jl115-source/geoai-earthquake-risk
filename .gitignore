@@ -18,3 +18,8 @@ results/*
 
 # OS
 .DS_Store
+
+# Also ignore a worktree virtual-environment symlink
+.venv
+
+.venv-eo/

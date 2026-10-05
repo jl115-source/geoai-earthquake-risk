@@ -1,3 +1,16 @@
+> **Direction update (2026-10-05):** The next headline Track-A problem is no
+> longer fitting the frozen 498-record Türkiye cohort as the primary model.
+> Türkiye 1F remains a pilot/validation asset. The next milestone is a large-data
+> audit against the [incomplete-exposure contract](project_direction_incomplete_exposure.md):
+> find earthquake datasets with a common/harmonizable hazard block (H), a
+> common pre-event GeoAI input (Z), independent damage labels, geographic
+> holdouts and deliberately heterogeneous (X). Track A then studies
+> (p(D\mid H,Z,X_{available})), including controlled modality dropout and
+> exposure-information recovery. Track B remains unchanged and later measures
+> whether that recovery improves AAL/OEP/AEP and tail-risk estimates.
+>
+> **1F implementation update (2026-10-05):** [The fallback target and input design are frozen](geoai_experiment_1f.md), with actual per-location pixel coverage and explicit cohort exclusions. B0 synthetic mechanics are implemented under the user-authorized separate track. Learned vulnerability fitting remains disabled; 2A follows protocol review and deterministic encoder preflight. Earlier future-tense roadmap sections below describe planned extensions, not completed results.
+
 # Roadmap — GeoAI × Catastrophe Risk
 
 This roadmap supersedes the earlier essentially linear

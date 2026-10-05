@@ -1,10 +1,37 @@
 # GeoAI Earthquake Risk
 
-Research-quality project on **transferable earthquake vulnerability and portfolio loss modelling**.
+Research-quality project on **GeoAI for transferable earthquake vulnerability and catastrophe risk under incomplete exposure information**.
+
+## Current milestone: 1F design frozen; B0 synthetic mechanics
+
+**New locked direction:** the headline Track-A problem is now incomplete/heterogeneous exposure information across geographies. Common hazard `H` + transferable pre-event GeoAI representation `Z` form the backbone; `X` may be rich, coarse or absent. The 498-record Türkiye cohort remains a pilot/validation asset rather than the sole headline training corpus. See [the project direction](docs/project_direction_incomplete_exposure.md). No learned vulnerability model is authorized yet.
+
+PRs #4 and #5 are consolidated on `main`. The next modelling milestone is **2A**, after the [two-event amendment and encoder preflight](docs/protocol_amendment_1f.md) and protocol review. **No damage models are fitted in 1F.** Primary H now contains separate M7.8 and M7.5 log-PGA; D≥3 diagnostics and a training-only PCA64 sensitivity are prespecified. The actual SatMAE ten-city preflight passed seed-repeat and fresh-process byte-identity checks. The fallback uses the independent 559-record survey; ACI133 stays external. CSB access is investigated but unconfirmed and non-blocking. Neither spatial damage product is independent primary ground truth.
+
+Read [the frozen experiment](docs/geoai_experiment_1f.md), [execution results](docs/geoai_1f_results.md), [CSB access check](docs/csb_access_1f.md), [encoder contract](docs/eo_representation_1f.md), and [B0 mechanics](docs/risk_b0.md). The claim is explicitly retrospective: structural family is post-event-ascertained, while EO/context observations predate the earthquake.
+
+From the repository root, reproduce:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-audit.txt
+.venv/bin/python -m src.data.turkiye
+# First run: public STAC metadata, actual clear-pixel/context windows, two pinned ShakeMaps.
+# Unset unrelated Conda PROJ variables so rasterio uses its compatible database.
+env -u PROJ_LIB -u PROJ_DATA .venv/bin/python -m src.data.geoai_feasibility --network --workers 4
+.venv/bin/python -m src.data.freeze_geoai
+.venv/bin/python -m src.data.geoai_audit_figures
+.venv/bin/python -m src.risk.b0 --config configs/risk_b0.json --output results/b0
+env -u PROJ_LIB -u PROJ_DATA .venv/bin/python -m pytest -q
+```
+
+Subsequent pixel-audit runs may omit `--network`: cached catalog, reports and checksummed chips are required. Input specification changes reject stale caches rather than relabelling old pixels. No cloud masking decisions use damage labels. Local outputs are `data/processed/geoai_1f/{location_audit.csv,pixel_audit.json,hazard.parquet,hazard_provenance.json,hazard_m75.parquet,hazard_m75_provenance.json,eligibility.csv,feature_manifest.parquet,city_folds.csv,fold_support.csv,fold_class_support.csv,freeze_summary.json}` and `results/geoai_1f/`. Every source row remains represented; exclusions have explicit reasons. Raw chips/imagery and these row-level outputs stay outside Git.
+
+B0 uses only declared synthetic fragility, asset values, damage-ratio distributions and Poisson event rates. It produces event/annual losses, analytic and simulated AAL, OEP/AEP and return-period losses in `results/b0/`. Those values are illustrative units, not calibrated Türkiye loss estimates. CI runs offline unit tests and B0; the network-heavy per-location satellite audit is a reproducible local validation.
 
 ## Research question
 
-Can learned geospatial representations improve earthquake damage and loss estimation in unseen regions beyond conventional intensity-measure + building-taxonomy fragility models?
+Can common pre-event geospatial representations recover useful earthquake-vulnerability information when detailed building/exposure attributes are missing in an unseen region, and does that recovery improve portfolio loss and tail-risk estimates?
 
 ## Project structure
 

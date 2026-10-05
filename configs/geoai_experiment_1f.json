@@ -1,0 +1,268 @@
+{
+  "version": "1f-v2-two-event-preflight",
+  "model_fitting_allowed": false,
+  "target_dataset": "turkiye_survey",
+  "external_dataset": "aci133",
+  "estimand": "Incremental city-transfer predictive information in independent surveyed buildings after the February 2023 sequence, conditional on retrospective structural-design proxies; not population vulnerability or prospective operational prediction.",
+  "target": {
+    "column": "damage_grade",
+    "classes": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "missing": "exclude explicitly",
+    "duplicate_coordinate_conflicts": "quarantine all records at conflicting coordinates",
+    "secondary": [
+      "any damage: D > 0",
+      "severe-or-worse: D >= 3"
+    ]
+  },
+  "event_cutoff": "2023-02-06T01:17:35Z",
+  "allowlists": {
+    "H": [
+      "log_PGA_m78_g",
+      "log_PGA_m75_g"
+    ],
+    "X": [
+      "structure_family"
+    ],
+    "Z_engineered": [
+      "green_mean",
+      "green_std",
+      "red_mean",
+      "red_std",
+      "nir_mean",
+      "nir_std",
+      "swir1_mean",
+      "swir1_std",
+      "red_texture",
+      "built_fraction_250m",
+      "built_fraction_480m",
+      "vegetation_fraction_250m",
+      "vegetation_fraction_480m",
+      "dsm_mean",
+      "dsm_relief",
+      "dsm_slope_mean"
+    ],
+    "Z_GeoAI": [
+      "satmae_0000..satmae_1023"
+    ]
+  },
+  "arms": {
+    "H": [
+      "H"
+    ],
+    "HX": [
+      "H",
+      "X"
+    ],
+    "HX_engineered": [
+      "H",
+      "X",
+      "Z_engineered"
+    ],
+    "HX_GeoAI": [
+      "H",
+      "X",
+      "Z_GeoAI"
+    ]
+  },
+  "additional_sensitivity": "H versus H+Z_GeoAI on the same frozen cohort, omitting retrospective survey X",
+  "prohibited": [
+    "floors",
+    "basement_floors",
+    "construction_age",
+    "area",
+    "occupancy",
+    "is_occupied",
+    "existing_placard",
+    "repair",
+    "casualties_reported",
+    "survey_date",
+    "assessor_name",
+    "photo_ids",
+    "infill_wall_damage",
+    "member_damage",
+    "estimated_building_damage",
+    "damage_label_as_feature",
+    "This_study",
+    "Visual_interpretation",
+    "post-event imagery",
+    "undated footprints",
+    "city_as_predictor",
+    "coordinates_as_predictor",
+    "test-city fitted transforms",
+    "ACI133 tuning",
+    "workbook IMs with unresolved product revision"
+  ],
+  "chronology": {
+    "X": "post-event ascertainment of presumed pre-existing structural family; height brackets removed; not independently verified pre-event",
+    "EO": "sensed 2022-06-01 through 2022-09-30",
+    "WorldCover": "2021 v200",
+    "DSM": "Copernicus GLO30 AWS 2021 release, main acquisition 2011-2015",
+    "H": "Separate pinned reconstructed M7.8 (2025-03-20 XML) and M7.5 (2025-08-30 XML) PGAs; retrospective hazard exception; other aftershocks/sequence mechanisms remain unmodelled"
+  },
+  "city_domains": [
+    "Antakya",
+    "Hassa",
+    "Iskendurun",
+    "Islahiye",
+    "Kahramanmaras",
+    "Kirikhan",
+    "Narli",
+    "Nurdagi",
+    "Pazarcik",
+    "Turkoglu"
+  ],
+  "validation_overrides": {
+    "Narli": "Pazarcik"
+  },
+  "validation_rule": "next city cyclically unless overridden",
+  "coordinate_city_median_limit_m": 10000,
+  "cross_partition_buffer_m": 2000,
+  "comparison": "Identical eligible rows, city folds and inverse coordinate-multiplicity weights for all arms. GeoAI replaces engineered Z in the primary comparison; additive union requires a separately declared sensitivity.",
+  "metrics": {
+    "primary": "normalized ranked probability score: mean squared cumulative-probability error at thresholds 0..3",
+    "aggregation": "unweighted mean of nonempty test-city scores; list empty cities and supports, no substitution",
+    "secondary": [
+      "ordinal MAE",
+      "macro F1 over fixed five classes",
+      "per-class support/recall",
+      "any-damage Brier",
+      "calibration",
+      "severe-or-worse Brier: (sum p[D=3,4] - 1[D>=3])^2",
+      "severe-or-worse reliability: fixed probability bins [0,.1,...,1], site-weighted support and means, no fitted recalibrator"
+    ],
+    "uncertainty": "2000 paired site bootstrap draws within test cities, seed 20231005; report city fold spread; conditional uncertainty, not independent-earthquake evidence"
+  },
+  "future_fit_protocol": {
+    "learner": "same L2-regularized multinomial logistic readout in all arms; fixed five-class probability output; absent training classes receive zero probability and are reported",
+    "C_grid": [
+      0.001,
+      0.01,
+      0.1,
+      1,
+      10
+    ],
+    "selection": "minimum validation RPS, ties smaller C; no test-city selection",
+    "transforms": "primary arms: train-only standard scaling; fixed structural-family vocabulary with unseen values OTHER; no PCA, feature selection or encoder adaptation; the separately declared PCA64 sensitivity is the only compression exception",
+    "calibration": "none in primary; do not fit on held-out cities",
+    "site_weights": "inverse exact-coordinate multiplicity for training, validation and scoring",
+    "structural_vocabulary": [
+      "RC_MRF",
+      "RC_WALL",
+      "RC_DUAL",
+      "REINFORCED_MASONRY",
+      "UNREINFORCED_MASONRY",
+      "OTHER"
+    ]
+  },
+  "encoder": {
+    "name": "SatMAE multispectral ViT-Large",
+    "source_revision": "117135b3354fa70a81df453be7f34e3da8b36032",
+    "weights": "https://zenodo.org/records/7325339/files/pretrain-vit-large-e199.pth",
+    "md5": "436bcd815194afdae38f3e023c74e9cd",
+    "bytes": 3949597273,
+    "published": "2022-11-17",
+    "dimensions": 1024,
+    "pooling": "mean of 432 final-normalized non-CLS tokens, identity no-mask path",
+    "input_shape": [
+      10,
+      96,
+      96
+    ],
+    "pixel_metres": 10,
+    "status": "passed: published checkpoint checksum, strict tensors, finite 10-city embeddings, seed-repeat and separate-process byte identity on pinned CPU runtime",
+    "code_license": "CC BY-NC 4.0",
+    "weight_license": "CC BY 4.0",
+    "bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B8A",
+      "B11",
+      "B12"
+    ],
+    "channel_groups": [
+      [
+        0,
+        1,
+        2,
+        6
+      ],
+      [
+        3,
+        4,
+        5,
+        7
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "patch_size": 8,
+    "normalization": "DN=10000*reflectance; uint8(clip(255*(DN-(mean-2*std))/(4*std),0,255))/255",
+    "mean": [
+      1184.3824625,
+      1120.77120066,
+      1136.26026392,
+      1263.73947144,
+      1645.40315151,
+      1846.87040806,
+      1762.59530783,
+      1972.62420416,
+      1732.16362238,
+      1247.91870117
+    ],
+    "std": [
+      650.2842772,
+      712.12507725,
+      965.23119807,
+      948.9819932,
+      1108.06650639,
+      1258.36394548,
+      1233.1492281,
+      1364.38688993,
+      1310.36996126,
+      1087.6020813
+    ],
+    "source_sha256": {
+      "models_mae_group_channels.py": "db35db5560af3d1e763c51218f1560c3a58b8f30dcf60194ddfcee9aa52816cd",
+      "util/pos_embed.py": "96c2448401c00c18f6d866f95c7bc8441830db8c4fb035522efde113860268df",
+      "LICENSE": "517acfe79046fca3d989a5a6f8b55b8c3919bb442609bd9ed0e81af6e25deb3a"
+    }
+  },
+  "2A_preflight": [
+    "Completed: two-event hazard, frozen cohort/folds/allowlists and secondary endpoints",
+    "Completed: official checkpoint checksum and strict state/shape coverage",
+    "Completed: deterministic identity no-mask inference in two fresh CPU processes",
+    "Completed: unchanged disjoint city folds and 2km context screen",
+    "Pending: CI and reviewed initiation of fixed 2A; no damage or PCA fits in 1F"
+  ],
+  "engineered_input_QA_decision": "Direct band moments fixed before fitting: pixelwise normalized differences had undefined denominators in 192/499 source-coordinate chips; no ratios filled or silently omitted.",
+  "hazard_sensitivity": {
+    "name": "M7.8-only",
+    "columns": [
+      "log_PGA_m78_g"
+    ],
+    "rule": "same fixed eligible cohort, folds and four arms; never select primary by performance"
+  },
+  "compression_sensitivity": {
+    "components": 64,
+    "solver": "deterministic full SVD",
+    "whiten": false,
+    "fit_scope": "training sites only, one exact-coordinate vector per site; centre raw 1024-D embeddings using training means only; do not pre-standardize dimensions",
+    "application": "apply training PCA unchanged to validation/test; standardize the 64 scores with training-only statistics; retain identical H and X blocks, folds, labels and C grid",
+    "selection": "64 is fixed, never tune dimensionality; no PCA in primary 1024-D arm",
+    "failure": "fail explicitly if fewer than 65 training sites; do not lower dimension silently",
+    "status": "predeclared only; no PCA fit in this milestone"
+  }
+}
