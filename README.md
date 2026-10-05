@@ -255,3 +255,58 @@ sequence cannot establish cross-earthquake spatial transfer.
 
 For an offline check using only versioned survey data, append
 `--datasets turkiye_survey` to both new module commands. This is also the CI path.
+
+
+## Research gate: literature review and modelling freeze
+
+**Modelling is frozen after Milestone 1D.** The project is now in a literature
+positioning/research-design gate. See [the literature review](docs/literature_review.md)
+and [paper matrix](docs/literature_matrix.csv).
+
+The review finds substantial prior art for empirical fragility, Nepal/Türkiye
+tree-based ML, host-to-target regional transfer, site/geology covariates and
+GNN-based seismic-damage prediction. The intended contribution is therefore not
+a new classifier. Subject to an independent target, the strongest candidate
+question is whether **verified pre-event spatial/neighbourhood context adds
+calibrated predictive information beyond H+X under leakage-safe geographic
+distribution shift**.
+
+A critical provenance correction is now explicit: the 30,122
+`spatial_this_study` labels are outputs of the Liu et al. (2026) methodology,
+not independent field ground truth. They are not approved as the headline
+supervised target. The manually annotated `Visual_interpretation` product is
+the candidate independent target, but its damage-label semantics and assessment
+coverage must be recovered before spatial modelling.
+
+No model fitting should resume until the literature-review gates for target
+independence, feature chronology, physical hazard definition, final estimand and
+feature allowlists are resolved or explicitly scoped out.
+
+
+## Locked direction — GeoAI × Catastrophe Risk
+
+The project charter is now explicit: this is a
+**[GeoAI × Catastrophe Risk project](docs/project_charter_geoai_cat_risk.md)**,
+not solely a vulnerability paper and not a generic OpenQuake implementation.
+
+The rebuilt [roadmap](docs/roadmap_geoai_cat_risk.md) has two parallel tracks:
+
+- **Track A — GeoAI vulnerability:** (H \rightarrow H+X \rightarrow
+  H+X+Z_{engineered} \rightarrow H+X+Z_{GeoAI}), evaluated under geographic
+  shift.
+- **Track B — Catastrophe risk:** hazard → exposure → vulnerability → damage →
+  MDR/loss → stochastic event losses → AAL/OEP/AEP.
+
+They reconnect by holding hazard/exposure/event set fixed and replacing the
+conventional vulnerability component with the calibrated GeoAI vulnerability
+model, then measuring changes in event loss and portfolio tail risk.
+
+The [spatial-target gate](docs/spatial_target_gate.md) is now resolved for the
+Liu package: neither `This_study` nor `Visual_interpretation` is approved as
+the headline vulnerability target. Preferred scale-up is authorized access to
+the Turkish CSB ground survey used by Ainscoe et al. (2025); the guaranteed
+fallback is the existing independent Türkiye engineering survey with a
+small-N/frozen-representation GeoAI protocol.
+
+**Modelling remains frozen** until the updated machine-readable research gate is
+satisfied.
