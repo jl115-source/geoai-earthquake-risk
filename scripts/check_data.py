@@ -3,26 +3,61 @@
 
 from pathlib import Path
 
-EXPECTED = {
-    "turkiye_survey": Path(
-        "data/raw/turkiye_2023/"
+EXPECTED_FILES = {
+    "turkiye_survey_reference": Path(
+        "data/reference/turkiye_2023/"
         "Jaiswal_2023TurkiyeEQ_us6000jllz_field_str_damage_data.xlsx"
     ),
-    "turkiye_shakemap": Path("data/raw/turkiye_2023/ShakeMapUpd.xml.gz"),
-    "nepal_dir": Path("data/raw/nepal"),
-    "italy_dado_dir": Path("data/raw/italy_dado"),
+    "turkiye_shakemap_reference": Path(
+        "data/reference/turkiye_2023/ShakeMapUpd.xml.gz"
+    ),
+    "nepal_geid_detailed": Path(
+        "data/raw/nepal_2015/Impact_Buildings_Detailed.csv"
+    ),
+    "nepal_shakemap": Path(
+        "data/raw/nepal_2015/usgs_shakemap_grid.xml"
+    ),
+    "nepal_nso_metadata": Path(
+        "data/raw/nepal_2015/NSO_HRHRS_metadata.json"
+    ),
+    "rc616_archive": Path("data/raw/rc616/rc616.zip"),
+}
+
+EXPECTED_DIRS = {
+    "rc616_extracted": Path("data/raw/rc616/extracted"),
+    "rc616_shakemaps": Path("data/raw/rc616_shakemaps"),
+}
+
+OPTIONAL_FILES = {
+    "turkiye_geoai_context": Path(
+        "data/raw/turkiye_2023_context/2023Turkey_earthquake_data.zip"
+    ),
 }
 
 
+def file_status(name: str, path: Path, optional: bool = False) -> None:
+    if path.is_file():
+        print(f"[OK] {name}: {path} ({path.stat().st_size:,} bytes)")
+    else:
+        tag = "OPTIONAL" if optional else "MISSING"
+        print(f"[{tag}] {name}: {path}")
+
+
+def dir_status(name: str, path: Path) -> None:
+    if path.is_dir():
+        n = sum(1 for p in path.rglob("*") if p.is_file())
+        print(f"[OK] {name}: {path} ({n} files)")
+    else:
+        print(f"[MISSING] {name}: {path}")
+
+
 def main() -> None:
-    for name, path in EXPECTED.items():
-        if path.is_file():
-            print(f"[OK] {name}: {path} ({path.stat().st_size:,} bytes)")
-        elif path.is_dir():
-            n = sum(1 for p in path.rglob("*") if p.is_file())
-            print(f"[OK] {name}: {path} ({n} files)")
-        else:
-            print(f"[MISSING] {name}: {path}")
+    for name, path in EXPECTED_FILES.items():
+        file_status(name, path)
+    for name, path in EXPECTED_DIRS.items():
+        dir_status(name, path)
+    for name, path in OPTIONAL_FILES.items():
+        file_status(name, path, optional=True)
 
 
 if __name__ == "__main__":
