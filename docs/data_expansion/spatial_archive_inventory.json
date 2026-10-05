@@ -1,0 +1,452 @@
+[
+  {
+    "name": "2023Turkey_earthquake_data/",
+    "bytes": 0,
+    "compressed_bytes": 0,
+    "crc32": 0
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/",
+    "bytes": 0,
+    "compressed_bytes": 0,
+    "crc32": 0
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/ARIA_DPM/",
+    "bytes": 0,
+    "compressed_bytes": 0,
+    "crc32": 0
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/ARIA_DPM/ARIA_DPM_Antakya.kmz",
+    "bytes": 82957,
+    "compressed_bytes": 80873,
+    "crc32": 476944048
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/ARIA_DPM/ARIA_DPM_Jindires.kmz",
+    "bytes": 10236,
+    "compressed_bytes": 9191,
+    "crc32": 4021521935
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/ARIA_DPM/ARIA_DPM_Nurdagi.kmz",
+    "bytes": 11993,
+    "compressed_bytes": 10954,
+    "crc32": 1702521534
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Microsoft_team/",
+    "bytes": 0,
+    "compressed_bytes": 0,
+    "crc32": 0
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Microsoft_team/Nurdagi_Microsoft_damage.kmz",
+    "bytes": 101697,
+    "compressed_bytes": 100197,
+    "crc32": 901899359
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/",
+    "bytes": 0,
+    "compressed_bytes": 0,
+    "crc32": 0
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Antakya.CPG",
+    "bytes": 5,
+    "compressed_bytes": 7,
+    "crc32": 243350608
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Antakya.dbf",
+    "bytes": 440239,
+    "compressed_bytes": 10804,
+    "crc32": 521734900
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Antakya.prj",
+    "bytes": 145,
+    "compressed_bytes": 121,
+    "crc32": 2940436309
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Antakya.sbn",
+    "bytes": 235564,
+    "compressed_bytes": 149717,
+    "crc32": 3432682536
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Antakya.sbx",
+    "bytes": 18476,
+    "compressed_bytes": 8087,
+    "crc32": 2432994685
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Antakya.shp",
+    "bytes": 3425900,
+    "compressed_bytes": 1609977,
+    "crc32": 2983529719
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Antakya.shp.xml",
+    "bytes": 7984,
+    "compressed_bytes": 2066,
+    "crc32": 1674623577
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Antakya.shx",
+    "bytes": 185436,
+    "compressed_bytes": 70199,
+    "crc32": 1758330434
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Jindires.CPG",
+    "bytes": 5,
+    "compressed_bytes": 7,
+    "crc32": 243350608
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Jindires.dbf",
+    "bytes": 115605,
+    "compressed_bytes": 2921,
+    "crc32": 1000715332
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Jindires.prj",
+    "bytes": 145,
+    "compressed_bytes": 121,
+    "crc32": 2940436309
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Jindires.sbn",
+    "bytes": 60676,
+    "compressed_bytes": 40647,
+    "crc32": 1432794769
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Jindires.sbx",
+    "bytes": 3908,
+    "compressed_bytes": 1800,
+    "crc32": 2812071092
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Jindires.shp",
+    "bytes": 879504,
+    "compressed_bytes": 399296,
+    "crc32": 1589337519
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Jindires.shp.xml",
+    "bytes": 7942,
+    "compressed_bytes": 2056,
+    "crc32": 2052801161
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Jindires.shx",
+    "bytes": 48748,
+    "compressed_bytes": 17886,
+    "crc32": 836655937
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Nurdagi.CPG",
+    "bytes": 5,
+    "compressed_bytes": 7,
+    "crc32": 243350608
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Nurdagi.dbf",
+    "bytes": 16672,
+    "compressed_bytes": 469,
+    "crc32": 1202422694
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Nurdagi.prj",
+    "bytes": 145,
+    "compressed_bytes": 121,
+    "crc32": 2940436309
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Nurdagi.sbn",
+    "bytes": 8668,
+    "compressed_bytes": 6300,
+    "crc32": 3076673312
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Nurdagi.sbx",
+    "bytes": 740,
+    "compressed_bytes": 394,
+    "crc32": 3479591497
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Nurdagi.shp",
+    "bytes": 135028,
+    "compressed_bytes": 67377,
+    "crc32": 4108583953
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Nurdagi.shp.xml",
+    "bytes": 7936,
+    "compressed_bytes": 2049,
+    "crc32": 608603654
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/This_study/Global_GBA_Nurdagi.shx",
+    "bytes": 7092,
+    "compressed_bytes": 2706,
+    "crc32": 1840371007
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/UNOSAT/",
+    "bytes": 0,
+    "compressed_bytes": 0,
+    "crc32": 0
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/UNOSAT/UNOSAT_damage_Jindires.gmt",
+    "bytes": 91024,
+    "compressed_bytes": 6856,
+    "crc32": 3046808556
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/",
+    "bytes": 0,
+    "compressed_bytes": 0,
+    "crc32": 0
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Antakya_damage.CPG",
+    "bytes": 5,
+    "compressed_bytes": 7,
+    "crc32": 243350608
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Antakya_damage.dbf",
+    "bytes": 188694,
+    "compressed_bytes": 2304,
+    "crc32": 1602025600
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Antakya_damage.prj",
+    "bytes": 145,
+    "compressed_bytes": 121,
+    "crc32": 2940436309
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Antakya_damage.sbn",
+    "bytes": 185044,
+    "compressed_bytes": 115057,
+    "crc32": 2626031532
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Antakya_damage.sbx",
+    "bytes": 16404,
+    "compressed_bytes": 7038,
+    "crc32": 1293801817
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Antakya_damage.shp",
+    "bytes": 4639168,
+    "compressed_bytes": 1263462,
+    "crc32": 553632345
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Antakya_damage.shp.xml",
+    "bytes": 7542,
+    "compressed_bytes": 2504,
+    "crc32": 4198481542
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Antakya_damage.shx",
+    "bytes": 137284,
+    "compressed_bytes": 53011,
+    "crc32": 2550143691
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Jindires_damage.cpg",
+    "bytes": 5,
+    "compressed_bytes": 7,
+    "crc32": 243350608
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Jindires_damage.dbf",
+    "bytes": 771350,
+    "compressed_bytes": 65316,
+    "crc32": 1765980924
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Jindires_damage.prj",
+    "bytes": 145,
+    "compressed_bytes": 121,
+    "crc32": 2940436309
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Jindires_damage.sbn",
+    "bytes": 28252,
+    "compressed_bytes": 19191,
+    "crc32": 1797903368
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Jindires_damage.sbx",
+    "bytes": 2100,
+    "compressed_bytes": 953,
+    "crc32": 3837874386
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Jindires_damage.shp",
+    "bytes": 400040,
+    "compressed_bytes": 184363,
+    "crc32": 4225225361
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Jindires_damage.shp.xml",
+    "bytes": 7610,
+    "compressed_bytes": 2299,
+    "crc32": 3998289272
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Jindires_damage.shx",
+    "bytes": 22212,
+    "compressed_bytes": 8083,
+    "crc32": 3241727599
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Nurdagi_damage.cpg",
+    "bytes": 5,
+    "compressed_bytes": 7,
+    "crc32": 243350608
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Nurdagi_damage.dbf",
+    "bytes": 217256,
+    "compressed_bytes": 20060,
+    "crc32": 248454680
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Nurdagi_damage.prj",
+    "bytes": 145,
+    "compressed_bytes": 121,
+    "crc32": 2940436309
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Nurdagi_damage.sbn",
+    "bytes": 7892,
+    "compressed_bytes": 5654,
+    "crc32": 1258295351
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Nurdagi_damage.sbx",
+    "bytes": 732,
+    "compressed_bytes": 381,
+    "crc32": 2866471240
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Nurdagi_damage.shp",
+    "bytes": 120276,
+    "compressed_bytes": 60312,
+    "crc32": 1532526840
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Nurdagi_damage.shp.xml",
+    "bytes": 1923,
+    "compressed_bytes": 851,
+    "crc32": 4171241402
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Building_damage_data/Visual_interpretation/Nurdagi_damage.shx",
+    "bytes": 6324,
+    "compressed_bytes": 2403,
+    "crc32": 2308861980
+  },
+  {
+    "name": "2023Turkey_earthquake_data/GBA_building_footprint/",
+    "bytes": 0,
+    "compressed_bytes": 0,
+    "crc32": 0
+  },
+  {
+    "name": "2023Turkey_earthquake_data/GBA_building_footprint/Turkey_GBA_building_data.CPG",
+    "bytes": 5,
+    "compressed_bytes": 7,
+    "crc32": 243350608
+  },
+  {
+    "name": "2023Turkey_earthquake_data/GBA_building_footprint/Turkey_GBA_building_data.dbf",
+    "bytes": 1230398006,
+    "compressed_bytes": 108205709,
+    "crc32": 1743917428
+  },
+  {
+    "name": "2023Turkey_earthquake_data/GBA_building_footprint/Turkey_GBA_building_data.prj",
+    "bytes": 145,
+    "compressed_bytes": 121,
+    "crc32": 2940436309
+  },
+  {
+    "name": "2023Turkey_earthquake_data/GBA_building_footprint/Turkey_GBA_building_data.sbn",
+    "bytes": 36172284,
+    "compressed_bytes": 11192956,
+    "crc32": 1496261119
+  },
+  {
+    "name": "2023Turkey_earthquake_data/GBA_building_footprint/Turkey_GBA_building_data.sbx",
+    "bytes": 449780,
+    "compressed_bytes": 208678,
+    "crc32": 3210081520
+  },
+  {
+    "name": "2023Turkey_earthquake_data/GBA_building_footprint/Turkey_GBA_building_data.shp",
+    "bytes": 663012580,
+    "compressed_bytes": 318524206,
+    "crc32": 1535200925
+  },
+  {
+    "name": "2023Turkey_earthquake_data/GBA_building_footprint/Turkey_GBA_building_data.shp.xml",
+    "bytes": 867,
+    "compressed_bytes": 379,
+    "crc32": 4174150744
+  },
+  {
+    "name": "2023Turkey_earthquake_data/GBA_building_footprint/Turkey_GBA_building_data.shx",
+    "bytes": 35280324,
+    "compressed_bytes": 13293069,
+    "crc32": 2207500171
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Influencing_factors/",
+    "bytes": 0,
+    "compressed_bytes": 0,
+    "crc32": 0
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Influencing_factors/DEM.tif",
+    "bytes": 845622698,
+    "compressed_bytes": 105375711,
+    "crc32": 2068589093
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Influencing_factors/Epicenter.tif",
+    "bytes": 25346873,
+    "compressed_bytes": 4077769,
+    "crc32": 1837328036
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Influencing_factors/Fault.tif",
+    "bytes": 28269247,
+    "compressed_bytes": 4077979,
+    "crc32": 1952209499
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Influencing_factors/Lithology.tif",
+    "bytes": 13992094,
+    "compressed_bytes": 4062574,
+    "crc32": 3630808740
+  },
+  {
+    "name": "2023Turkey_earthquake_data/Influencing_factors/PGV.tif",
+    "bytes": 25054968,
+    "compressed_bytes": 11301710,
+    "crc32": 1042951812
+  }
+]

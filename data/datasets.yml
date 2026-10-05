@@ -34,24 +34,34 @@ datasets:
     source_repository: gem/geid
     file: Impact_Buildings_Detailed.csv
     size_bytes: 78448526
+    n_records: 762106
+    n_variables: 19
+    n_districts: 11
+    coordinates: administrative_codes_only
+    id_warning: rounded_scientific_notation_only_74_distinct_building_ids
+    relationship: HRHRS_derived_11_district_projection_aggregate_verified
     spatial_resolution: detailed_building_impact
-    status: one_command_download_ready
+    status: acquired_and_audited_1c
 
   nepal_2015_hrhrs:
     region: Nepal
     event: 2015 Gorkha earthquake
-    role: optional source/validation dataset and authoritative schema documentation
+    role: priority_richer_source_same_survey_as_GEID
     access: public-use microdata subject to NSO terms
     redistribution: prohibited_without_written_agreement
     official_study_id: NPL-CBS-HRHRS-2016-v01
     target: building damage assessment / damage grade
     spatial_resolution: administrative/ward identifiers
+    advertised_n_records: 1052948
+    advertised_n_variables: 105
+    metadata_acquired: true
+    building_microdata_acquired: false
+    status: awaiting_authorized_NSO_delivery_public_endpoint_empty
     local_docs:
       - metadata JSON
       - English questionnaire
       - 14-district key-findings report
       - affected-districts map
-    status: docs_one_command_download_microdata_manual_if_used
 
   multi_event_rc_616:
     region: multi-region
@@ -67,10 +77,29 @@ datasets:
     license: CC-BY-SA-3.0
     source: datacenterhub
     doi: 10.7277/ACX0-DG18
-    n_buildings: 616
-    target: four-class structural damage
+    advertised_n_buildings: 616
+    observed_archive_n_records: 619
+    n_variables: 21
+    coordinate_pairs_present: 353
+    acquisition: python -m src.data.acquire_expansion rc616
+    target: structural_damage_original_labels_preserved
+    observed_damage_vocabulary: [N, None, L, Light, M, Moderate, S, Severe, C, R]
     spatial_resolution: building latitude_longitude_when_available
-    status: one_command_download_ready
+    status: tables_acquired_and_ingested_1c_count_discrepancy_preserved
+
+  turkiye_2023_aci133:
+    region: Turkiye
+    event: 2023_Kahramanmaras_sequence
+    role: separate_engineering_survey_overlap_unresolved
+    doi: 10.5281/zenodo.13386343
+    file: ACI133v3.xlsx
+    license: CC-BY-4.0
+    n_records: 242
+    n_variables: 106
+    n_unique_coordinate_pairs: 234
+    records_with_author_supplemented_cells: 42
+    overlap_candidates_with_registered_survey_within_25m: 12
+    status: acquired_and_audited_1c_not_pooled
 
   italy_dado:
     region: Italy
@@ -109,5 +138,9 @@ supporting:
       - fault_distance
       - lithology
       - PGV
-    redistribution: local_only_due_to_unspecified_record_license
-    status: one_command_download_ready
+    license: CC-BY-4.0
+    redistribution: project_local_only_preserve_upstream_product_terms
+    n_footprint_features: 4410028
+    n_this_study_label_features: 30122
+    label_warning: separate_products_visual_files_lack_explicit_damage_grades
+    status: acquired_checksum_verified_and_inventoried_1c

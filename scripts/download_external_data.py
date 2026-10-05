@@ -16,11 +16,11 @@ Notes
 -----
 - Nepal GEID is licensed by GEM under CC BY-NC-SA 4.0.
 - The RC616 database is CC BY-SA 3.0.
-- The Türkiye 2026 Zenodo record is open-access, but currently shows no
-  explicit license; it is therefore local-only.
-- Nepal NSO HRHRS microdata are NOT downloaded here. Their access terms
-  prohibit redistribution without written agreement. We download only public
-  metadata and documentation so the schema and sampling design are reproducible.
+- The Türkiye 2026 Zenodo API declares CC BY 4.0. Preserve individual product
+  attributions; this project keeps the package local.
+- Official Nepal Building data require authorized NSO delivery; the public
+  download endpoint returned no file in the 1C audit. Public metadata are
+  acquired here. Local research use is permitted under NSO conditions.
 """
 
 from __future__ import annotations
@@ -47,17 +47,7 @@ SOURCES = {
         "expected_size": 78_448_526,
         "format": "csv",
     },
-    "rc616": {
-        "url": (
-            "https://www.dropbox.com/scl/fo/"
-            "qi3d9rbwjdqn8vev74bjs/APrtlwCls_w8csviSUJfbqY"
-            "?rlkey=y1p57c5axbj9fkxs4x2itfwp2&dl=1"
-        ),
-        "path": RAW / "rc616" / "rc616.zip",
-        "extract_to": RAW / "rc616" / "extracted",
-        "min_size": 100_000,
-        "format": "zip",
-    },
+    "rc616": {},  # Delegated to the selective, checksum-pinned table acquisition.
     "turkiye-context": {
         "url": (
             "https://zenodo.org/records/18437501/files/"
@@ -225,6 +215,12 @@ def extract_if_needed(name: str, spec: dict) -> None:
 
 
 def acquire(name: str) -> None:
+    if name == "rc616":
+        # Avoid downloading the whole 15.4 GB media bag for three small tables.
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+        from src.data.acquire_expansion import acquire_rc616
+        acquire_rc616()
+        return
     spec = SOURCES[name]
     path: Path = spec["path"]
 

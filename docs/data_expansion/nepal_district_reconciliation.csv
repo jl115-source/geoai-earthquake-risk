@@ -1,0 +1,12 @@
+district_code,district_name,geid_rows,official_ddi_rows,exact_aggregate_match
+12,Okhaldhunga,39352,39352,True
+20,Sindhuli,68750,68750,True
+21,Ramechhap,58623,58623,True
+22,Dolakha,60639,60639,True
+23,Sindhupalchok,88741,88741,True
+24,Kavrepalanchok,98019,98019,True
+28,Nuwakot,77148,77148,True
+29,Rasuwa,12644,12644,True
+30,Dhading,89122,89122,True
+31,Makwanpur,90994,90994,True
+36,Gorkha,78074,78074,True

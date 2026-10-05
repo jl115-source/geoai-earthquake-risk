@@ -29,7 +29,7 @@ results/
 
 1. **Türkiye 2023** — 559-record engineering survey + ShakeMap; first end-to-end vulnerability benchmark.
 2. **Nepal 2015** — large GEID building-impact dataset, with official HRHRS documentation and optional local microdata for scale/generalization.
-3. **RC616 multi-event benchmark** — 616 buildings across six earthquakes in Turkey, Peru, China and Haiti for leave-one-event / leave-one-country-out transfer tests.
+3. **RC616 multi-event benchmark** — 619 archived records across six earthquakes (616 advertised) in Turkey, Peru, China and Haiti for leave-one-event / leave-one-country-out transfer tests.
 
 **Italy Da.D.O. is deliberately deferred** as an optional later extension. The three core domains already give us a clean combination of engineering detail, scale and independent-event transfer.
 
@@ -55,8 +55,8 @@ This acquires locally:
 - GEM GEID detailed Nepal 2015 building-impact data;
 - the Nepal USGS ShakeMap grid;
 - public Nepal NSO metadata, questionnaire and survey documentation;
-- the RC616 six-earthquake damage archive;
-- ShakeMap grids for all six RC616 earthquakes.
+- the RC616 six-earthquake damage tables;
+- ShakeMap grids for the six RC616 earthquakes.
 
 Small/open GEM exposure/vulnerability references, GEID event summaries and site models are versioned under `data/reference/`.
 
@@ -68,7 +68,8 @@ make data-geoai
 
 This downloads the 2026 Zenodo Türkiye building-footprint, damage and
 geo-environmental context archive locally. It is intentionally not committed to
-Git because it is large and the record does not display an explicit license.
+Git. The Zenodo API declares CC BY 4.0; preserve the bundled products' original
+attributions and terms.
 
 Validate the local data layer:
 
@@ -164,6 +165,52 @@ See [the ingestion contract](docs/turkiye_2023.md) and the
 [complete source-column dictionary](docs/turkiye_2023_columns.md) for provenance,
 damage mapping, units and validation rules. The CI workflow reruns ingestion,
 EDA and tests and uploads all generated outputs for PR review.
+
+## Milestone 1C: data expansion audit
+
+See the [data expansion audit](docs/data_expansion_audit.md) for measured counts,
+all variable inventories, damage labels, spatial coverage, overlap and licensing.
+The audit keeps datasets separate and fits no models. Italy remains deferred.
+
+From the repository root (Python 3.11+):
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-audit.txt
+python -m src.data.acquire_expansion nepal-geid nso-metadata nso-study nso-ddi nso-building-dictionary aci133 aci-metadata spatial-metadata turkiye-spatial rc616
+python -m src.data.turkiye
+python -m src.data.audit_expansion
+python -m pytest -q
+```
+
+Acquisition needs internet access; the subsequent audit works offline. Allow
+about **3.6 GB** for downloaded/extracted inputs plus derived outputs. RC616
+streams only three CSV tables from its 15.4 GB archive, stopping before media.
+The spatial ZIP is 584,760,454 bytes and expands to 2,916,264,899 bytes.
+The audit scans all five raster bands but uses metadata for the 4.4-million-
+feature footprint layer; its geometry validity is not exhaustively checked.
+
+Raw files and snapshots stay under ignored `data/raw/`. Outputs under ignored
+`data/processed/expansion_audit/` include `rc616.parquet`, `aci133.parquet`,
+per-dataset JSON audits, variable dictionaries, Nepal district reconciliation,
+Türkiye proximity candidates, and a complete spatial archive inventory.
+Only aggregate findings and code are versioned. CI runs offline unit tests and
+the original Türkiye workflow; local-data regression tests skip when expansion
+inputs are absent. It does not download or upload Nepal microdata.
+
+The official NSO Building file is **not acquired**. Its published metadata
+reports 1,052,948 rows and 105 variables. The public access endpoint can be
+checked separately (currently exits nonzero because it returns no file):
+
+```bash
+python -m src.data.acquire_expansion nso-access
+```
+
+Obtain the official file through NSO's authorized access process and keep it in
+ignored `data/raw/nepal_2015/hrhrs_official/`. Do not substitute an unofficial
+mirror or treat published metadata as downloaded microdata. No NSO request or
+agreement has been submitted on the user's behalf.
 
 ## Milestones
 

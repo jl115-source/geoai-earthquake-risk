@@ -40,10 +40,9 @@ CHECKS = {
         ),
         "min_size": 300_000,
     },
-    "rc616_archive": {
-        "path": Path("data/raw/rc616/rc616.zip"),
-        "min_size": 100_000,
-        "zip": True,
+    "rc616_priority_i": {
+        "path": Path("data/raw/rc616/454_866_Priority_I_data.csv"),
+        "expected_size": 95671,
     },
 }
 
@@ -114,13 +113,6 @@ def main() -> None:
     ok = True
     for name, spec in CHECKS.items():
         ok = check_file(name, spec) and ok
-
-    extracted = Path("data/raw/rc616/extracted/.extracted")
-    if extracted.is_file():
-        print("[OK] rc616_extracted")
-    else:
-        print("[MISSING] rc616_extracted")
-        ok = False
 
     ok = check_rc616_shakemaps() and ok
 

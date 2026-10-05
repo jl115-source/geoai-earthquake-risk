@@ -42,7 +42,7 @@ def inspect_zip(path: Path) -> None:
 
 def main() -> None:
     inspect_csv(ROOT / "nepal_2015" / "Impact_Buildings_Detailed.csv")
-    inspect_zip(ROOT / "rc616" / "rc616.zip")
+    inspect_csv(ROOT / "rc616" / "454_866_Priority_I_data.csv")
     inspect_zip(
         ROOT / "turkiye_2023_context" / "2023Turkey_earthquake_data.zip"
     )

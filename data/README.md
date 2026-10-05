@@ -42,7 +42,8 @@ Also versioned:
 Core large building-impact data:
 
 - GEM GEID `Impact_Buildings_Detailed.csv`;
-- exactly 78,448,526 bytes in the current GEID source;
+- approximately 78.4 MB; 762,106 records / 19 variables across 11 districts;
+- no latitude/longitude; exported building IDs are rounded (74 distinct strings);
 - downloaded locally by:
 
 ```bash
@@ -64,24 +65,18 @@ USGS ShakeMap grid:
 python scripts/download_external_data.py nepal-shakemap
 ```
 
-Official NSO HRHRS documentation:
-
-```bash
-python scripts/download_external_data.py nepal-docs
-```
-
-This fetches the public metadata JSON, English questionnaire, 14-district
-key-findings report, and affected-districts map. The HRHRS microdata themselves
-remain optional/local-only because the official terms prohibit redistribution
-without written agreement. The 11 census-model districts are the preferred
-subset if we later use the NSO microdata, because private residential buildings
-there were assessed irrespective of damage.
+Official NSO HRHRS 2016–2017 is the **priority richer source**, with 1,052,948
+records / 105 variables advertised by its dictionary. GEID matches its 11-district
+subset exactly at district-count level; do not count these as independent surveys.
+Official Building microdata are not yet acquired: the public endpoint returned
+no file and metadata describe access from CBS premises. Research use is allowed
+under NSO terms, including no redistribution or identifying linkage.
 
 ### 3. Multi-event RC616 benchmark
 
 DataCenterHub/DEEDS DOI: `10.7277/ACX0-DG18`.
 
-The database contains 616 low-rise reinforced-concrete / concrete-masonry
+The publication describes 616 low-rise reinforced-concrete / concrete-masonry
 buildings across:
 
 - Erzincan 1992;
@@ -91,7 +86,9 @@ buildings across:
 - Wenchuan 2008;
 - Haiti 2010.
 
-The archive is CC BY-SA 3.0 and is downloaded locally:
+The archive is CC BY-SA 3.0. The current table has **619**, rather than the
+advertised 616, unique experiment records. Stream its three CSV tables locally
+without downloading 15.4 GB of photographs/reports:
 
 ```bash
 python scripts/download_external_data.py rc616
@@ -129,8 +126,20 @@ Download locally:
 python scripts/download_external_data.py turkiye-context
 ```
 
-The Zenodo record currently does not display an explicit license, so these
-files are treated as local-only and are not redistributed here.
+The Zenodo API explicitly declares **CC BY 4.0** (verified 2026-10-05), correcting
+the earlier assumption from an empty license label in the rendered page. Keep
+original product attributions and terms. Files remain local-only in this project.
+The package has 4,410,028 footprint features, not that many independent damage
+labels. See the [Milestone 1C audit](../docs/data_expansion_audit.md) for product
+counts, missing label semantics and raster-unit limitations.
+
+## ACI133 Türkiye 2023
+
+`python -m src.data.acquire_expansion aci133 aci-metadata` acquires
+`ACI133v3.xlsx` from Zenodo record 13386343 (CC BY 4.0). It contains 242 records
+and 106 source columns, including author-supplemented data and multiple intensity
+products. Twelve records are within 25 m of the existing survey: these are
+proximity candidates, not confirmed duplicate buildings. Keep the datasets separate.
 
 ## One-command acquisition
 

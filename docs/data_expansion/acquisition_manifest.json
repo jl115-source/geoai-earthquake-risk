@@ -1,0 +1,100 @@
+{
+  "inputs": [
+    {
+      "dataset": "nso-metadata",
+      "source_url": "https://microdata.nsonepal.gov.np/index.php/metadata/export/69/json",
+      "relative_path": "audit_metadata/nso_69.json",
+      "bytes": 16267,
+      "sha256": "bade9962614b3dff49ac66b7de05aee2e074d115dd777065c53f973e96c0341a",
+      "expected_md5": null
+    },
+    {
+      "dataset": "nso-ddi",
+      "source_url": "https://microdata.nsonepal.gov.np/index.php/metadata/export/69/ddi",
+      "relative_path": "audit_metadata/nso_69.xml",
+      "bytes": 2371596,
+      "sha256": "d19c21a243942ef22546ba9e29f9c8a06c4ad10187be472c297f293597b03b6b",
+      "expected_md5": null
+    },
+    {
+      "dataset": "nso-building-dictionary",
+      "source_url": "https://microdata.nsonepal.gov.np/index.php/catalog/69/data-dictionary/F2?file_name=Building",
+      "relative_path": "audit_metadata/nso_building.html",
+      "bytes": 166014,
+      "sha256": "03f17efe63074e66edd019123a629219aa2d233104a223bccf5e79deb562983d",
+      "expected_md5": null
+    },
+    {
+      "dataset": "nso-study",
+      "source_url": "https://microdata.nsonepal.gov.np/index.php/catalog/69/study-description",
+      "relative_path": "audit_metadata/nso_study.html",
+      "bytes": 68158,
+      "sha256": "a58e58fd8112cd1c626c99230e93169f0a49da853ef577e50de50da2fd690443",
+      "expected_md5": null
+    },
+    {
+      "dataset": "aci-metadata",
+      "source_url": "https://zenodo.org/api/records/13386343",
+      "relative_path": "audit_metadata/zenodo_13386343.json",
+      "bytes": 4875,
+      "sha256": "4b5b590cb8b331fd2371f6636f3628ec715aee1062c58e75ac321aad34395984",
+      "expected_md5": null
+    },
+    {
+      "dataset": "spatial-metadata",
+      "source_url": "https://zenodo.org/api/records/18437501",
+      "relative_path": "audit_metadata/zenodo_18437501.json",
+      "bytes": 5944,
+      "sha256": "6323d94078648b408e6fefc3f68c8e3eeffdc672fcbff942f78e990809a89e81",
+      "expected_md5": null
+    },
+    {
+      "dataset": "nepal-geid",
+      "source_url": "https://raw.githubusercontent.com/gem/geid/d6eb5ed42475ef67ba28cd9e0567f2d0d17a6393/South_Asia/Nepal/20150425_M7.8_Gorkha/1_Impact/Impact_Buildings_Detailed.csv",
+      "relative_path": "nepal_2015/Impact_Buildings_Detailed.csv",
+      "bytes": 78448526,
+      "sha256": "695762d973e9bdbf93178542333b3a0bef4328c9be036577cfd7fdcf65546d66",
+      "expected_md5": null
+    },
+    {
+      "dataset": "turkiye-spatial",
+      "source_url": "https://zenodo.org/records/18437501/files/2023Turkey_earthquake_data.zip?download=1",
+      "relative_path": "turkiye_2023_context/2023Turkey_earthquake_data.zip",
+      "bytes": 584760454,
+      "sha256": "cbdb7c37ff32bca6733aea44f42b451105e3eff727def15e237c7836f38e7120",
+      "expected_md5": "f3a3a9982cf63bd954616a898c7416b9"
+    },
+    {
+      "dataset": "aci133",
+      "source_url": "https://zenodo.org/records/13386343/files/ACI133v3.xlsx?download=1",
+      "relative_path": "turkiye_aci133/ACI133v3.xlsx",
+      "bytes": 317542,
+      "sha256": "9b050aa9986a26b991306c64d8405b06eba6d31d8dcee84286ee1bf9a9c65b56",
+      "expected_md5": "c912ccae688adf77339571c621f31e2d"
+    }
+  ],
+  "rc616": {
+    "source_url": "https://www.dropbox.com/scl/fo/qi3d9rbwjdqn8vev74bjs/AJACOPsS6f6ZlIQKQyiEBTA/454_bag_2024-01-25.tgz?rlkey=y1p57c5axbj9fkxs4x2itfwp2&dl=1",
+    "archive_content_length": "15420287590",
+    "acquisition_scope": "Only three data/metadata CSV members streamed; 15.4 GB media archive not downloaded in full.",
+    "members": {
+      "454_bag_2024-01-25/data/datatables/454_866_Priority_I_data.csv": {
+        "bytes": 95671,
+        "sha256": "8b17a9c5dd145280d24025ec8ff123af6d47ab60e6ac0597e4cae42c26ec2d55"
+      },
+      "454_bag_2024-01-25/data/datatables/454_866_Priority_I_metadata.csv": {
+        "bytes": 2708,
+        "sha256": "d3ae908b1be2a7ac266ed0538e3bf46a744f1a0ef6bb0831b00d9b5d0ffec707"
+      },
+      "454_bag_2024-01-25/data/datatables/454_datatables_metadata.csv": {
+        "bytes": 146,
+        "sha256": "9dfe12785b0dc2936439b3f3e56f65dbb690a3d9ac2e7bf3a94f6521de420957"
+      }
+    }
+  },
+  "official_access_attempt": {
+    "dataset": "nso-access",
+    "acquired": false,
+    "reason": "Empty response for nso-access; not a successful acquisition"
+  }
+}
