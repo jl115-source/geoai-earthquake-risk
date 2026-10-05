@@ -1,28 +1,41 @@
 {
-  "version": "literature-gate-2026-10-05",
+  "version": "literature-gate-2026-10-05-v2",
   "review_date": "2026-10-05",
+  "project_mode": "GeoAI_x_Catastrophe_Risk",
   "model_fitting_allowed": false,
-  "reason": "Literature positioning and target/provenance gates must be resolved before Milestone 1E.",
-  "headline_candidate": "Test whether verified pre-event spatial/neighbourhood context adds calibrated predictive information beyond hazard intensity and conventional building attributes under leakage-safe geographic distribution shift.",
+  "purpose": [
+    "Demonstrate modern GeoAI/spatial-ML expertise",
+    "Develop and demonstrate end-to-end catastrophe-loss modelling"
+  ],
+  "headline_candidate": "Test whether learned pre-event geospatial representations add transferable, calibrated vulnerability information beyond hazard intensity and conventional building attributes, then measure the effect on financial loss and portfolio tail risk.",
+  "tracks": {
+    "geoai_vulnerability": "H -> H+X -> H+X+Z_engineered -> H+X+Z_GeoAI under held-out geography/event",
+    "catastrophe_risk": "hazard -> exposure -> vulnerability -> damage -> MDR -> loss -> event loss -> AAL/OEP/AEP",
+    "integration": "hold hazard/exposure/event set fixed; replace conventional vulnerability with calibrated GeoAI vulnerability and compare portfolio risk"
+  },
   "prohibited_headline_claims": [
     "Novelty from fitting standard fragility curves to the existing Turkiye survey",
     "Novelty from applying XGBoost, Random Forest or CatBoost to Nepal or Turkiye damage",
     "Novelty from host-to-target or leave-one-event-out evaluation alone",
     "Novelty from adding geology, Vs30, fault distance or topography alone",
     "Novelty from using a GNN architecture alone",
-    "Treating spatial_this_study as independent observed ground-truth damage"
+    "Treating spatial_this_study as independent observed ground-truth damage",
+    "Treating Visual_interpretation Join_Count or unlabeled footprint subsets as an engineering damage-state target"
   ],
   "spatial_target_status": {
-    "spatial_this_study": "method_output_pseudolabel_not_approved_as_headline_target",
-    "visual_interpretation": "candidate_independent_target_pending_damage_semantics_and_assessment_coverage"
+    "spatial_this_study": "rejected_as_independent_target_method_output_pseudolabel",
+    "visual_interpretation": "rejected_as_primary_vulnerability_target_no_common_explicit_damage_state_and_incomplete_assessment_semantics",
+    "turkiye_csb_ground_survey": "preferred_scale_up_target_access_required_via_ministry",
+    "turkiye_engineering_survey": "guaranteed_independent_fallback_target_small_n",
+    "aci133": "reserved_external_after_overlap_and_provenance_adjudication"
   },
   "required_gates": {
     "independent_target": {
-      "status": "blocked",
+      "status": "blocked_pending_target_path_freeze",
       "requirements": [
-        "Recover Visual_interpretation annotation codebook and damage-class semantics",
-        "Verify independence from This_study methodology",
-        "Document assessed/undamaged sampling and annotation coverage"
+        "Preferred: obtain and audit authorized CSB ground-survey access",
+        "Fallback: explicitly freeze small-N engineering target protocol using independent survey labels",
+        "Do not substitute This_study or Visual_interpretation merely to increase sample size"
       ]
     },
     "feature_chronology": {
@@ -41,10 +54,10 @@
       ]
     },
     "estimand": {
-      "status": "blocked",
+      "status": "blocked_pending_target_path",
       "requirements": [
-        "Freeze the primary supervised target and held-out domain claim before fitting",
-        "Do not claim cross-earthquake spatial transfer from one Turkiye/Syria sequence"
+        "Freeze primary supervised target and held-out geographic/event claim",
+        "Do not claim cross-earthquake transfer of learned spatial representation from one Turkiye/Syria sequence"
       ]
     },
     "feature_allowlists": {
@@ -55,5 +68,11 @@
       ]
     }
   },
-  "resume_condition": "All required gates must be resolved or explicitly scoped out in a reviewed configuration change."
+  "catastrophe_track_policy": {
+    "roadmap_design_allowed": true,
+    "first_principles_reference_implementation_allowed_after_global_model_gate": "yes",
+    "use_openquake_as_black_box": false,
+    "integration_rule": "same hazard, exposure, event set and consequence mapping for conventional-vs-GeoAI risk comparison"
+  },
+  "resume_condition": "A reviewed configuration must freeze the independent target path, predictor chronology, hazard definition, estimand and feature allowlists before fitting."
 }
