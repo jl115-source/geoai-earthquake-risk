@@ -16,12 +16,11 @@ Notes
 -----
 - Nepal GEID is licensed by GEM under CC BY-NC-SA 4.0.
 - The RC616 database is CC BY-SA 3.0.
-- The Türkiye 2026 Zenodo record is open-access, but the record page does not
-  currently display an explicit license. It is therefore downloaded locally
-  only and MUST NOT be redistributed from this repository.
-- Nepal NSO microdata are not downloaded here because their access terms
-  prohibit redistribution without written agreement. We only download the
-  public study metadata.
+- The Türkiye 2026 Zenodo API declares CC BY 4.0. Preserve individual product
+  attributions; this project keeps the package local.
+- Official Nepal Building data require authorized NSO delivery; the public
+  download endpoint returned no file in the 1C audit. Public metadata are
+  acquired here. Local research use is permitted under NSO conditions.
 """
 
 from __future__ import annotations
@@ -49,15 +48,7 @@ SOURCES = {
         "path": RAW / "nepal_2015" / "Impact_Buildings_Detailed.csv",
         "expected_size": 78_448_526,
     },
-    "rc616": {
-        "url": (
-            "https://www.dropbox.com/scl/fo/"
-            "qi3d9rbwjdqn8vev74bjs/APrtlwCls_w8csviSUJfbqY"
-            "?rlkey=y1p57c5axbj9fkxs4x2itfwp2&dl=1"
-        ),
-        "path": RAW / "rc616" / "rc616.zip",
-        "extract_to": RAW / "rc616" / "extracted",
-    },
+    "rc616": {},  # Delegated to the selective, checksum-pinned table acquisition.
     "turkiye-context": {
         "url": (
             "https://zenodo.org/records/18437501/files/"
@@ -157,6 +148,12 @@ def extract_if_needed(name: str, spec: dict) -> None:
 
 
 def acquire(name: str) -> None:
+    if name == "rc616":
+        # Avoid downloading the whole 15.4 GB media bag for three small tables.
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+        from src.data.acquire_expansion import acquire_rc616
+        acquire_rc616()
+        return
     spec = SOURCES[name]
     path: Path = spec["path"]
 
@@ -180,14 +177,18 @@ def main() -> None:
     args = parser.parse_args()
 
     names = list(SOURCES) if args.dataset == "all" else [args.dataset]
+    failed = []
     for name in names:
         print(f"\n=== {name} ===")
         try:
             acquire(name)
         except Exception as exc:
+            failed.append(name)
             print(f"[ERROR] {name}: {exc}", file=sys.stderr)
             if args.dataset != "all":
                 raise
+    if failed:
+        raise SystemExit(f"Acquisition incomplete: {failed}")
 
 
 if __name__ == "__main__":

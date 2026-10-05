@@ -1,0 +1,27 @@
+Label,Description,Units,Data Type,Not Applicable Text(s)
+Id,,,int,
+Case Name,,,text_large,
+Case Id,,,text_large,
+Latitude,Latitude of the location where data was collected,,float,
+Longitude,Longitude of the location where data was collected,,float,
+Priority Index,"PI = CI + WI  where, PI = Priority Index (Hassan Index, %)  CI = Column Index  WI = Wall Index",%,float_small,
+"No. 
+Floors",Number of floors,,float,
+Floor Area,Floor area of the 1st floor,m^2,float,
+Total Floor Area,Af: Total areas above ground levels.,m^2,float,
+Column Area,Acol: Sum of cross-sectional areas of all columns at ground floor,m^2,float,
+Concrete Wall Area (NS),cross-sectional areas of reinforced concrete walls in NS direction,m^2,float,
+Concrete Wall Area (EW),cross-sectional areas of reinforced concrete walls in EW direction,m^2,float,
+Masonry Wall Area (NS),cross-sectional areas of infill masonry walls in NS direction at ground floor,m^2,float,
+Masonry Wall Area (EW),cross-sectional areas of infill masonry walls in EW direction at ground floor,m^2,float,
+"Structural 
+Damage",Four classes of Damage  Light: Hairline (crack width not exceeding approximate 0.13 mm) inclined and flexural cracks were observed in structural elements  Moderate: Wider cracks or spalling of concrete were observed.  Severe: At least one element had a structural failure.  Collapse: At least one floor slab or part of it lost its elevation.,,txt_small,
+"Masonry Wall
+Damage",Damage to infill walls classified as follows:  Light: Hairline (crack width not exceeding approximate 0.13 mm) cracks occurred.  Moderate: Wider cracks or larger pieces of plaster flaked off.  Severe: The element collapsed or cracks wide enough to see through the wall appeared.,,txt_small,
+"Captive
+Columns",Are there captive columns? Yes or No,,txt_small,
+"Column
+Index","CI =0.5 Acol /Af *100%  where,  Acol: the sum of cross-sectional areas of all columns at ground floor  Af: total areas above ground areas",%,txt_small,
+Wall Index (NS),"WI = (Acw + 0.1 Amw)/Af *100%  where,  Acw: the sums of cross-sectional areas of reinforced concrete walls in north-south direction at ground floor.  Amw: the sums of cross-sectional areas of infill masonry walls in north-south direction at ground floor.  Af: total areas above ground areas",%,txt_small,
+Wall Index (EW),"WI = (Acw + 0.1 Amw)/Af *100%  where,  Acw: the sums of cross-sectional areas of reinforced concrete walls in east-west direction at ground floor.  Amw: the sums of cross-sectional areas of infill masonry walls in east-west direction at ground floor.  Af: total areas above ground areas.",%,txt_small,
+Min WI,Minimum Wall Index,%,txt_small,

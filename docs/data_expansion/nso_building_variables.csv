@@ -1,0 +1,106 @@
+name,description
+dist,District Code
+vcode,
+vdcmun,VDC/Municipality
+ward,Ward of the VDC/Municipality
+EA,Enumeration Area
+howner_sn,House Owner Serial Number
+house_sn,House Serial Number
+legl_own,Legal Ownership of the House Land
+house_cd,Condition of house after earthquake
+floor_pre,Number of floor before earthquake
+floor_pos,Number of floor after earthquake
+age,Age of house
+pl_area,Plinth area in sq ft of house
+hgt_pre,Height of house in feet before earthquake
+hgt_pos,Height of house in feet afterr earthquake
+surf_con,Condition of land surface around house
+foundatn,Foundation of house
+roof,Roof of house
+gd_floor,Condition of ground floor
+up_floor,Condition of floor other than ground floor and roof
+sup_str1,Super structure with Adobe/Mud construction
+sup_str2,Super structure with Mud Mortar-Stone
+sup_str3,Super structure with stone
+sup_str4,Super structure with cement mortar-stone
+sup_str5,Super structure with mud mortar-brick
+sup_str6,Super structure with cement morter-brick
+sup_str7,Super structure with timber
+sup_str8,Super structure with bamboo
+sup_str9,Super structure with mud RC(non-engineered)
+sup_str10,Super structure with mud RC(engineered)
+sup_str11,Super structure with others
+positn,Position of house
+pln_conf,Plan configuration
+collapse,Totally collapse or Partially collapse
+leaning,Building or storey leaning
+adjbld_rsk,Adjacent Building Risk
+dm_fndtn1,Foundation Sever-Extreme
+dm_fndtn2,Foundation Moderate-Heavy
+dm_fndtn3,Foundation Insignificant-Low
+dm_roof1,Roof/Floor collapse/partially collapse (sever-extreme)
+dm_roof2,Roof/Floor collapse/partially collapse (moderate-heavy)
+dm_roof3,Roof/Floor collapse/partially collapse (insignificant-low)
+corn_sep1,Corner separation sever-extreme
+corn_sep2,Corner separation moderate-heavy
+corn_sep3,Corner separation insignificant-low
+diag_cr1,Diagonal cracking sever-extreme
+diag_cr2,Diagonal cracking moderate-heavy
+diag_cr3,Diagonal cracking insignificant-low
+pl_fail1,In-plane-failure of walls sever-extreme
+pl_fail2,In-plane-failure of walls moderate-heavy
+pl_fail3,In-plane-failure of walls insignificant-low
+op_fail1,Out-of-plane-failure of walls carrying floor/roof sever-extreme
+op_fail2,Out-of-plane-failure of walls carrying floor/roof moderate-heavy
+op_fail3,Out-of-plane-failure of walls carrying floor/roof insignificant-low
+op_fl_nl1,Out-of-plane-failure of walls not carrying floor/roof sever-extreme
+op_fl_nl2,Out-of-plane-failure of walls not carrying floor/roof moderate-heavy
+op_fl_nl3,Out-of-plane-failure of walls not carrying floor/roof insignificant-low
+dm_gabl1,Gable wall damage/collapse sever-extreme
+dm_gabl2,Gable wall damage/collapse moderate-heavy
+dm_gabl3,Gable wall damage/collapse insignificant-low
+delam1,Delamination sever-extreme
+delam2,Delamination moderate- heavy
+delam3,Delamination insignificant-low
+col_fail1,Column failure sever-extreme
+col_fail2,Column failure moderate-heavy
+col_fail3,Column failure insignificant-low
+beam_fl1,Beam failure sever-extreme
+beam_fl2,Beam failure moderate-heavy
+beam_fl3,Beam failure insignificant-low
+part_col1,Infill/partition walls damage/toppling severr-extreme
+part_col2,Infill/partition walls damage/toppling moderate-heavy
+part_col3,Infill/partition walls damage/toppling insignificant-low
+str_case1,Staircase sever-extreme
+str_case2,Staircase moderate-heavy
+str_case3,Staircase insignificant-low
+parapet1,Parapet sever-extreme
+parapet2,Parapet moderate-heavy
+parapet3,Parapet insignificant-low
+clad_glz1,Cladding/Glazing sever-extreme
+clad_glz2,Cladding/Glazing moderate-heavy
+clad_glz3,Cladding/Glazing insignificant-low
+gersk,Geo-technical risk around the house
+gersk_ls1,Jamin vasieko
+gersk_ls2,Fault crack
+gersk_ls3,Liqufication
+gersk_ls4,Landslide
+gersk_ls5,Rock fall
+gersk_ls6,Flood
+gersk_ls7,Others
+assd_ar,Observation parts of house
+dm_grade,Damge grade of house
+tech_sol,Technical solution of house
+repair,Have you started reconstruction?
+sec_use,Secondary use of houe
+secuse_ls1,Goath/Kirsi karya
+secuse_ls2,Hotel/Restaurant/shop
+secuse_ls3,Rent
+secuse_ls4,Institution
+secuse_ls5,School
+secuse_ls6,Industry
+secuse_ls7,Health post
+secuse_ls8,Government office
+secuse_ls9,Police office
+secuse_ls10,Other's
+fam_cn,Total family in the house

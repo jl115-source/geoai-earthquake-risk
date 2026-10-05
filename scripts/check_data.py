@@ -20,11 +20,10 @@ EXPECTED_FILES = {
     "nepal_nso_metadata": Path(
         "data/raw/nepal_2015/NSO_HRHRS_metadata.json"
     ),
-    "rc616_archive": Path("data/raw/rc616/rc616.zip"),
+    "rc616_priority_i": Path("data/raw/rc616/454_866_Priority_I_data.csv"),
 }
 
 EXPECTED_DIRS = {
-    "rc616_extracted": Path("data/raw/rc616/extracted"),
     "rc616_shakemaps": Path("data/raw/rc616_shakemaps"),
 }
 

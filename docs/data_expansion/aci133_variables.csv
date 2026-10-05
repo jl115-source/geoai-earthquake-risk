@@ -1,0 +1,107 @@
+column,excel_column,source_header,source_units,group
+c001,A,ID,(-),building
+c002,B,Age,(year),building
+c003,C,No Stories,(-),building
+c004,D,No Stories above critical floor (CF),(-),building
+c005,E,Total Height,(m),building
+c006,F,Floor Area,(m^2),building
+c007,G,Total Floor Area Above C.F.,(m^2),building
+c008,H,C.F. Column Area,(m^2),building
+c009,I,C.F. Concrete Wall Area NS,(m^2),building
+c010,J,C.F. Concrete Wall Area EW,(m^2),building
+c011,K,C.F. Masonry Wall Area NS,(m^2),building
+c012,L,C.F. Masonry Wall Area EW,(m^2),building
+c013,M,Critical AAC Masonry Wall Area NS,(m^2),building
+c014,N,Critical AAC Masonry Wall Area EW,(m^2),building
+c015,O,C.F. Concrete Wall Area MAX,(m^2),building
+c016,P,C.F. Concrete Wall Area MIN,(m^2),building
+c017,Q,C.F. Masonry Wall Area MAX,(m^2),building
+c018,R,C.F. Masonry Wall Area MIN,(m^2),building
+c019,S,CD,(%),building
+c020,T,WD,(%),building
+c021,U,Structural Damage (5-class),(-),building
+c022,V,Structural Damage (3-class),(-),building
+c023,W,Structural Damage Encoding (3-class) ,(-),building
+c024,X,Critical Damage,(-),building
+c025,Y,Critical Damage Encoding,(-),building
+c026,Z,Masonry Wall Damage (5-Class),(-),building
+c027,AA,Masonry Wall Damage Encoding (5-Class),(-),building
+c028,AB,Captive Columns Presence ,(-),building
+c029,AC,Captive Column Encoding,(-),building
+c030,AD,Column Index (%),(%),building
+c031,AE,Wall Index NS (%),(%),building
+c032,AF,Wall Index EW (%),(%),building
+c033,AG,min WI (%),(%),building
+c034,AH,Priority Index (%),(%),building
+c035,AI,Soft Story,(-),building
+c036,AJ,Soft Story Encoding,(-),building
+c037,AK,Latitude,(deg),building_site
+c038,AL,Longitude,(deg),building_site
+c039,AM,V_S30,(m/s),building_site
+c040,AN,T_1    [N/10],(s),building_site
+c041,AO,T_1    [0.0466H^0.9],(s),building_site
+c042,AP,M7.8_Repi,(km),building_site
+c043,AQ,M7.8_Rrup,(km),building_site
+c044,AR,M6.7_Repi,(km),building_site
+c045,AS,M6.7_Rrup,(km),building_site
+c046,AT,M7.8_Repi,(km),building_site
+c047,AU,M7.8_Rrup,(km),building_site
+c048,AV,M6.3_Repi,(km),building_site
+c049,AW,M6.3_Rrup,(km),building_site
+c050,AX,M7.8_PGA,(g),kriging
+c051,AY,M7.8_PGV,(cm/s),kriging
+c052,AZ,M7.8_PSA0.3,(g),kriging
+c053,BA,M7.8_PSA0.6,(g),kriging
+c054,BB,M7.8_PSA1.0,(g),kriging
+c055,BC,M7.8_AI,(m/s),kriging
+c056,BD,M7.8_CAV,(m/s),kriging
+c057,BE,M6.7_PGA,(g),kriging
+c058,BF,M6.7_PGV,(cm/s),kriging
+c059,BG,M6.7_PSA0.3,(g),kriging
+c060,BH,M6.7_PSA0.6,(g),kriging
+c061,BI,M6.7_PSA1.0,(g),kriging
+c062,BJ,M6.7_AI,(m/s),kriging
+c063,BK,M6.7_CAV,(m/s),kriging
+c064,BL,M7.5_PGA,(g),kriging
+c065,BM,M7.5_PGV,(cm/s),kriging
+c066,BN,M7.7_PSA0.3,(g),kriging
+c067,BO,M7.7_PSA0.6,(g),kriging
+c068,BP,M7.7_PSA1.0,(g),kriging
+c069,BQ,M7.7_AI,(m/s),kriging
+c070,BR,M7.7_CAV,(m/s),kriging
+c071,BS,M6.3_PGA,(g),kriging
+c072,BT,M6.3_PGV,(cm/s),kriging
+c073,BU,M6.3_PSA0.3,(g),kriging
+c074,BV,M6.3_PSA0.6,(g),kriging
+c075,BW,M6.3_PSA1.0,(g),kriging
+c076,BX,M6.3_AI,(m/s),kriging
+c077,BY,M6.3_CAV,(m/s),kriging
+c078,BZ,M7.8_SaT1,(g),kriging
+c079,CA,M6.8_SaT1,(g),kriging
+c080,CB,M7.5_SaT1,(g),kriging
+c081,CC,M6.4_SaT1,(g),kriging
+c082,CD,PGA_max,(g),kriging
+c083,CE,PGV_max,(cm/s),kriging
+c084,CF,SaT1_max,(g),kriging
+c085,CG,AI_max,(m/s),kriging
+c086,CH,CAV_max,(m/s),kriging
+c087,CI,M7.8_PGA,(g),USGS
+c088,CJ,M7.8_PGV,(cm/s),USGS
+c089,CK,M7.8_SA0.3,(g),USGS
+c090,CL,M7.8_SA1.0,(g),USGS
+c091,CM,M7.8_SA3.0,(g),USGS
+c092,CN,M6.7_PGA,(g),USGS
+c093,CO,M6.7_PGV,(cm/s),USGS
+c094,CP,M6.7_SA0.3,(g),USGS
+c095,CQ,M6.7_SA1.0,(g),USGS
+c096,CR,M6.7_SA3.0,(g),USGS
+c097,CS,M7.8_PGA,(g),USGS
+c098,CT,M7.8_PGV,(cm/s),USGS
+c099,CU,M7.8_SA0.3,(g),USGS
+c100,CV,M7.8_SA1.0,(g),USGS
+c101,CW,M7.8_SA3.0,(g),USGS
+c102,CX,M6.3_PGA,(g),USGS
+c103,CY,M6.3_PGV,(cm/s),USGS
+c104,CZ,M6.3_SA0.3,(g),USGS
+c105,DA,M6.3_SA1.0,(g),USGS
+c106,DB,M6.3_SA3.0,(g),USGS
