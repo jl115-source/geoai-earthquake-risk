@@ -32,10 +32,15 @@ Acquire/inventory:
 
 ```bash
 python -m src.data.acquire_zagreb_copernicus
+python -m src.data.audit_zagreb_copernicus
 ```
 
 Raw data remain ignored under `data/raw/zagreb_2020_copernicus/`.
-Only the ZIP inventory/provenance is versioned.
+The [actual GDB layer audit](zagreb_2020_copernicus/audit.md) finds 29,398 reference
+building polygons but only 556 damage polygons and 99 near-identical mutually
+unique footprint pairs (IoU ≥0.99). There are no explicit undamaged controls.
+**Auxiliary only: not the large-N supervised building dataset.** Layer counts,
+native codebook definitions, geometry checks and linkage diagnostics are versioned.
 
 ## Not obtainable anonymously
 

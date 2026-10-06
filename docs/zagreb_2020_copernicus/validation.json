@@ -1,0 +1,25 @@
+{
+  "tests": {
+    "passed": 96,
+    "failed": 0,
+    "skipped": 0,
+    "zagreb_tests": 6,
+    "command": "env -u PROJ_LIB -u PROJ_DATA python -m pytest -q"
+  },
+  "determinism": {
+    "fresh_extraction_runs": 2,
+    "byte_identical_artifacts": [
+      "layer_audit.json",
+      "layer_counts.csv",
+      "damage_counts.csv"
+    ]
+  },
+  "sha256": {
+    "layer_audit.json": "e2d49d7533fad8285c8b38756b599aff941f0ab7d907c4f13f0f3265b2540251",
+    "layer_counts.csv": "a939216f33c4a01f760ff684d9886883edfb0a62c60425e23bf8146e2d4f1aae",
+    "damage_counts.csv": "912cfd67c9d30d67646523d9524d5946bde86f6558eb37aca06d79996c240a29"
+  },
+  "models_fitted": false,
+  "target_harmonized": false,
+  "merged": false
+}

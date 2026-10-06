@@ -9,10 +9,16 @@
     },
     {
       "id": "zagreb_2020_copernicus_emsn074",
-      "status": "public_acquisition_automated",
+      "status": "acquired_layer_audited_auxiliary_only",
       "dataset": "https://doi.org/10.2905/JRC.G4YG7J8",
       "activation": "https://mapping.emergency.copernicus.eu/activations/EMSN074/DAMAGEASSESSMENT/",
-      "type": "remote_sensing_reference_and_damage_product"
+      "type": "remote_sensing_reference_and_damage_product",
+      "reference_building_polygons": 29398,
+      "damage_polygons": 556,
+      "near_identical_unique_footprint_pairs_iou_0p99": 99,
+      "explicit_undamaged_controls": 0,
+      "suitable_for_large_N_vulnerability_training": false,
+      "audit": "docs/zagreb_2020_copernicus/audit.md"
     }
   ],
   "permission_gated": [
