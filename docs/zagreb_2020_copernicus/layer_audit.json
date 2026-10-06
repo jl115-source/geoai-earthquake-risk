@@ -1,0 +1,4126 @@
+{
+  "archive_sha256": "96fdaa2e40fc0e9a74f6a1b075df563b700d40e890ea84bc864877a0b6c36c93",
+  "damage_assessment_layers": [
+    "P08_damage_assessment_poly"
+  ],
+  "damage_categories": [
+    {
+      "count": 244,
+      "documented_name": "Possible damage",
+      "native_value": "1"
+    },
+    {
+      "count": 136,
+      "documented_name": "Moderate damage",
+      "native_value": "2"
+    },
+    {
+      "count": 155,
+      "documented_name": "Severe damage",
+      "native_value": "3"
+    },
+    {
+      "count": 21,
+      "documented_name": "Destroyed",
+      "native_value": "4"
+    }
+  ],
+  "damage_valid_geometries_and_recognized_codes": 556,
+  "decision": "auxiliary_only_not_large_N_building_vulnerability_training",
+  "layer_count": 30,
+  "layers": {
+    "P02_bridge_line": {
+      "bounds_native": [
+        572329.1840820312,
+        5069655.567321777,
+        580624.2005004883,
+        5073312.452270508
+      ],
+      "bounds_wgs84": [
+        15.930406888326818,
+        45.77643581687201,
+        16.037454539623464,
+        45.80896257512757
+      ],
+      "columns": {
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "6": 47
+          },
+          "nulls": 0
+        },
+        "Shape_Length": {
+          "blank_strings": 0,
+          "distinct": 47,
+          "dtype": "float64",
+          "native_counts": {
+            "106.7790133617371": 1,
+            "107.64322900699388": 1,
+            "122.87080736908378": 1,
+            "125.6010905565113": 1,
+            "127.68061239729371": 1,
+            "130.21805044829432": 1,
+            "133.69723785014526": 1,
+            "133.8513237849797": 1,
+            "139.2798271030581": 1,
+            "139.6418489299184": 1,
+            "157.39955580343417": 1,
+            "157.44840521330377": 1,
+            "194.5237185199697": 1,
+            "200.7171327606576": 1,
+            "230.58785061916635": 1,
+            "271.6133128784259": 1,
+            "290.3191471024299": 1,
+            "293.39513057081024": 1,
+            "294.73462652577894": 1,
+            "297.8045581195899": 1,
+            "308.2260112266065": 1,
+            "309.91294415748234": 1,
+            "404.2680441608884": 1,
+            "410.24164821363786": 1,
+            "411.5540033485": 1,
+            "430.6432758107401": 1,
+            "471.58976519781856": 1,
+            "472.8971354333429": 1,
+            "474.31748633755376": 1,
+            "477.98637231642743": 1,
+            "497.87062615535405": 1,
+            "50.605267962878585": 1,
+            "51.855327308597765": 1,
+            "522.7032480926121": 1,
+            "53.08276509071748": 1,
+            "54.390765962284426": 1,
+            "55.496718143204106": 1,
+            "56.826823616101535": 1,
+            "57.42550819885995": 1,
+            "57.64634232729508": 1,
+            "624.5247542943362": 1,
+            "626.8873948401431": 1,
+            "627.5811437171466": 1,
+            "63.14811143561257": 1,
+            "72.77186690985323": 1,
+            "72.77768416148083": 1,
+            "72.78124086127812": 1
+          },
+          "nulls": 0
+        },
+        "TRS": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int32",
+          "native_counts": {
+            "12": 21,
+            "13": 26
+          },
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 47
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 47
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "2141": 47
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {
+            "<NULL>": 47
+          },
+          "nulls": 47
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "214": 47
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "2": 47
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 47,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "MultiLineString": 47
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P02_bridge_point": {
+      "bounds_native": [
+        571073.0291137695,
+        5069357.364929199,
+        579425.3048706055,
+        5076689.846923828
+      ],
+      "bounds_wgs84": [
+        15.914515612049245,
+        45.773882788271116,
+        16.022781206152196,
+        45.839195479407415
+      ],
+      "columns": {
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "6": 44
+          },
+          "nulls": 0
+        },
+        "TRS": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int32",
+          "native_counts": {
+            "12": 33,
+            "13": 11
+          },
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 44
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 44
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "2141": 44
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {
+            "<NULL>": 44
+          },
+          "nulls": 44
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "214": 44
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 1,
+            "2": 43
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 44,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "Point": 44
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P02_building_point": {
+      "bounds_native": [
+        571084.7094726562,
+        5069192.7775268555,
+        583868.1983032227,
+        5078018.656677246
+      ],
+      "bounds_wgs84": [
+        15.914556716648947,
+        45.772046873260756,
+        16.07978335906912,
+        45.85083977885883
+      ],
+      "columns": {
+        "FFN": {
+          "blank_strings": 0,
+          "distinct": 18,
+          "dtype": "int32",
+          "native_counts": {
+            "440": 150,
+            "475": 4,
+            "480": 16,
+            "550": 36,
+            "610": 2,
+            "810": 10,
+            "811": 47,
+            "815": 1,
+            "827": 32,
+            "835": 2,
+            "840": 4,
+            "841": 11,
+            "845": 5,
+            "850": 197,
+            "855": 31,
+            "860": 38,
+            "912": 22,
+            "930": 79
+          },
+          "nulls": 0
+        },
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int32",
+          "native_counts": {
+            "1": 1,
+            "6": 686
+          },
+          "nulls": 0
+        },
+        "NAM": {
+          "blank_strings": 0,
+          "distinct": 526,
+          "dtype": "object",
+          "nulls": 96
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 687
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 687
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 14,
+          "dtype": "int16",
+          "native_counts": {
+            "1211": 36,
+            "122": 2,
+            "1220": 14,
+            "1221": 79,
+            "1222": 11,
+            "1223": 5,
+            "123": 154,
+            "1241": 16,
+            "1263": 228,
+            "1264": 38,
+            "1265": 22,
+            "1272": 79,
+            "1273": 1,
+            "1279": 2
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {
+            "<NULL>": 687
+          },
+          "nulls": 687
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "12": 687
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 34,
+            "2": 653
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 687,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "Point": 687
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P02_building_poly": {
+      "bounds_native": [
+        571032.294921875,
+        5069164.346313477,
+        584370.0413208008,
+        5078393.047729492
+      ],
+      "bounds_wgs84": [
+        15.91386857819562,
+        45.77166504973348,
+        16.086149578762306,
+        45.854055858872876
+      ],
+      "columns": {
+        "FFN": {
+          "blank_strings": 0,
+          "distinct": 39,
+          "dtype": "int32",
+          "native_counts": {
+            "0": 57,
+            "350": 41,
+            "440": 249,
+            "470": 2,
+            "475": 19,
+            "480": 54,
+            "530": 6,
+            "540": 3,
+            "550": 38,
+            "563": 27200,
+            "572": 2,
+            "604": 1,
+            "610": 2,
+            "643": 5,
+            "720": 9,
+            "810": 10,
+            "811": 54,
+            "815": 1,
+            "827": 34,
+            "835": 42,
+            "840": 5,
+            "841": 11,
+            "843": 5,
+            "845": 5,
+            "850": 247,
+            "855": 112,
+            "859": 3,
+            "860": 126,
+            "861": 30,
+            "887": 3,
+            "891": 8,
+            "892": 1,
+            "893": 1,
+            "902": 7,
+            "905": 24,
+            "912": 30,
+            "930": 91,
+            "99": 827,
+            "999": 33
+          },
+          "nulls": 0
+        },
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 3,
+          "dtype": "int32",
+          "native_counts": {
+            "1": 9,
+            "2": 3,
+            "6": 29386
+          },
+          "nulls": 0
+        },
+        "NAM": {
+          "blank_strings": 0,
+          "distinct": 749,
+          "dtype": "object",
+          "nulls": 27971
+        },
+        "Shape_Area": {
+          "blank_strings": 0,
+          "distinct": 29383,
+          "dtype": "float64",
+          "nulls": 0
+        },
+        "Shape_Length": {
+          "blank_strings": 0,
+          "distinct": 29389,
+          "dtype": "float64",
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 29398
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 29398
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 21,
+          "dtype": "int16",
+          "native_counts": {
+            "1211": 38,
+            "122": 8,
+            "1220": 15,
+            "1221": 89,
+            "1222": 11,
+            "1223": 5,
+            "1224": 5,
+            "123": 272,
+            "1241": 54,
+            "1251": 868,
+            "1252": 6,
+            "1261": 9,
+            "1262": 31,
+            "1263": 368,
+            "1264": 156,
+            "1265": 30,
+            "127": 42,
+            "1272": 91,
+            "1273": 1,
+            "1279": 42,
+            "997": 27257
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 5,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            " ": 5,
+            "<NULL>": 29393
+          },
+          "nulls": 29393
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int32",
+          "native_counts": {
+            "11": 27200,
+            "12": 2198
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 4981,
+            "2": 24417
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 29398,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 23,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "MultiPolygon": 29398
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P02_cart_track_line": {
+      "bounds_native": [
+        572700.5405273438,
+        5069503.676513672,
+        583855.853515625,
+        5077976.454284668
+      ],
+      "bounds_wgs84": [
+        15.935536900002445,
+        45.774571693591014,
+        16.079499300117426,
+        45.850567907944885
+      ],
+      "columns": {
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "6": 43
+          },
+          "nulls": 0
+        },
+        "Shape_Length": {
+          "blank_strings": 0,
+          "distinct": 26,
+          "dtype": "float64",
+          "native_counts": {
+            "102.14178103016717": 1,
+            "11.403171077744195": 1,
+            "1165.7034532520854": 3,
+            "1429.9912836941128": 1,
+            "148.88519331192222": 3,
+            "159.0820214400919": 1,
+            "168.86335046982362": 1,
+            "183.7854476055523": 1,
+            "350.9448125562469": 2,
+            "360.4420060783329": 1,
+            "416.8131377949104": 1,
+            "423.9564849441657": 3,
+            "465.82528894482857": 1,
+            "468.0084553537148": 1,
+            "489.93782978093134": 1,
+            "529.5061915724998": 1,
+            "62.59376534059106": 3,
+            "68.33027314350863": 1,
+            "691.1562522454764": 3,
+            "706.2508207072186": 1,
+            "727.5228483728058": 1,
+            "75.92376054132616": 1,
+            "77.22801641009984": 3,
+            "784.0890267249932": 3,
+            "801.5428937235089": 1,
+            "81.43473831867715": 3
+          },
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 43
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 43
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "21124": 43
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {
+            "<NULL>": 43
+          },
+          "nulls": 43
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "211": 43
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 27,
+            "2": 16
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 43,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 17,
+        "nulls": 0,
+        "types": {
+          "MultiLineString": 43
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P02_facility_poly": {
+      "bounds_native": [
+        571060.7869262695,
+        5069289.895690918,
+        584203.8551025391,
+        5078059.845092773
+      ],
+      "bounds_wgs84": [
+        15.914461867819893,
+        45.773205443018604,
+        16.084045217371187,
+        45.8511930129635
+      ],
+      "columns": {
+        "FFN": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "99": 137
+          },
+          "nulls": 0
+        },
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "6": 137
+          },
+          "nulls": 0
+        },
+        "Shape_Area": {
+          "blank_strings": 0,
+          "distinct": 137,
+          "dtype": "float64",
+          "nulls": 0
+        },
+        "Shape_Length": {
+          "blank_strings": 0,
+          "distinct": 137,
+          "dtype": "float64",
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 137
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 137
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "2305": 137
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {
+            "<NULL>": 137
+          },
+          "nulls": 137
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "23": 137
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 12,
+            "2": 125
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 137,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "MultiPolygon": 137
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P02_helipad_poly": {
+      "bounds_native": [
+        578606.0791015625,
+        5069558.830078125,
+        580399.6976928711,
+        5076502.69152832
+      ],
+      "bounds_wgs84": [
+        16.011077064373115,
+        45.775113964330906,
+        16.035289501980305,
+        45.83740300096468
+      ],
+      "columns": {
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "6": 2
+          },
+          "nulls": 0
+        },
+        "HAF": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int32",
+          "native_counts": {
+            "1": 1,
+            "11": 1
+          },
+          "nulls": 0
+        },
+        "Shape_Area": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "float64",
+          "native_counts": {
+            "1326.635981798172": 1,
+            "2703.089707447216": 1
+          },
+          "nulls": 0
+        },
+        "Shape_Length": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "float64",
+          "native_counts": {
+            "145.73140844532355": 1,
+            "208.120837125983": 1
+          },
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 2
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 2
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "21312": 2
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {
+            "<NULL>": 2
+          },
+          "nulls": 2
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "213": 2
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 1,
+            "2": 1
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 2,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "MultiPolygon": 2
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P02_power_station_poly": {
+      "bounds_native": [
+        573604.9343261719,
+        5069897.252075195,
+        579333.4915161133,
+        5073213.19128418
+      ],
+      "bounds_wgs84": [
+        15.947303199519277,
+        45.77810220050693,
+        16.020550600565027,
+        45.808544299716296
+      ],
+      "columns": {
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "6": 2
+          },
+          "nulls": 0
+        },
+        "PPC": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "999": 2
+          },
+          "nulls": 0
+        },
+        "Shape_Area": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "float64",
+          "native_counts": {
+            "231946.11262960546": 1,
+            "66687.2294425331": 1
+          },
+          "nulls": 0
+        },
+        "Shape_Length": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "float64",
+          "native_counts": {
+            "1128.1295061764788": 1,
+            "2082.3587121186038": 1
+          },
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 2
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 2
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "2302": 2
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {
+            "<NULL>": 2
+          },
+          "nulls": 2
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "23": 2
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "2": 2
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 2,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "MultiPolygon": 2
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P02_railway_line": {
+      "bounds_native": [
+        571039.3052978516,
+        5069171.141479492,
+        584341.6311035156,
+        5076867.874084473
+      ],
+      "bounds_wgs84": [
+        15.914014569532185,
+        45.772046679457,
+        16.085803536130893,
+        45.84121519976887
+      ],
+      "columns": {
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "6": 729
+          },
+          "nulls": 0
+        },
+        "LOC": {
+          "blank_strings": 0,
+          "distinct": 3,
+          "dtype": "int32",
+          "native_counts": {
+            "40": 2,
+            "44": 669,
+            "45": 58
+          },
+          "nulls": 0
+        },
+        "Shape_Length": {
+          "blank_strings": 0,
+          "distinct": 694,
+          "dtype": "float64",
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 729
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 729
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "2122": 729
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {
+            "<NULL>": 729
+          },
+          "nulls": 729
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "212": 729
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 9,
+            "2": 720
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 729,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 34,
+        "nulls": 0,
+        "types": {
+          "MultiLineString": 729
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P02_road_line": {
+      "bounds_native": [
+        571024.8048706055,
+        5069164.557922363,
+        584366.6220703125,
+        5078394.707702637
+      ],
+      "bounds_wgs84": [
+        15.91371268316569,
+        45.77171149577806,
+        16.086107932173775,
+        45.85406919108296
+      ],
+      "columns": {
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int32",
+          "native_counts": {
+            "1": 29,
+            "6": 6978
+          },
+          "nulls": 0
+        },
+        "HCT": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int32",
+          "native_counts": {
+            "2": 623,
+            "4": 6384
+          },
+          "nulls": 0
+        },
+        "LOC": {
+          "blank_strings": 0,
+          "distinct": 3,
+          "dtype": "int32",
+          "native_counts": {
+            "40": 24,
+            "44": 6944,
+            "45": 39
+          },
+          "nulls": 0
+        },
+        "NAM": {
+          "blank_strings": 0,
+          "distinct": 2229,
+          "dtype": "object",
+          "nulls": 2900
+        },
+        "RST": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int32",
+          "native_counts": {
+            "1": 6967,
+            "2": 40
+          },
+          "nulls": 0
+        },
+        "Shape_Length": {
+          "blank_strings": 0,
+          "distinct": 7007,
+          "dtype": "float64",
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 7007
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 7007
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int16",
+          "native_counts": {
+            "21121": 623,
+            "21122": 6384
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {
+            "<NULL>": 7007
+          },
+          "nulls": 7007
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "211": 7007
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 861,
+            "2": 6146
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 7007,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "MultiLineString": 7007
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P02_tunnel_line": {
+      "bounds_native": [
+        572202.6768798828,
+        5071617.957092285,
+        582644.4805297852,
+        5074729.54107666
+      ],
+      "bounds_wgs84": [
+        15.929291390760799,
+        45.79409719994588,
+        16.063892130845833,
+        45.821176027598895
+      ],
+      "columns": {
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "6": 5
+          },
+          "nulls": 0
+        },
+        "Shape_Length": {
+          "blank_strings": 0,
+          "distinct": 5,
+          "dtype": "float64",
+          "native_counts": {
+            "233.65318263455902": 1,
+            "234.28180284173362": 1,
+            "50.34195397096865": 1,
+            "55.93276200882271": 1,
+            "56.04508359107294": 1
+          },
+          "nulls": 0
+        },
+        "TRS": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "13": 5
+          },
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 5
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 5
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "2142": 5
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {
+            "<NULL>": 5
+          },
+          "nulls": 5
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "214": 5
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "2": 5
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 5,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "MultiLineString": 5
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P02_tunnel_point": {
+      "bounds_native": [
+        572823.8803100586,
+        5071904.908874512,
+        581583.2152709961,
+        5076532.742919922
+      ],
+      "bounds_wgs84": [
+        15.937062244716927,
+        45.79686303175668,
+        16.04988820045678,
+        45.83831946132161
+      ],
+      "columns": {
+        "FUN": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "6": 21
+          },
+          "nulls": 0
+        },
+        "TRS": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int32",
+          "native_counts": {
+            "12": 2,
+            "13": 19
+          },
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 21
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 21
+          },
+          "nulls": 0
+        },
+        "info": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int16",
+          "native_counts": {
+            "2142": 21
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {
+            "<NULL>": 21
+          },
+          "nulls": 21
+        },
+        "obj_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "214": 21
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 2,
+            "2": 19
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 21,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "Point": 21
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P08_damage_assessment_poly": {
+      "bounds_native": [
+        571896.7280883789,
+        5070340.736877441,
+        584195.5697021484,
+        5077770.271728516
+      ],
+      "bounds_wgs84": [
+        15.9253308044835,
+        45.78261263488138,
+        16.08393874101592,
+        45.848794658600944
+      ],
+      "columns": {
+        "SHAPE_Area": {
+          "blank_strings": 0,
+          "distinct": 556,
+          "dtype": "float64",
+          "nulls": 0
+        },
+        "SHAPE_Length": {
+          "blank_strings": 0,
+          "distinct": 556,
+          "dtype": "float64",
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 556
+          },
+          "nulls": 0
+        },
+        "damage_gra": {
+          "blank_strings": 0,
+          "distinct": 4,
+          "dtype": "object",
+          "native_counts": {
+            "1": 244,
+            "2": 136,
+            "3": 155,
+            "4": 21
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 556
+          },
+          "nulls": 0
+        },
+        "dmg_src_id": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int32",
+          "native_counts": {
+            "3": 82,
+            "4": 474
+          },
+          "nulls": 0
+        },
+        "event_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "6": 556
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "2": 556
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 2,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 15,
+            "2": 541
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 556,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "MultiPolygon": 556
+        }
+      },
+      "local_fid_unique": true
+    },
+    "P09_reconstruction_monitoring_poly": {
+      "bounds_native": [
+        571896.7282714844,
+        5070340.737121582,
+        584195.5698852539,
+        5077770.271911621
+      ],
+      "bounds_wgs84": [
+        15.925330806867095,
+        45.78261263705877,
+        16.083938743415448,
+        45.84879466022021
+      ],
+      "columns": {
+        "SHAPE_Area": {
+          "blank_strings": 0,
+          "distinct": 560,
+          "dtype": "float64",
+          "nulls": 0
+        },
+        "SHAPE_Length": {
+          "blank_strings": 0,
+          "distinct": 560,
+          "dtype": "float64",
+          "nulls": 0
+        },
+        "aoi_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "01": 560
+          },
+          "nulls": 0
+        },
+        "det_method": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "1": 560
+          },
+          "nulls": 0
+        },
+        "event_type": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "6": 560
+          },
+          "nulls": 0
+        },
+        "notation": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "object",
+          "native_counts": {
+            "2": 560
+          },
+          "nulls": 0
+        },
+        "or_src_id": {
+          "blank_strings": 0,
+          "distinct": 3,
+          "dtype": "int16",
+          "native_counts": {
+            "1": 16,
+            "2": 543,
+            "5": 1
+          },
+          "nulls": 0
+        },
+        "recons_src_id": {
+          "blank_strings": 0,
+          "distinct": 1,
+          "dtype": "int32",
+          "native_counts": {
+            "5": 560
+          },
+          "nulls": 0
+        },
+        "status_class": {
+          "blank_strings": 0,
+          "distinct": 5,
+          "dtype": "object",
+          "native_counts": {
+            "1": 1,
+            "2": 147,
+            "3": 115,
+            "5": 5,
+            "6": 292
+          },
+          "nulls": 0
+        }
+      },
+      "crs": "EPSG:32633",
+      "features": 560,
+      "geometry": {
+        "empty": 0,
+        "invalid_nonempty": 0,
+        "normalized_duplicate_extra_rows": 0,
+        "nulls": 0,
+        "types": {
+          "MultiPolygon": 560
+        }
+      },
+      "local_fid_unique": true
+    },
+    "fras_aux_pppp": {
+      "columns": {
+        "object": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rasterband_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "type": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_aux_ppppp": {
+      "columns": {
+        "object": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rasterband_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "type": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_aux_testRaster": {
+      "columns": {
+        "object": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rasterband_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "type": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_aux_zzz": {
+      "columns": {
+        "object": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rasterband_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "type": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_blk_pppp": {
+      "columns": {
+        "block_data": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_key": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "col_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rasterband_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "row_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rrd_factor": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_blk_ppppp": {
+      "columns": {
+        "block_data": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_key": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "col_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rasterband_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "row_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rrd_factor": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_blk_testRaster": {
+      "columns": {
+        "block_data": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_key": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "col_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rasterband_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "row_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rrd_factor": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_blk_zzz": {
+      "columns": {
+        "block_data": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_key": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "col_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rasterband_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "row_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "rrd_factor": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_bnd_pppp": {
+      "columns": {
+        "band_flags": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_height": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_types": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_width": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_height": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_origin_x": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_origin_y": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_width": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "cdate": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "emaxx": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "emaxy": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "eminx": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "eminy": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "mdate": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "name": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "raster_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "sequence_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "srid": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_bnd_ppppp": {
+      "columns": {
+        "band_flags": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_height": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_types": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_width": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_height": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_origin_x": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_origin_y": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_width": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "cdate": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "emaxx": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "emaxy": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "eminx": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "eminy": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "mdate": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "name": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "raster_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "sequence_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "srid": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_bnd_testRaster": {
+      "columns": {
+        "band_flags": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_height": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_types": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_width": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_height": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_origin_x": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_origin_y": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_width": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "cdate": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "emaxx": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "emaxy": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "eminx": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "eminy": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "mdate": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "name": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "raster_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "sequence_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "srid": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_bnd_zzz": {
+      "columns": {
+        "band_flags": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_height": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_types": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "band_width": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_height": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_origin_x": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_origin_y": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "block_width": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "cdate": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "emaxx": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "emaxy": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "eminx": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "eminy": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "float64",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "mdate": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "name": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "raster_id": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "sequence_nbr": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "srid": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_ras_pppp": {
+      "columns": {
+        "description": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "raster_flags": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "storage_def": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_ras_ppppp": {
+      "columns": {
+        "description": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "raster_flags": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "storage_def": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_ras_testRaster": {
+      "columns": {
+        "description": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "raster_flags": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "storage_def": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    },
+    "fras_ras_zzz": {
+      "columns": {
+        "description": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "raster_flags": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "int32",
+          "native_counts": {},
+          "nulls": 0
+        },
+        "storage_def": {
+          "blank_strings": 0,
+          "distinct": 0,
+          "dtype": "object",
+          "native_counts": {},
+          "nulls": 0
+        }
+      },
+      "crs": null,
+      "features": 0,
+      "geometry": null,
+      "local_fid_unique": true
+    }
+  },
+  "linkage": {
+    "all_geometry_intersections": {
+      "damage_records_matched": 556,
+      "damage_records_unmatched": 0,
+      "damage_records_with_multiple_references": 58,
+      "mutually_unique_pairs": 160,
+      "pairs": 617,
+      "reference_records_matched": 325,
+      "references_with_multiple_damage_records": 110
+    },
+    "damage_records_touching_invalid_geometry": 62,
+    "id_linkage": "OBJECTID/FID is layer-local; shared aoi_id, or_src_id and other attributes are not unique building identifiers.",
+    "intersection_pairs_touching_invalid_geometry": 62,
+    "iou_0p99_native_damage_counts": {
+      "1": 50,
+      "2": 14,
+      "3": 19,
+      "4": 16
+    },
+    "iou_thresholds": {
+      "0.5": {
+        "damage_records_matched": 127,
+        "damage_records_unmatched": 429,
+        "damage_records_with_multiple_references": 0,
+        "mutually_unique_pairs": 127,
+        "pairs": 127,
+        "reference_records_matched": 127,
+        "references_with_multiple_damage_records": 0
+      },
+      "0.9": {
+        "damage_records_matched": 100,
+        "damage_records_unmatched": 456,
+        "damage_records_with_multiple_references": 0,
+        "mutually_unique_pairs": 100,
+        "pairs": 100,
+        "reference_records_matched": 100,
+        "references_with_multiple_damage_records": 0
+      },
+      "0.95": {
+        "damage_records_matched": 99,
+        "damage_records_unmatched": 457,
+        "damage_records_with_multiple_references": 0,
+        "mutually_unique_pairs": 99,
+        "pairs": 99,
+        "reference_records_matched": 99,
+        "references_with_multiple_damage_records": 0
+      },
+      "0.99": {
+        "damage_records_matched": 99,
+        "damage_records_unmatched": 457,
+        "damage_records_with_multiple_references": 0,
+        "mutually_unique_pairs": 99,
+        "pairs": 99,
+        "reference_records_matched": 99,
+        "references_with_multiple_damage_records": 0
+      },
+      "0.999": {
+        "damage_records_matched": 99,
+        "damage_records_unmatched": 457,
+        "damage_records_with_multiple_references": 0,
+        "mutually_unique_pairs": 99,
+        "pairs": 99,
+        "reference_records_matched": 99,
+        "references_with_multiple_damage_records": 0
+      }
+    },
+    "method": "Diagnostic spatial links only; exact equality and fixed IoU thresholds. Invalid geometries excluded from area/equality comparisons without repair. No row-level labels created.",
+    "shared_non_geometry_fields": [
+      "aoi_id",
+      "det_method",
+      "notation",
+      "or_src_id"
+    ],
+    "topologically_equal_valid_geometry_pairs": 0,
+    "valid_damage_records_at_least_95pct_covered_by_reference": 491,
+    "valid_positive_area_intersections": {
+      "damage_records_matched": 497,
+      "damage_records_unmatched": 59,
+      "damage_records_with_multiple_references": 55,
+      "mutually_unique_pairs": 162,
+      "pairs": 555,
+      "reference_records_matched": 315,
+      "references_with_multiple_damage_records": 101
+    }
+  },
+  "merge_authorized": false,
+  "metadata": {
+    "domains": {
+      "AAD010-FUN": {
+        "0": "Unknown",
+        "1": "Under Construction",
+        "101": "New",
+        "102": "Removed / Cleared",
+        "11": "Partially Destroyed",
+        "13": "Damaged",
+        "143": "Decoy-dummy",
+        "16": "Disused",
+        "2": "Abandoned",
+        "3": "Destroyed",
+        "4": "Dismantled",
+        "5": "Proposed",
+        "6": "Fully Functional",
+        "9": "Partially Functional"
+      },
+      "AAD010-PPC": {
+        "0": "Unknown",
+        "1": "Hydro-electric",
+        "2": "Nuclear",
+        "3": "Solar",
+        "4": "Geothermal",
+        "5": "Wind",
+        "6": "Tidal",
+        "7": "Thermal",
+        "999": "Other"
+      },
+      "AAL010-FFN": {
+        "0": "Unknown",
+        "2": "Agriculture",
+        "350": "Industrial - Utilities",
+        "440": "Commercial",
+        "480": "Transportation",
+        "550": "Public Accommodation - Hotel",
+        "610": "Telecommunications",
+        "626": "Satellite Ground Control",
+        "720": "Scientific Research and Development",
+        "721": "Observation Station",
+        "810": "Administration",
+        "811": "Government",
+        "825": "Diplomacy",
+        "835": "Military",
+        "841": "Police Station",
+        "843": "Correctional",
+        "845": "Firefighting",
+        "850": "Educational",
+        "860": "Medical",
+        "907": "Botanical and/or Zoological Reserve Activities",
+        "930": "Religious",
+        "99": "Industrial - Manufacturing",
+        "999": "Other"
+      },
+      "AAL010-FUN": {
+        "0": "Unknown",
+        "1": "Under Construction",
+        "101": "New",
+        "102": "Removed / Cleared",
+        "11": "Partially Destroyed",
+        "13": "Damaged",
+        "143": "Decoy-dummy",
+        "16": "Disused",
+        "2": "Abandoned",
+        "3": "Destroyed",
+        "4": "Dismantled",
+        "5": "Proposed",
+        "6": "Fully Functional",
+        "9": "Partially Functional"
+      },
+      "AAL015-FFN": {
+        "0": "Unknown",
+        "1001": "Laboratory",
+        "1002": "Dry Storage",
+        "1003": "Control Room",
+        "1004": "Temperature Regulation / Ventilation",
+        "1005": "Generator",
+        "1006": "Turbine Hall",
+        "1007": "Laser Building",
+        "1008": "Optical Range-Based",
+        "1009": "Missile Assembly",
+        "1010": "Nitrogen / Oxygen Shop",
+        "1011": "Packaging",
+        "1012": "Hydrofluorination",
+        "1013": "Conditioning",
+        "1014": "Centrifuge Assembly",
+        "1015": "Centrifuge Cascade Hall",
+        "1016": "Steam Generator",
+        "105": "Oil-mill",
+        "107": "Grain Milling",
+        "161": "Sawmilling",
+        "171": "Paper-mill",
+        "192": "Petroleum Refining",
+        "2": "Agriculture",
+        "241": "Steel Mill",
+        "270": "Electrical",
+        "290": "Motor Vehicle Manufacture",
+        "320": "Workshop",
+        "330": "General Repair",
+        "341": "Aircraft Repair",
+        "343": "Motor Vehicle Repair",
+        "350": "Industrial - Utilities",
+        "351": "Power Generation",
+        "355": "Cooling",
+        "356": "Boiler Room",
+        "362": "Water Treatment",
+        "440": "Commercial",
+        "470": "Refuelling Station",
+        "475": "Market",
+        "480": "Transportation",
+        "481": "Terminal",
+        "486": "Signalling",
+        "501": "Pumping",
+        "511": "Maritime Pilotage",
+        "513": "Harbour Control",
+        "530": "Warehouse and Storage",
+        "535": "Motor Vehicle Parking",
+        "540": "Post Office",
+        "550": "Public Accommodation - Hotel",
+        "556": "Barracks - Dormitory ",
+        "563": "Residential",
+        "572": "Restaurant",
+        "582": "Print Publishing",
+        "601": "Radio Broadcasting",
+        "604": "Television Broadcasting",
+        "610": "Telecommunications",
+        "626": "Satellite Ground Control",
+        "643": "Bank",
+        "720": "Scientific Research and Development",
+        "721": "Observation Station",
+        "722": "Weather Station",
+        "730": "Wind Tunnel",
+        "781": "Guard House",
+        "809": "Headquarters",
+        "810": "Administration",
+        "811": "Government",
+        "815": "Palace",
+        "825": "Diplomacy",
+        "827": "Embassy",
+        "835": "Military",
+        "840": "Judicial Activities ",
+        "841": "Police Station",
+        "843": "Correctional",
+        "845": "Firefighting",
+        "850": "Educational",
+        "855": "Higher Education",
+        "859": "Institution",
+        "860": "Medical",
+        "861": "In-patient Care",
+        "887": "Social Work",
+        "891": "Theatre",
+        "892": "Auditorium",
+        "893": "Community Centre",
+        "894": "Opera House",
+        "902": "Library",
+        "905": "Museum",
+        "912": "Sports Centre",
+        "919": "Animal Boarding",
+        "930": "Religious",
+        "931": "Place of Worship",
+        "955": "Yacht-club",
+        "99": "Industrial - Manufacturing",
+        "999": "Other"
+      },
+      "AAL015-FUN": {
+        "0": "Unknown",
+        "1": "Under Construction",
+        "101": "New",
+        "102": "Removed / Cleared",
+        "11": "Partially Destroyed",
+        "13": "Damaged",
+        "143": "Decoy-dummy",
+        "16": "Disused",
+        "2": "Abandoned",
+        "3": "Destroyed",
+        "4": "Dismantled",
+        "5": "Proposed",
+        "6": "Fully Functional",
+        "9": "Partially Functional"
+      },
+      "AGB030-FUN": {
+        "0": "Unknown",
+        "1": "Under Construction",
+        "101": "New",
+        "102": "Removed / Cleared",
+        "11": "Partially Destroyed",
+        "13": "Damaged",
+        "143": "Decoy-dummy",
+        "16": "Disused",
+        "2": "Abandoned",
+        "3": "Destroyed",
+        "4": "Dismantled",
+        "5": "Proposed",
+        "6": "Fully Functional",
+        "9": "Partially Functional"
+      },
+      "AGB030-HAF": {
+        "0": "Unknown",
+        "1": "Heliport",
+        "11": "Military Installation",
+        "2": "Land Aerodrome",
+        "3": "Hospital",
+        "4": "Non-hospital Building",
+        "6": "Rig",
+        "9": "Offshore Construction",
+        "999": "Other"
+      },
+      "LAN010-FUN": {
+        "0": "Unknown",
+        "1": "Under Construction",
+        "101": "New",
+        "102": "Removed / Cleared",
+        "11": "Partially Destroyed",
+        "13": "Damaged",
+        "143": "Decoy-dummy",
+        "16": "Disused",
+        "2": "Abandoned",
+        "3": "Destroyed",
+        "4": "Dismantled",
+        "5": "Proposed",
+        "6": "Fully Functional",
+        "9": "Partially Functional"
+      },
+      "LAN010-LOC": {
+        "0": "Unknown",
+        "40": "Below Ground Surface",
+        "44": "On Surface",
+        "45": "Above Surface"
+      },
+      "LAP010-FUN": {
+        "0": "Unknown",
+        "101": "New",
+        "102": "Removed / Cleared",
+        "11": "Partially Destroyed",
+        "13": "Damaged",
+        "3": "Destroyed",
+        "6": "Fully Functional",
+        "9": "Partially Functional"
+      },
+      "LAP030-FUN": {
+        "0": "Unknown",
+        "1": "Under Construction",
+        "101": "New",
+        "102": "Removed / Cleared",
+        "11": "Partially Destroyed",
+        "13": "Damaged",
+        "143": "Decoy-dummy",
+        "16": "Disused",
+        "2": "Abandoned",
+        "3": "Destroyed",
+        "4": "Dismantled",
+        "5": "Proposed",
+        "6": "Fully Functional",
+        "9": "Partially Functional"
+      },
+      "LAP030-HCT": {
+        "0": "Unknown",
+        "1": "Main Road",
+        "2": "Secondary Road",
+        "3": "Highway",
+        "4": "Local Road"
+      },
+      "LAP030-LOC": {
+        "0": "Unknown",
+        "17": "On Waterbody Bottom",
+        "40": "Below Ground Surface",
+        "44": "On Surface",
+        "45": "Above Surface"
+      },
+      "LAP030-RST": {
+        "0": "Unknown",
+        "1": "Hard/Paved",
+        "2": "Loose/Unpaved",
+        "8": "Temporary"
+      },
+      "LAQ040-FUN": {
+        "0": "Unknown",
+        "1": "Under Construction",
+        "101": "New",
+        "102": "Removed / Cleared",
+        "11": "Partially Destroyed",
+        "13": "Damaged",
+        "143": "Decoy-dummy",
+        "16": "Disused",
+        "2": "Abandoned",
+        "3": "Destroyed",
+        "4": "Dismantled",
+        "5": "Proposed",
+        "6": "Fully Functional",
+        "9": "Partially Functional"
+      },
+      "LAQ040-TRS": {
+        "0": "Unknown",
+        "1": "Aeronautical",
+        "10": "Pipeline",
+        "12": "Railway",
+        "13": "Road",
+        "2": "Aqueduct",
+        "4": "Bus",
+        "5": "Canal",
+        "7": "Maritime",
+        "9": "Pedestrian",
+        "998": "Not Applicable",
+        "999": "Other"
+      },
+      "LAQ130-FUN": {
+        "0": "Unknown",
+        "1": "Under Construction",
+        "101": "New",
+        "102": "Removed / Cleared",
+        "11": "Partially Destroyed",
+        "13": "Damaged",
+        "143": "Decoy-dummy",
+        "16": "Disused",
+        "2": "Abandoned",
+        "3": "Destroyed",
+        "4": "Dismantled",
+        "5": "Proposed",
+        "6": "Fully Functional",
+        "9": "Partially Functional"
+      },
+      "LAQ130-TRS": {
+        "0": "Unknown",
+        "1": "Aeronautical",
+        "10": "Pipeline",
+        "12": "Railway",
+        "13": "Road",
+        "2": "Aqueduct",
+        "4": "Bus",
+        "5": "Canal",
+        "7": "Maritime",
+        "9": "Pedestrian",
+        "998": "Not Applicable",
+        "999": "Other"
+      },
+      "PAQ040-FUN": {
+        "0": "Unknown",
+        "1": "Under Construction",
+        "101": "New",
+        "102": "Removed / Cleared",
+        "11": "Partially Destroyed",
+        "13": "Damaged",
+        "143": "Decoy-dummy",
+        "16": "Disused",
+        "2": "Abandoned",
+        "3": "Destroyed",
+        "4": "Dismantled",
+        "5": "Proposed",
+        "6": "Fully Functional",
+        "9": "Partially Functional"
+      },
+      "PAQ040-TRS": {
+        "0": "Unknown",
+        "1": "Aeronautical",
+        "10": "Pipeline",
+        "12": "Railway",
+        "13": "Road",
+        "2": "Aqueduct",
+        "4": "Bus",
+        "5": "Canal",
+        "7": "Maritime",
+        "9": "Pedestrian",
+        "998": "Not Applicable",
+        "999": "Other"
+      },
+      "PAQ130-FUN": {
+        "0": "Unknown",
+        "1": "Under Construction",
+        "101": "New",
+        "102": "Removed / Cleared",
+        "11": "Partially Destroyed",
+        "13": "Damaged",
+        "143": "Decoy-dummy",
+        "16": "Disused",
+        "2": "Abandoned",
+        "3": "Destroyed",
+        "4": "Dismantled",
+        "5": "Proposed",
+        "6": "Fully Functional",
+        "9": "Partially Functional"
+      },
+      "PAQ130-TRS": {
+        "0": "Unknown",
+        "1": "Aeronautical",
+        "10": "Pipeline",
+        "12": "Railway",
+        "13": "Road",
+        "2": "Aqueduct",
+        "4": "Bus",
+        "5": "Canal",
+        "7": "Maritime",
+        "9": "Pedestrian",
+        "998": "Not Applicable",
+        "999": "Other"
+      },
+      "comment_list": {
+        "1": "Extreme sea level",
+        "2": "Dam disruption",
+        "3": "Ice/snow melting",
+        "4": "Rain",
+        "5": "River ice jams"
+      },
+      "comment_list_p08": {
+        "1": "Loss of tree cover",
+        "2": "Impact on buildings",
+        "3": "Impact on transportation",
+        "4": "Impact on industrial facilities",
+        "997": "Not Applicable"
+      },
+      "damage_event_type_list": {
+        "1": "Flood",
+        "10": "Tropical cyclones / Hurricanes",
+        "11": "Wildfire",
+        "12": "Drought",
+        "13": "Extreme temperature",
+        "14": "Epidemics",
+        "15": "Windstorm",
+        "16": "Air pollution",
+        "17": "Other",
+        "2": "Landslide",
+        "3": "Coastal flooding, strom surges",
+        "4": "Coastal erosion",
+        "5": "Soil erosion",
+        "6": "Earthquake",
+        "7": "Volcanic activity",
+        "8": "Tsunami",
+        "9": "Ground deformation"
+      },
+      "damage_grade_list": {
+        "1": "Possible damage",
+        "2": "Moderate damage",
+        "3": "Severe damage",
+        "4": "Destroyed"
+      },
+      "det_method_list": {
+        "1": "Photo-interpretation",
+        "2": "Semi-automatic extraction",
+        "3": "Automatic extraction",
+        "4": "Modelling",
+        "997": "Not Applicable"
+      },
+      "dom_C1_built_up_12": {
+        "121": "121-Hotels and similar buildings",
+        "1211": "1211-Hotel buildings",
+        "1212": "1212-Other short-stay accommodation buildings",
+        "122": "122-Office buildings",
+        "1220": "1220-Administrative",
+        "1221": "1221-Institutional",
+        "1222": "1222-Police station",
+        "1223": "1223-Fire station",
+        "1224": "1224-Correctional",
+        "123": "123-Wholesale and retail trade buildings",
+        "124": "124-Traffic and communication buildings",
+        "1241": "1241-Communication buildings, stations, terminals and associated buildings",
+        "1242": "1242-Garage buildings",
+        "125": "125-Industrial buildings and warehouses",
+        "1251": "1251-Industrial buildings",
+        "1252": "1252-Reservoirs, silos and warehouses",
+        "126": "126-Public entertainment, education, hospital or institutional care buildings",
+        "1261": "1261-Public entertainment buildings",
+        "1262": "1262-Museums and libraries",
+        "1263": "1263-School, university and research buildings",
+        "1264": "1264-Hospital or institutional care buildings",
+        "1265": "1265-Sports halls",
+        "127": "127-Other non-residential buildings",
+        "1271": "1271-Non-residential farm buildings",
+        "1272": "1272-Buildings used as places of worship and for religious activities",
+        "1273": "1273-Historic or protected monuments",
+        "1274": "1274-Other buildings not elsewhere classified",
+        "1275": "1275-Multi-functional",
+        "1276": "1276-Refugee/IDP camp",
+        "1277": "1277-Tent",
+        "1278": "1278-Shelter",
+        "1279": "1279-Military",
+        "1280": "1280-Cemetery",
+        "997": "997-Not Applicable"
+      },
+      "dom_C2_facilities_23": {
+        "2301": "2301-Constructions for mining or extraction",
+        "23010": "23010-Oil Gas Well",
+        "23011": "23011-Water Well",
+        "2302": "2302-Power plant constructions",
+        "23020": "23020-Power plant constructions  Hydro-electric",
+        "23021": "23021-Power plant constructions Nuclear",
+        "23022": "23022-Power plant constructions Solar",
+        "23023": "23023-Power plant constructions Geothermal",
+        "23024": "23024-Power plant constructions Wind",
+        "23025": "23025-Power plant constructions Tidal",
+        "23026": "23026-Power plant constructions Thermal",
+        "23027": "23027-Power Substation",
+        "2303": "2303-Chemical plant constructions",
+        "2304": "2304-Heavy industrial plants, not elsewhere classified",
+        "2305": "2305-Industrial - Manufacturing",
+        "997": "997-Not Applicable"
+      },
+      "dom_C3_transportation_211": {
+        "2111": "2111-Highways",
+        "21110": "21110-Toll",
+        "2112": "2112-Streets and roads",
+        "21120": "21120-Primary Road",
+        "21121": "21121-Secondary Road",
+        "21122": "21122-Local Road",
+        "21123": "21123-No Driveway",
+        "21124": "21124-Cart Track",
+        "21125": "21125-Trail",
+        "997": "997-Not Applicable"
+      },
+      "dom_C3_transportation_212": {
+        "2121": "2121-Long-distance railways",
+        "21210": "21210-Railway Yard",
+        "2122": "2122-Urban railways",
+        "21220": "21220-Tramway",
+        "21221": "21221-Subway",
+        "997": "997-Not Applicable"
+      },
+      "dom_C3_transportation_213": {
+        "2130": "2130-Airfield runways",
+        "2131": "2131-Heliport",
+        "21312": "21312-Helipad",
+        "997": "997-Not Applicable"
+      },
+      "dom_C3_transportation_214": {
+        "2141": "2141-Bridges and elevated highways",
+        "2142": "2142-Tunnels and subways",
+        "2143": "2143-Causeway",
+        "2144": "2144-Embankment",
+        "997": "997-Not Applicable"
+      },
+      "obj_type_built_up": {
+        "11": "11-Residential Buildings",
+        "12": "12-Non-residential Buildings"
+      },
+      "obj_type_facilities": {
+        "23": "23-Complex Constructions on Industrial Sites"
+      },
+      "obj_type_transportation": {
+        "211": "211-Highways, Streets and Roads",
+        "212": "212-Railways",
+        "213": "213-Airfield",
+        "214": "214-Bridges, Elevated Highways, Tunnels and Subways"
+      },
+      "status_class_list_1": {
+        "1": "New",
+        "2": "Unchanged",
+        "3": "Reconstruction on-going",
+        "4": "Demolished",
+        "5": "Removed",
+        "6": "Reconstructed",
+        "7": "Not Analysed"
+      }
+    },
+    "layers": {
+      "P02_bridge_line": {
+        "alias": "BridgeL",
+        "fields": {
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "LAQ040-FUN"
+          },
+          "OBJECTID": {
+            "alias": "FID",
+            "domain": null
+          },
+          "Shape": {
+            "alias": "Shape",
+            "domain": null
+          },
+          "Shape_Length": {
+            "alias": null,
+            "domain": null
+          },
+          "TRS": {
+            "alias": "Transportation System Type",
+            "domain": "LAQ040-TRS"
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C3_transportation_214"
+          },
+          "notation": {
+            "alias": "Comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_transportation"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P02_bridge_point": {
+        "alias": "BridgeP",
+        "fields": {
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "PAQ040-FUN"
+          },
+          "OBJECTID": {
+            "alias": null,
+            "domain": null
+          },
+          "Shape": {
+            "alias": null,
+            "domain": null
+          },
+          "TRS": {
+            "alias": "Transportation System Type",
+            "domain": "PAQ040-TRS"
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C3_transportation_214"
+          },
+          "notation": {
+            "alias": "Comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_transportation"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P02_building_point": {
+        "alias": "POIs",
+        "fields": {
+          "FFN": {
+            "alias": "Feature Function",
+            "domain": "AAL015-FFN"
+          },
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "AAL015-FUN"
+          },
+          "NAM": {
+            "alias": "Name",
+            "domain": null
+          },
+          "OBJECTID": {
+            "alias": "FID",
+            "domain": null
+          },
+          "Shape": {
+            "alias": "Shape",
+            "domain": null
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C1_built_up_12"
+          },
+          "notation": {
+            "alias": "Comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_built_up"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P02_building_poly": {
+        "alias": "Building footprints",
+        "fields": {
+          "FFN": {
+            "alias": "Feature Function",
+            "domain": "AAL015-FFN"
+          },
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "AAL015-FUN"
+          },
+          "NAM": {
+            "alias": "Name",
+            "domain": null
+          },
+          "OBJECTID": {
+            "alias": "FID",
+            "domain": null
+          },
+          "Shape": {
+            "alias": "Shape",
+            "domain": null
+          },
+          "Shape_Area": {
+            "alias": null,
+            "domain": null
+          },
+          "Shape_Length": {
+            "alias": null,
+            "domain": null
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C1_built_up_12"
+          },
+          "notation": {
+            "alias": "Comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_built_up"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P02_cart_track_line": {
+        "alias": "TrackL",
+        "fields": {
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "LAP010-FUN"
+          },
+          "OBJECTID": {
+            "alias": "FID",
+            "domain": null
+          },
+          "Shape": {
+            "alias": "Shape",
+            "domain": null
+          },
+          "Shape_Length": {
+            "alias": null,
+            "domain": null
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C3_transportation_211"
+          },
+          "notation": {
+            "alias": "Comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_transportation"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P02_facility_poly": {
+        "alias": "FacilityA",
+        "fields": {
+          "FFN": {
+            "alias": "Feature Function",
+            "domain": "AAL010-FFN"
+          },
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "AAL010-FUN"
+          },
+          "OBJECTID": {
+            "alias": "FID",
+            "domain": null
+          },
+          "Shape": {
+            "alias": "Shape",
+            "domain": null
+          },
+          "Shape_Area": {
+            "alias": null,
+            "domain": null
+          },
+          "Shape_Length": {
+            "alias": null,
+            "domain": null
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C2_facilities_23"
+          },
+          "notation": {
+            "alias": "Comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_facilities"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P02_helipad_poly": {
+        "alias": "HelipadA",
+        "fields": {
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "AGB030-FUN"
+          },
+          "HAF": {
+            "alias": "Helipad Associated Facility",
+            "domain": "AGB030-HAF"
+          },
+          "OBJECTID": {
+            "alias": "FID",
+            "domain": null
+          },
+          "Shape": {
+            "alias": "Shape",
+            "domain": null
+          },
+          "Shape_Area": {
+            "alias": null,
+            "domain": null
+          },
+          "Shape_Length": {
+            "alias": null,
+            "domain": null
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C3_transportation_213"
+          },
+          "notation": {
+            "alias": "comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_transportation"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P02_power_station_poly": {
+        "alias": "PowerStationA",
+        "fields": {
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "AAD010-FUN"
+          },
+          "OBJECTID": {
+            "alias": "FID",
+            "domain": null
+          },
+          "PPC": {
+            "alias": "Power Station Type",
+            "domain": "AAD010-PPC"
+          },
+          "Shape": {
+            "alias": "Shape",
+            "domain": null
+          },
+          "Shape_Area": {
+            "alias": null,
+            "domain": null
+          },
+          "Shape_Length": {
+            "alias": null,
+            "domain": null
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C2_facilities_23"
+          },
+          "notation": {
+            "alias": "Comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_facilities"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P02_railway_line": {
+        "alias": "RailrdL",
+        "fields": {
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "LAN010-FUN"
+          },
+          "LOC": {
+            "alias": "Vertical Relative Location",
+            "domain": "LAN010-LOC"
+          },
+          "OBJECTID": {
+            "alias": "FID",
+            "domain": null
+          },
+          "Shape": {
+            "alias": "Shape",
+            "domain": null
+          },
+          "Shape_Length": {
+            "alias": null,
+            "domain": null
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C3_transportation_212"
+          },
+          "notation": {
+            "alias": "Comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_transportation"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P02_road_line": {
+        "alias": "RoadL",
+        "fields": {
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "LAP030-FUN"
+          },
+          "HCT": {
+            "alias": "Thoroughfare Class",
+            "domain": "LAP030-HCT"
+          },
+          "LOC": {
+            "alias": "Vertical Relative Location",
+            "domain": "LAP030-LOC"
+          },
+          "NAM": {
+            "alias": "Name",
+            "domain": null
+          },
+          "OBJECTID": {
+            "alias": "FID",
+            "domain": null
+          },
+          "RST": {
+            "alias": "Load-bearing Surface Type",
+            "domain": "LAP030-RST"
+          },
+          "Shape": {
+            "alias": "Shape",
+            "domain": null
+          },
+          "Shape_Length": {
+            "alias": null,
+            "domain": null
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C3_transportation_211"
+          },
+          "notation": {
+            "alias": "Comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_transportation"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P02_tunnel_line": {
+        "alias": "TunnelL",
+        "fields": {
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "LAQ130-FUN"
+          },
+          "OBJECTID": {
+            "alias": "FID",
+            "domain": null
+          },
+          "Shape": {
+            "alias": "Shape",
+            "domain": null
+          },
+          "Shape_Length": {
+            "alias": null,
+            "domain": null
+          },
+          "TRS": {
+            "alias": "Transportation System Type",
+            "domain": "LAQ130-TRS"
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C3_transportation_214"
+          },
+          "notation": {
+            "alias": "Comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_transportation"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P02_tunnel_point": {
+        "alias": "TunnelP",
+        "fields": {
+          "FUN": {
+            "alias": "Condition of Facility",
+            "domain": "PAQ130-FUN"
+          },
+          "OBJECTID": {
+            "alias": "FID",
+            "domain": null
+          },
+          "Shape": {
+            "alias": "Shape",
+            "domain": null
+          },
+          "TRS": {
+            "alias": "Transportation System Type",
+            "domain": "PAQ130-TRS"
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "info": {
+            "alias": "Ancillary attribute",
+            "domain": "dom_C3_transportation_214"
+          },
+          "notation": {
+            "alias": "Comment",
+            "domain": "comment_list"
+          },
+          "obj_type": {
+            "alias": "Subtype (Element type)",
+            "domain": "obj_type_transportation"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P08_damage_assessment_poly": {
+        "alias": "",
+        "fields": {
+          "OBJECTID": {
+            "alias": "OBJECTID",
+            "domain": null
+          },
+          "SHAPE": {
+            "alias": null,
+            "domain": null
+          },
+          "SHAPE_Area": {
+            "alias": null,
+            "domain": null
+          },
+          "SHAPE_Length": {
+            "alias": null,
+            "domain": null
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "damage_gra": {
+            "alias": "Damage Grade",
+            "domain": "damage_grade_list"
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "dmg_src_id": {
+            "alias": "Damage Source Identifier",
+            "domain": null
+          },
+          "event_type": {
+            "alias": "Event Type",
+            "domain": "damage_event_type_list"
+          },
+          "notation": {
+            "alias": "Impact on Assets",
+            "domain": "comment_list_p08"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      },
+      "P09_reconstruction_monitoring_poly": {
+        "alias": "",
+        "fields": {
+          "OBJECTID": {
+            "alias": "OBJECTID",
+            "domain": null
+          },
+          "SHAPE": {
+            "alias": null,
+            "domain": null
+          },
+          "SHAPE_Area": {
+            "alias": null,
+            "domain": null
+          },
+          "SHAPE_Length": {
+            "alias": null,
+            "domain": null
+          },
+          "aoi_id": {
+            "alias": "AOI Id",
+            "domain": null
+          },
+          "det_method": {
+            "alias": "Determination Method",
+            "domain": "det_method_list"
+          },
+          "event_type": {
+            "alias": "Event Type",
+            "domain": "damage_event_type_list"
+          },
+          "notation": {
+            "alias": "Object of Interest",
+            "domain": "comment_list_p08"
+          },
+          "or_src_id": {
+            "alias": "Origin Source Identifier",
+            "domain": null
+          },
+          "recons_src_id": {
+            "alias": "Reconstruction Source Identifier",
+            "domain": null
+          },
+          "status_class": {
+            "alias": "Status Classes",
+            "domain": "status_class_list_1"
+          }
+        },
+        "oid_field": "OBJECTID",
+        "relationship_classes": []
+      }
+    }
+  },
+  "models_fitted": false,
+  "reconstruction_layers": [
+    "P09_reconstruction_monitoring_poly"
+  ],
+  "reference_building_layers": [
+    "P02_building_poly",
+    "P02_building_point"
+  ],
+  "runtime": {
+    "GEOS": "3.13.1",
+    "pyogrio": "0.13.0"
+  },
+  "spatial_layers": 14,
+  "target_harmonized": false,
+  "unlabelled_reference_buildings_are_not_undamaged": true
+}

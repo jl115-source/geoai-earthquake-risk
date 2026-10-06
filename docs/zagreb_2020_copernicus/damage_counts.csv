@@ -1,0 +1,5 @@
+native_value,documented_name,count
+1,Possible damage,244
+2,Moderate damage,136
+3,Severe damage,155
+4,Destroyed,21

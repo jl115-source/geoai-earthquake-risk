@@ -371,3 +371,18 @@ target is survived/destroyed, **not undamaged/damaged**.
 If a conda shell exports a `PROJ_LIB`/`PROJ_DATA` pointing at a different PROJ
 database, run the venv commands with `env -u PROJ_LIB -u PROJ_DATA` (or deactivate
 conda). A stale conda database can break the existing Rasterio CRS tests.
+
+
+## Zagreb EMSN074 layer audit (1H)
+
+```bash
+python -m src.data.acquire_zagreb_copernicus
+python -m src.data.audit_zagreb_copernicus
+python -m pytest -q
+```
+
+[Measured GDB audit](docs/zagreb_2020_copernicus/audit.md): 29,398 reference
+footprints but only 556 damage polygons, no undamaged controls, and no complete
+1:1 building join. **Auxiliary only**, not a large-N vulnerability dataset.
+The audit reads all layers and embedded codebooks, records validity and fixed-IoU
+linkage diagnostics, and preserves native labels. No models or target harmonization.

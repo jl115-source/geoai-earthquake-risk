@@ -1,0 +1,1850 @@
+{
+  "dataset": "copernicus_emsn074_zagreb_2020",
+  "access": "public_no_authentication",
+  "dataset_id": "0f79c223-1225-4f9b-91dc-1ce948e1ff2b",
+  "activation": "EMSN074",
+  "event": "2020-03-22 Zagreb earthquake",
+  "source": {
+    "source_url": "https://mapping.emergency.copernicus.eu/download/EMSN074/EMSN074_STD_UTM33_v01.gdb_.zip",
+    "content_type": "application/zip",
+    "bytes": 6253576,
+    "sha256": "96fdaa2e40fc0e9a74f6a1b075df563b700d40e890ea84bc864877a0b6c36c93"
+  },
+  "member_count": 304,
+  "members": [
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "crc32": 0
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000001.freelist",
+      "bytes": 16728,
+      "compressed_bytes": 448,
+      "crc32": 1749965168
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000001.gdbindexes",
+      "bytes": 110,
+      "compressed_bytes": 82,
+      "crc32": 2529943236
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000001.gdbtable",
+      "bytes": 2785,
+      "compressed_bytes": 1051,
+      "crc32": 227660687
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000001.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 173,
+      "crc32": 290522437
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000001.TablesByName.atx",
+      "bytes": 20502,
+      "compressed_bytes": 604,
+      "crc32": 4083633694
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000002.gdbtable",
+      "bytes": 2055,
+      "compressed_bytes": 642,
+      "crc32": 1868924595
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000002.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 133,
+      "crc32": 2165908499
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000003.gdbindexes",
+      "bytes": 42,
+      "compressed_bytes": 40,
+      "crc32": 279189289
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000003.gdbtable",
+      "bytes": 2759,
+      "compressed_bytes": 662,
+      "crc32": 1977542721
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000003.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 65,
+      "crc32": 1907976205
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000004.CatItemsByPhysicalName.atx",
+      "bytes": 32790,
+      "compressed_bytes": 1303,
+      "crc32": 282482266
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000004.CatItemsByType.atx",
+      "bytes": 12310,
+      "compressed_bytes": 434,
+      "crc32": 1700614451
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000004.FDO_UUID.atx",
+      "bytes": 12310,
+      "compressed_bytes": 2609,
+      "crc32": 3050436933
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000004.freelist",
+      "bytes": 74072,
+      "compressed_bytes": 6502,
+      "crc32": 472111013
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000004.gdbindexes",
+      "bytes": 310,
+      "compressed_bytes": 132,
+      "crc32": 548459433
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000004.gdbtable",
+      "bytes": 2531275,
+      "compressed_bytes": 158142,
+      "crc32": 1330142276
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000004.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 497,
+      "crc32": 4286591383
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000004.spx",
+      "bytes": 229398,
+      "compressed_bytes": 1350,
+      "crc32": 2478048327
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000005.CatItemTypesByName.atx",
+      "bytes": 12310,
+      "compressed_bytes": 530,
+      "crc32": 538336415
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000005.CatItemTypesByParentTypeID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 278,
+      "crc32": 4226820971
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000005.CatItemTypesByUUID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 865,
+      "crc32": 3390262323
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000005.gdbindexes",
+      "bytes": 296,
+      "compressed_bytes": 119,
+      "crc32": 2175196442
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000005.gdbtable",
+      "bytes": 1803,
+      "compressed_bytes": 1119,
+      "crc32": 392351807
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000005.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 127,
+      "crc32": 154725557
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000006.CatRelsByDestinationID.atx",
+      "bytes": 12310,
+      "compressed_bytes": 1601,
+      "crc32": 115803474
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000006.CatRelsByOriginID.atx",
+      "bytes": 12310,
+      "compressed_bytes": 711,
+      "crc32": 1950482754
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000006.CatRelsByType.atx",
+      "bytes": 12310,
+      "compressed_bytes": 370,
+      "crc32": 107349099
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000006.FDO_UUID.atx",
+      "bytes": 12310,
+      "compressed_bytes": 2413,
+      "crc32": 1049793973
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000006.freelist",
+      "bytes": 8536,
+      "compressed_bytes": 287,
+      "crc32": 3568592910
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000006.gdbindexes",
+      "bytes": 318,
+      "compressed_bytes": 129,
+      "crc32": 297724318
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000006.gdbtable",
+      "bytes": 18301,
+      "compressed_bytes": 5353,
+      "crc32": 82381954
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000006.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 353,
+      "crc32": 281336814
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000007.CatRelTypesByBackwardLabel.atx",
+      "bytes": 4118,
+      "compressed_bytes": 333,
+      "crc32": 831352792
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000007.CatRelTypesByDestItemTypeID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 297,
+      "crc32": 1195728318
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000007.CatRelTypesByForwardLabel.atx",
+      "bytes": 4118,
+      "compressed_bytes": 265,
+      "crc32": 2715059009
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000007.CatRelTypesByName.atx",
+      "bytes": 4118,
+      "compressed_bytes": 337,
+      "crc32": 4261984477
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000007.CatRelTypesByOriginItemTypeID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 382,
+      "crc32": 717017268
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000007.CatRelTypesByUUID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 483,
+      "crc32": 1661793042
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000007.gdbindexes",
+      "bytes": 602,
+      "compressed_bytes": 172,
+      "crc32": 3251437668
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000007.gdbtable",
+      "bytes": 2504,
+      "compressed_bytes": 1306,
+      "crc32": 4270982523
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000007.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 89,
+      "crc32": 1059106410
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001a.gdbindexes",
+      "bytes": 70,
+      "compressed_bytes": 50,
+      "crc32": 2415404108
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001a.gdbtable",
+      "bytes": 165,
+      "compressed_bytes": 100,
+      "crc32": 1708726184
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001a.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001b.gdbindexes",
+      "bytes": 66,
+      "compressed_bytes": 46,
+      "crc32": 2675677118
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001b.gdbtable",
+      "bytes": 138,
+      "compressed_bytes": 95,
+      "crc32": 2774719752
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001b.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001c.band_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001c.blk_key_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 34,
+      "crc32": 824670517
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001c.col_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001c.gdbindexes",
+      "bytes": 308,
+      "compressed_bytes": 127,
+      "crc32": 1373541981
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001c.gdbtable",
+      "bytes": 225,
+      "compressed_bytes": 138,
+      "crc32": 2112345509
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001c.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001c.row_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001d.gdbindexes",
+      "bytes": 86,
+      "compressed_bytes": 55,
+      "crc32": 1221258441
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001d.gdbtable",
+      "bytes": 498,
+      "compressed_bytes": 193,
+      "crc32": 926962748
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000001d.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000023.gdbindexes",
+      "bytes": 70,
+      "compressed_bytes": 50,
+      "crc32": 2415404108
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000023.gdbtable",
+      "bytes": 165,
+      "compressed_bytes": 100,
+      "crc32": 1708726184
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000023.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000024.gdbindexes",
+      "bytes": 66,
+      "compressed_bytes": 46,
+      "crc32": 2675677118
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000024.gdbtable",
+      "bytes": 138,
+      "compressed_bytes": 95,
+      "crc32": 2774719752
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000024.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000025.band_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000025.blk_key_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 34,
+      "crc32": 824670517
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000025.col_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000025.gdbindexes",
+      "bytes": 308,
+      "compressed_bytes": 127,
+      "crc32": 1373541981
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000025.gdbtable",
+      "bytes": 225,
+      "compressed_bytes": 138,
+      "crc32": 2112345509
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000025.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000025.row_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000026.gdbindexes",
+      "bytes": 86,
+      "compressed_bytes": 55,
+      "crc32": 1221258441
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000026.gdbtable",
+      "bytes": 498,
+      "compressed_bytes": 193,
+      "crc32": 926962748
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000026.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002c.gdbindexes",
+      "bytes": 70,
+      "compressed_bytes": 50,
+      "crc32": 2415404108
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002c.gdbtable",
+      "bytes": 165,
+      "compressed_bytes": 100,
+      "crc32": 1708726184
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002c.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002d.gdbindexes",
+      "bytes": 66,
+      "compressed_bytes": 46,
+      "crc32": 2675677118
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002d.gdbtable",
+      "bytes": 138,
+      "compressed_bytes": 95,
+      "crc32": 2774719752
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002d.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002e.band_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002e.blk_key_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 34,
+      "crc32": 824670517
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002e.col_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002e.gdbindexes",
+      "bytes": 308,
+      "compressed_bytes": 127,
+      "crc32": 1373541981
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002e.gdbtable",
+      "bytes": 225,
+      "compressed_bytes": 138,
+      "crc32": 2112345509
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002e.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002e.row_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002f.gdbindexes",
+      "bytes": 86,
+      "compressed_bytes": 55,
+      "crc32": 1221258441
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002f.gdbtable",
+      "bytes": 498,
+      "compressed_bytes": 193,
+      "crc32": 926962748
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000002f.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000035.gdbindexes",
+      "bytes": 70,
+      "compressed_bytes": 50,
+      "crc32": 2415404108
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000035.gdbtable",
+      "bytes": 165,
+      "compressed_bytes": 100,
+      "crc32": 1708726184
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000035.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000036.gdbindexes",
+      "bytes": 66,
+      "compressed_bytes": 46,
+      "crc32": 2675677118
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000036.gdbtable",
+      "bytes": 138,
+      "compressed_bytes": 95,
+      "crc32": 2774719752
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000036.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000037.band_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000037.blk_key_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 34,
+      "crc32": 824670517
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000037.col_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000037.gdbindexes",
+      "bytes": 308,
+      "compressed_bytes": 127,
+      "crc32": 1373541981
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000037.gdbtable",
+      "bytes": 225,
+      "compressed_bytes": 138,
+      "crc32": 2112345509
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000037.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000037.row_index.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000038.gdbindexes",
+      "bytes": 86,
+      "compressed_bytes": 55,
+      "crc32": 1221258441
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000038.gdbtable",
+      "bytes": 498,
+      "compressed_bytes": 193,
+      "crc32": 926962748
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000038.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000045.freelist",
+      "bytes": 4440,
+      "compressed_bytes": 50,
+      "crc32": 4161250503
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000045.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 67,
+      "crc32": 4286214332
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000045.gdbtable",
+      "bytes": 2024,
+      "compressed_bytes": 671,
+      "crc32": 493264145
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000045.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000045.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000049.freelist",
+      "bytes": 16728,
+      "compressed_bytes": 111,
+      "crc32": 1581615554
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000049.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 67,
+      "crc32": 4286214332
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000049.gdbtable",
+      "bytes": 2800,
+      "compressed_bytes": 727,
+      "crc32": 4205206980
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000049.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000049.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000004d.freelist",
+      "bytes": 8536,
+      "compressed_bytes": 74,
+      "crc32": 2886748458
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000004d.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 67,
+      "crc32": 4286214332
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000004d.gdbtable",
+      "bytes": 2206,
+      "compressed_bytes": 692,
+      "crc32": 3755780338
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000004d.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000004d.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000053.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 67,
+      "crc32": 4286214332
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000053.gdbtable",
+      "bytes": 1447,
+      "compressed_bytes": 614,
+      "crc32": 1436497820
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000053.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000053.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000055.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 67,
+      "crc32": 4286214332
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000055.gdbtable",
+      "bytes": 1477,
+      "compressed_bytes": 629,
+      "crc32": 2734407656
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000055.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000055.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000056.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 67,
+      "crc32": 4286214332
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000056.gdbtable",
+      "bytes": 1503,
+      "compressed_bytes": 637,
+      "crc32": 411332019
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000056.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000056.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000058.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 67,
+      "crc32": 4286214332
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000058.gdbtable",
+      "bytes": 1482,
+      "compressed_bytes": 651,
+      "crc32": 3623617061
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000058.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000058.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000059.freelist",
+      "bytes": 53592,
+      "compressed_bytes": 1103,
+      "crc32": 1098939304
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000059.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000059.gdbtable",
+      "bytes": 113946,
+      "compressed_bytes": 100840,
+      "crc32": 796005431
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000059.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 781,
+      "crc32": 2886812049
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000059.spx",
+      "bytes": 12310,
+      "compressed_bytes": 651,
+      "crc32": 4253877528
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005a.freelist",
+      "bytes": 475480,
+      "compressed_bytes": 153565,
+      "crc32": 4102038982
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005a.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005a.gdbtable",
+      "bytes": 7892567,
+      "compressed_bytes": 4364157,
+      "crc32": 4225164088
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005a.gdbtablx",
+      "bytes": 179360,
+      "compressed_bytes": 90715,
+      "crc32": 1511946268
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005a.spx",
+      "bytes": 892950,
+      "compressed_bytes": 139463,
+      "crc32": 1137526041
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005b.freelist",
+      "bytes": 37208,
+      "compressed_bytes": 766,
+      "crc32": 536300926
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005b.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005b.gdbtable",
+      "bytes": 102635,
+      "compressed_bytes": 29007,
+      "crc32": 1373485832
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005b.gdbtablx",
+      "bytes": 10272,
+      "compressed_bytes": 1870,
+      "crc32": 730453552
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005b.spx",
+      "bytes": 16406,
+      "compressed_bytes": 2240,
+      "crc32": 1657089584
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005c.freelist",
+      "bytes": 90456,
+      "compressed_bytes": 22630,
+      "crc32": 2616820998
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005c.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005c.gdbtable",
+      "bytes": 1280411,
+      "compressed_bytes": 711287,
+      "crc32": 2080688779
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005c.gdbtablx",
+      "bytes": 41120,
+      "compressed_bytes": 22162,
+      "crc32": 3816807438
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005c.spx",
+      "bytes": 172054,
+      "compressed_bytes": 21490,
+      "crc32": 770366985
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005d.freelist",
+      "bytes": 37208,
+      "compressed_bytes": 1697,
+      "crc32": 1144090686
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005d.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005d.gdbtable",
+      "bytes": 118199,
+      "compressed_bytes": 67458,
+      "crc32": 3478337221
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005d.gdbtablx",
+      "bytes": 15392,
+      "compressed_bytes": 2326,
+      "crc32": 2364546874
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005d.spx",
+      "bytes": 20502,
+      "compressed_bytes": 1803,
+      "crc32": 3885545935
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005e.freelist",
+      "bytes": 33112,
+      "compressed_bytes": 330,
+      "crc32": 697415438
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005e.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005e.gdbtable",
+      "bytes": 10953,
+      "compressed_bytes": 4650,
+      "crc32": 797304199
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005e.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 216,
+      "crc32": 1650171826
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005e.spx",
+      "bytes": 4118,
+      "compressed_bytes": 207,
+      "crc32": 479637386
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005f.freelist",
+      "bytes": 29016,
+      "compressed_bytes": 576,
+      "crc32": 1848690462
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005f.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005f.gdbtable",
+      "bytes": 20289,
+      "compressed_bytes": 13670,
+      "crc32": 4080454339
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005f.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 193,
+      "crc32": 1519408104
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000005f.spx",
+      "bytes": 4118,
+      "compressed_bytes": 132,
+      "crc32": 2018823888
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000060.freelist",
+      "bytes": 16728,
+      "compressed_bytes": 119,
+      "crc32": 3449040390
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000060.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000060.gdbtable",
+      "bytes": 2300,
+      "compressed_bytes": 1033,
+      "crc32": 2939433623
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000060.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 32,
+      "crc32": 1133548438
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000060.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000061.freelist",
+      "bytes": 37208,
+      "compressed_bytes": 443,
+      "crc32": 1840625325
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000061.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000061.gdbtable",
+      "bytes": 14011,
+      "compressed_bytes": 10977,
+      "crc32": 490945112
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000061.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 59,
+      "crc32": 2676095015
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000061.spx",
+      "bytes": 4118,
+      "compressed_bytes": 78,
+      "crc32": 436220201
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000062.freelist",
+      "bytes": 20824,
+      "compressed_bytes": 139,
+      "crc32": 4181668274
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000062.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000062.gdbtable",
+      "bytes": 4075,
+      "compressed_bytes": 1433,
+      "crc32": 3050166147
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000062.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 44,
+      "crc32": 296369492
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000062.spx",
+      "bytes": 4118,
+      "compressed_bytes": 76,
+      "crc32": 654471222
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000063.freelist",
+      "bytes": 37208,
+      "compressed_bytes": 1110,
+      "crc32": 1346949342
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000063.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000063.gdbtable",
+      "bytes": 39264,
+      "compressed_bytes": 22636,
+      "crc32": 4109454360
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000063.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 491,
+      "crc32": 2395069340
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000063.spx",
+      "bytes": 4118,
+      "compressed_bytes": 530,
+      "crc32": 1562566694
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000065.freelist",
+      "bytes": 12632,
+      "compressed_bytes": 81,
+      "crc32": 2095823612
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000065.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000065.gdbtable",
+      "bytes": 2066,
+      "compressed_bytes": 843,
+      "crc32": 1583236185
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000065.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 31,
+      "crc32": 1139486820
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000065.spx",
+      "bytes": 4118,
+      "compressed_bytes": 36,
+      "crc32": 3903442695
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000066.freelist",
+      "bytes": 12632,
+      "compressed_bytes": 85,
+      "crc32": 3831036691
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000066.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000066.gdbtable",
+      "bytes": 3362,
+      "compressed_bytes": 2091,
+      "crc32": 1804849492
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000066.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 51,
+      "crc32": 2738590442
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000066.spx",
+      "bytes": 4118,
+      "compressed_bytes": 78,
+      "crc32": 3496155974
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000067.freelist",
+      "bytes": 16728,
+      "compressed_bytes": 132,
+      "crc32": 1418334320
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000067.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000067.gdbtable",
+      "bytes": 3227,
+      "compressed_bytes": 1607,
+      "crc32": 1698507109
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000067.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 32,
+      "crc32": 2562819208
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000067.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000068.freelist",
+      "bytes": 12632,
+      "compressed_bytes": 111,
+      "crc32": 2423425138
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000068.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000068.gdbtable",
+      "bytes": 3130,
+      "compressed_bytes": 1009,
+      "crc32": 2676505636
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000068.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 39,
+      "crc32": 1280500567
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000068.spx",
+      "bytes": 4118,
+      "compressed_bytes": 76,
+      "crc32": 450331697
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000069.freelist",
+      "bytes": 8536,
+      "compressed_bytes": 68,
+      "crc32": 1331021864
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000069.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000069.gdbtable",
+      "bytes": 2150,
+      "compressed_bytes": 723,
+      "crc32": 2804942074
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000069.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000069.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006a.freelist",
+      "bytes": 33112,
+      "compressed_bytes": 336,
+      "crc32": 820835692
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006a.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006a.gdbtable",
+      "bytes": 11126,
+      "compressed_bytes": 5616,
+      "crc32": 109069987
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006a.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 190,
+      "crc32": 1061189644
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006a.spx",
+      "bytes": 4118,
+      "compressed_bytes": 227,
+      "crc32": 2834812462
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006c.freelist",
+      "bytes": 8536,
+      "compressed_bytes": 142,
+      "crc32": 1664522137
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006c.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006c.gdbtable",
+      "bytes": 3693,
+      "compressed_bytes": 1092,
+      "crc32": 1759392196
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006c.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 104,
+      "crc32": 1468437235
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006c.spx",
+      "bytes": 4118,
+      "compressed_bytes": 119,
+      "crc32": 3206851846
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006d.freelist",
+      "bytes": 16728,
+      "compressed_bytes": 104,
+      "crc32": 2291828265
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006d.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006d.gdbtable",
+      "bytes": 3407,
+      "compressed_bytes": 1236,
+      "crc32": 3885813937
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006d.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 55,
+      "crc32": 2152387897
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000006d.spx",
+      "bytes": 4118,
+      "compressed_bytes": 125,
+      "crc32": 2465798473
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000083.freelist",
+      "bytes": 8536,
+      "compressed_bytes": 81,
+      "crc32": 3669806173
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000083.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000083.gdbtable",
+      "bytes": 3355,
+      "compressed_bytes": 1348,
+      "crc32": 3323675753
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000083.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 160,
+      "crc32": 1930181395
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000083.spx",
+      "bytes": 4118,
+      "compressed_bytes": 184,
+      "crc32": 2339668944
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008e.freelist",
+      "bytes": 8536,
+      "compressed_bytes": 66,
+      "crc32": 3597136030
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008e.gdbindexes",
+      "bytes": 206,
+      "compressed_bytes": 105,
+      "crc32": 2474400224
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008e.gdbtable",
+      "bytes": 2107,
+      "compressed_bytes": 1360,
+      "crc32": 3687777416
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008e.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 34,
+      "crc32": 3161618093
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008e.GDB_190_IsRetired.atx",
+      "bytes": 4118,
+      "compressed_bytes": 38,
+      "crc32": 2532193896
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008e.spx",
+      "bytes": 4118,
+      "compressed_bytes": 343,
+      "crc32": 3032590344
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008f.G191multi.DestClassID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 48,
+      "crc32": 583924037
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008f.G191multi.DestID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 46,
+      "crc32": 4177411093
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008f.G191multi.OriginClassID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 48,
+      "crc32": 849128753
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008f.G191multi.OriginID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 48,
+      "crc32": 4169350803
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008f.G191multi.TopoRuleID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 49,
+      "crc32": 2598596261
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008f.G191multi.TopoRuleType.atx",
+      "bytes": 4118,
+      "compressed_bytes": 49,
+      "crc32": 425235702
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008f.gdbindexes",
+      "bytes": 388,
+      "compressed_bytes": 170,
+      "crc32": 4125145589
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008f.gdbtable",
+      "bytes": 1416,
+      "compressed_bytes": 646,
+      "crc32": 2144528971
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008f.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 48,
+      "crc32": 3481660795
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008f.GDB_191_IsException.atx",
+      "bytes": 4118,
+      "compressed_bytes": 46,
+      "crc32": 2380708953
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000008f.spx",
+      "bytes": 4118,
+      "compressed_bytes": 63,
+      "crc32": 2121119985
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.freelist",
+      "bytes": 4440,
+      "compressed_bytes": 49,
+      "crc32": 1999765072
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.G192multi.DestClassID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.G192multi.DestID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.G192multi.OriginClassID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.G192multi.OriginID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.G192multi.TopoRuleID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.G192multi.TopoRuleType.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.gdbindexes",
+      "bytes": 388,
+      "compressed_bytes": 171,
+      "crc32": 3295069577
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.gdbtable",
+      "bytes": 1325,
+      "compressed_bytes": 653,
+      "crc32": 4061075530
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 31,
+      "crc32": 1139486820
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.GDB_192_IsException.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000090.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000091.G193multi.DestClassID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000091.G193multi.DestID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000091.G193multi.OriginClassID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000091.G193multi.OriginID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000091.G193multi.TopoRuleID.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000091.G193multi.TopoRuleType.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000091.gdbindexes",
+      "bytes": 388,
+      "compressed_bytes": 171,
+      "crc32": 3571773021
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000091.gdbtable",
+      "bytes": 1268,
+      "compressed_bytes": 560,
+      "crc32": 1131019041
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000091.gdbtablx",
+      "bytes": 32,
+      "compressed_bytes": 19,
+      "crc32": 4221537549
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000091.GDB_193_IsException.atx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 1674749407
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000091.spx",
+      "bytes": 4118,
+      "compressed_bytes": 33,
+      "crc32": 2251296991
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000092.freelist",
+      "bytes": 29016,
+      "compressed_bytes": 282,
+      "crc32": 3765460788
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000092.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000092.gdbtable",
+      "bytes": 10114,
+      "compressed_bytes": 5398,
+      "crc32": 1174706686
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000092.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 190,
+      "crc32": 2904359410
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000092.spx",
+      "bytes": 4118,
+      "compressed_bytes": 248,
+      "crc32": 2081012327
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000093.freelist",
+      "bytes": 8536,
+      "compressed_bytes": 195,
+      "crc32": 1984107994
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000093.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000093.gdbtable",
+      "bytes": 5208,
+      "compressed_bytes": 1402,
+      "crc32": 3746148220
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000093.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 153,
+      "crc32": 2180784670
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000093.spx",
+      "bytes": 4118,
+      "compressed_bytes": 174,
+      "crc32": 3311547906
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000094.freelist",
+      "bytes": 29016,
+      "compressed_bytes": 1160,
+      "crc32": 3250448658
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000094.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 70,
+      "crc32": 1731915611
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000094.gdbtable",
+      "bytes": 59690,
+      "compressed_bytes": 20179,
+      "crc32": 3337091327
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000094.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 1855,
+      "crc32": 3675161037
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a00000094.spx",
+      "bytes": 16406,
+      "compressed_bytes": 2043,
+      "crc32": 4191259702
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000009f.freelist",
+      "bytes": 37208,
+      "compressed_bytes": 1019,
+      "crc32": 1109576557
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000009f.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 67,
+      "crc32": 4286214332
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000009f.gdbtable",
+      "bytes": 91888,
+      "compressed_bytes": 60800,
+      "crc32": 51465401
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000009f.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 1626,
+      "crc32": 1689333471
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a0000009f.spx",
+      "bytes": 20502,
+      "compressed_bytes": 3287,
+      "crc32": 1479854299
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a000000a0.freelist",
+      "bytes": 37208,
+      "compressed_bytes": 1106,
+      "crc32": 164756468
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a000000a0.gdbindexes",
+      "bytes": 116,
+      "compressed_bytes": 67,
+      "crc32": 4286214332
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a000000a0.gdbtable",
+      "bytes": 95843,
+      "compressed_bytes": 62285,
+      "crc32": 1124096379
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a000000a0.gdbtablx",
+      "bytes": 5152,
+      "compressed_bytes": 1632,
+      "crc32": 1504410433
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/a000000a0.spx",
+      "bytes": 20502,
+      "compressed_bytes": 3327,
+      "crc32": 3954328952
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/gdb",
+      "bytes": 4,
+      "compressed_bytes": 4,
+      "crc32": 379203374
+    },
+    {
+      "name": "EMSN074_STD_UTM33_v01.gdb/timestamps",
+      "bytes": 400,
+      "compressed_bytes": 38,
+      "crc32": 2540223690
+    }
+  ],
+  "geojson_members": [],
+  "geodatabase_roots": [
+    "EMSN074_STD_UTM33_v01.gdb/"
+  ],
+  "tiff_members": [],
+  "notes": [
+    "Copernicus product is remote-sensing/reference geodata, not the City engineering inspection database.",
+    "P02.1 reference buildings are based on pre-event 2019 VHR imagery.",
+    "P08.1 damage assessment uses post-event drone/VHR imagery and is suitable as a label/validation product, not a pre-event predictor."
+  ]
+}

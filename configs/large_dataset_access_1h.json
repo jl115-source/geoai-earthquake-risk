@@ -1,0 +1,40 @@
+{
+  "version": "1h-v1",
+  "checked_on": "2026-10-05",
+  "public_now": [
+    {
+      "id": "noto_2024",
+      "status": "acquired_and_audited",
+      "records": 140208
+    },
+    {
+      "id": "zagreb_2020_copernicus_emsn074",
+      "status": "acquired_layer_audited_auxiliary_only",
+      "dataset": "https://doi.org/10.2905/JRC.G4YG7J8",
+      "activation": "https://mapping.emergency.copernicus.eu/activations/EMSN074/DAMAGEASSESSMENT/",
+      "type": "remote_sensing_reference_and_damage_product",
+      "reference_building_polygons": 29398,
+      "damage_polygons": 556,
+      "near_identical_unique_footprint_pairs_iou_0p99": 99,
+      "explicit_undamaged_controls": 0,
+      "suitable_for_large_N_vulnerability_training": false,
+      "audit": "docs/zagreb_2020_copernicus/audit.md"
+    }
+  ],
+  "permission_gated": [
+    {
+      "id": "turkiye_meucc_2023_national",
+      "reported_records": 2153835,
+      "status": "ministry_request_required"
+    },
+    {
+      "id": "dado_central_italy_2016_2017",
+      "status": "institutional_accreditation_and_user_registration_required"
+    },
+    {
+      "id": "kirikhan_2023",
+      "reported_records": 16611,
+      "status": "corresponding_author_plus_ministry_permission_required"
+    }
+  ]
+}
