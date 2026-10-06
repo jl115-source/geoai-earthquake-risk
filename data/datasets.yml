@@ -144,3 +144,39 @@ supporting:
     n_this_study_label_features: 30122
     label_warning: separate_products_visual_files_lack_explicit_damage_grades
     status: acquired_checksum_verified_and_inventoried_1c
+
+
+  noto_2024_building_damage:
+    region: Japan
+    event: 2024_Noto_Peninsula
+    role: large_geolocated_earthquake_damage_candidate
+    source: Zenodo
+    record: https://zenodo.org/records/15192949
+    doi_family: 10.5281/zenodo.11055711
+    access: open
+    n_records: 140208
+    geometry: pre_event_building_footprints_epsg4326
+    target: damage_and_technically_validated_damage_val
+    hazard: USGS_MMI_per_building
+    secondary_perils: [GSI_fire, GSI_slope_failure, GSI_tsunami]
+    file: Noto_Peninsula_Damage_2_5.gpkg
+    md5: 280e9c53cb45086786c20ed0b2c21ffb
+    acquisition: python -m src.data.acquire_large_geoai noto
+    status: public_source_pinned_not_modelled
+
+  xbd_mexico_earthquake:
+    region: Mexico
+    event: 2017_Mexico_earthquake
+    role: geolocated_remote_sensing_damage_candidate
+    source: xView2_xBD
+    access: registration_required_for_original_xBD
+    license: CC-BY-NC-SA-4.0
+    target: xBD_joint_damage_scale_native
+    geometry: original_xBD_building_polygons_and_patch_geolocation
+    audit: python -m src.data.acquire_large_geoai xbd-mexico --xbd-root /path/to/xBD
+    sentinel_companion:
+      source: xBD-S12
+      record: https://zenodo.org/records/18960454
+      cropped_archive_size_gb: 9.5
+      md5: 891b86000caa6019c20a95fc2f3f4e68
+    status: official_labels_require_user_registration_not_yet_acquired

@@ -18,6 +18,8 @@ jobs:
       - run: python -m src.data.harmonize --datasets turkiye_survey
       - run: python -m src.data.design_experiments --datasets turkiye_survey
       - run: python -m src.risk.b0
+      - run: python -m src.data.acquire_large_geoai noto
+      - run: python -m src.data.audit_noto
       - run: python -m pytest -q
       - uses: actions/upload-artifact@v4
         with:
@@ -25,3 +27,6 @@ jobs:
           path: |
             data/processed/turkiye_2023/
             results/turkiye_2023/
+            results/noto_2024/
+            docs/noto_2024/
+            docs/noto_2024_execution.json

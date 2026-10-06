@@ -337,3 +337,37 @@ small-N/frozen-representation GeoAI protocol.
 
 **Modelling remains frozen** until the updated machine-readable research gate is
 satisfied.
+
+
+## Milestone 1G — Noto 2024 full-data audit
+
+The [measured Noto audit](docs/noto_2024_audit.md) covers all 140,208
+footprints, native label/status codes, MMI, secondary perils, and geographic
+evaluation suitability. See [execution evidence](docs/noto_2024_execution.json)
+and [aggregate tables](docs/noto_2024/). No models or target harmonization.
+
+```bash
+python -m pip install -r requirements-audit.txt
+python -m src.data.acquire_large_geoai noto
+python -m src.data.audit_noto
+python -m pytest -q
+```
+
+Raw data stay under ignored `data/raw/noto_2024/`; all seven maps/plots are
+written to ignored `results/noto_2024/`. The download is MD5-pinned.
+To verify a fresh offline audit against the checked-in evidence:
+
+```bash
+python -m src.data.audit_noto --evidence-dir results/noto_repeat/evidence --results-dir results/noto_repeat/figures
+cmp docs/noto_2024_execution.json results/noto_repeat/evidence/noto_2024_execution.json
+diff -r docs/noto_2024 results/noto_repeat/evidence/noto_2024
+```
+
+Figure hashes are included in the execution JSON; exact PNG equality requires
+the same rendering environment. No rows are imputed or removed. `damage_2`
+is preserved because the advertised `damage` field is absent. The useful native
+target is survived/destroyed, **not undamaged/damaged**.
+
+If a conda shell exports a `PROJ_LIB`/`PROJ_DATA` pointing at a different PROJ
+database, run the venv commands with `env -u PROJ_LIB -u PROJ_DATA` (or deactivate
+conda). A stale conda database can break the existing Rasterio CRS tests.
