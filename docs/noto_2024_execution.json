@@ -1,0 +1,395 @@
+{
+  "USGS_MMI": {
+    "counts": {
+      "7.2": 382,
+      "7.4": 305,
+      "7.6": 15124,
+      "7.8": 16158,
+      "8.0": 15936,
+      "8.2": 15822,
+      "8.4": 30376,
+      "8.6": 30190,
+      "8.8": 15849,
+      "9.0": 66
+    },
+    "missing": 0,
+    "nonfinite_non_null": 0,
+    "outside_1_to_12": 0,
+    "statistics": {
+      "1%": 7.6,
+      "25%": 8.0,
+      "5%": 7.6,
+      "50%": 8.4,
+      "75%": 8.6,
+      "95%": 8.8,
+      "99%": 8.8,
+      "count": 140208.0,
+      "max": 9.0,
+      "mean": 8.25964424283921,
+      "min": 7.2,
+      "std": 0.3827417570778199
+    }
+  },
+  "binary_target_records": 115736,
+  "bounds_wgs84_minx_miny_maxx_maxy": [
+    136.670683417,
+    37.000347909,
+    137.360662401,
+    37.529975389
+  ],
+  "columns": [
+    {
+      "blank_string_count": 0,
+      "dtype": "int64",
+      "name": "fid",
+      "null_count": 0,
+      "null_fraction": 0.0
+    },
+    {
+      "blank_string_count": 0,
+      "dtype": "object",
+      "name": "s_fid",
+      "null_count": 0,
+      "null_fraction": 0.0
+    },
+    {
+      "blank_string_count": 2,
+      "dtype": "object",
+      "name": "source",
+      "null_count": 135320,
+      "null_fraction": 0.9651375099851649
+    },
+    {
+      "blank_string_count": 0,
+      "dtype": "int32",
+      "name": "damage_val",
+      "null_count": 0,
+      "null_fraction": 0.0
+    },
+    {
+      "blank_string_count": 0,
+      "dtype": "object",
+      "name": "municipality",
+      "null_count": 22,
+      "null_fraction": 0.0001569097341093233
+    },
+    {
+      "blank_string_count": 0,
+      "dtype": "object",
+      "name": "conf",
+      "null_count": 313,
+      "null_fraction": 0.0022323975807371907
+    },
+    {
+      "blank_string_count": 0,
+      "dtype": "int32",
+      "name": "damage_2",
+      "null_count": 0,
+      "null_fraction": 0.0
+    },
+    {
+      "blank_string_count": 0,
+      "dtype": "int64",
+      "name": "GSI_fire",
+      "null_count": 0,
+      "null_fraction": 0.0
+    },
+    {
+      "blank_string_count": 0,
+      "dtype": "int64",
+      "name": "GSI_tsunami",
+      "null_count": 0,
+      "null_fraction": 0.0
+    },
+    {
+      "blank_string_count": 0,
+      "dtype": "int64",
+      "name": "GSI_slope_failure",
+      "null_count": 0,
+      "null_fraction": 0.0
+    },
+    {
+      "blank_string_count": 0,
+      "dtype": "float64",
+      "name": "USGS_MMI",
+      "null_count": 0,
+      "null_fraction": 0.0
+    },
+    {
+      "blank_string_count": 0,
+      "dtype": "geometry",
+      "name": "geometry",
+      "null_count": 0,
+      "null_fraction": 0.0
+    }
+  ],
+  "confidence": {
+    "<NULL>": 313,
+    "multi": 20810,
+    "single": 119085
+  },
+  "constraints": {
+    "models_fitted": false,
+    "post_event_imagery_used_as_predictor": false,
+    "rows_removed_or_imputed": 0,
+    "target_harmonized": false
+  },
+  "container": {
+    "embedded_styles": [
+      {
+        "attribute": "damage_val",
+        "categories": [
+          {
+            "label": "Survived",
+            "value": "0"
+          },
+          {
+            "label": "Destroyed",
+            "value": "1"
+          },
+          {
+            "label": "Obscured (cloud/shade)",
+            "value": "9"
+          },
+          {
+            "label": "Missing/inconsistent",
+            "value": "99"
+          },
+          {
+            "label": "",
+            "value": ""
+          }
+        ]
+      }
+    ],
+    "layers": [
+      [
+        "v2.5",
+        "MultiPolygon"
+      ],
+      [
+        "layer_styles",
+        null
+      ]
+    ],
+    "sqlite_columns": [
+      {
+        "declared_type": "INTEGER",
+        "name": "fid",
+        "not_null": true,
+        "primary_key": true
+      },
+      {
+        "declared_type": "MULTIPOLYGON",
+        "name": "geom",
+        "not_null": false,
+        "primary_key": false
+      },
+      {
+        "declared_type": "TEXT",
+        "name": "s_fid",
+        "not_null": false,
+        "primary_key": false
+      },
+      {
+        "declared_type": "TEXT",
+        "name": "source",
+        "not_null": false,
+        "primary_key": false
+      },
+      {
+        "declared_type": "MEDIUMINT",
+        "name": "damage_val",
+        "not_null": false,
+        "primary_key": false
+      },
+      {
+        "declared_type": "TEXT",
+        "name": "municipality",
+        "not_null": false,
+        "primary_key": false
+      },
+      {
+        "declared_type": "TEXT",
+        "name": "conf",
+        "not_null": false,
+        "primary_key": false
+      },
+      {
+        "declared_type": "MEDIUMINT",
+        "name": "damage_2",
+        "not_null": false,
+        "primary_key": false
+      },
+      {
+        "declared_type": "INTEGER",
+        "name": "GSI_fire",
+        "not_null": false,
+        "primary_key": false
+      },
+      {
+        "declared_type": "INTEGER",
+        "name": "GSI_tsunami",
+        "not_null": false,
+        "primary_key": false
+      },
+      {
+        "declared_type": "INTEGER",
+        "name": "GSI_slope_failure",
+        "not_null": false,
+        "primary_key": false
+      },
+      {
+        "declared_type": "REAL",
+        "name": "USGS_MMI",
+        "not_null": false,
+        "primary_key": false
+      }
+    ],
+    "sqlite_integrity_check": "ok"
+  },
+  "crs": "EPSG:4326",
+  "damage": null,
+  "damage_2": {
+    "0": 112320,
+    "1": 3361,
+    "9": 9460,
+    "99": 15067
+  },
+  "damage_2_vs_damage_val_disagreements": 156,
+  "damage_field_discrepancy": "Published damage field absent; actual damage_2 preserved. Equivalence to documented original damage field not independently established.",
+  "damage_val": {
+    "0": 112275,
+    "1": 3461,
+    "9": 9437,
+    "99": 15035
+  },
+  "figure_sha256": {
+    "damage_2_map.png": "7349dc1341b14d5aace583cc4e141b3e29d7c4b06e50e60ac0356cb5a292eb75",
+    "damage_counts.png": "07587568f43e771f33c001d0c7420e03014b510a33774b0c978959178dcd82f0",
+    "damage_map.png": "5177b53d5dd79f0de80f8b9e3193882fc83700cde5c16979487f82eb08233bbf",
+    "damage_vs_mmi.png": "f6d1c35d1050e20288882785c5807a0abc3cd882828941b6ed6f175aa288c4ca",
+    "mmi_map.png": "103e43b2630eaf339b1a5cca37f291fa3dcb707d6f00a3e575b96d331740ca87",
+    "secondary_peril_counts.png": "caaf4c65e5b5b475769622eb50c602d0e75fe8370915072e9bd64daa1abb48e4",
+    "secondary_peril_map.png": "b0f1b748c5c4b874fc6665a6150e76545f698e74b9dac01e2268fd3c74aac9fb"
+  },
+  "geometry": {
+    "distinct_overlapping_valid_polygon_pairs": 9441,
+    "duplicate_test": "Normalized exact-coordinate WKB plus topological equals on valid nonempty polygons; no tolerance or repair",
+    "empty": 0,
+    "invalid_nonempty": 0,
+    "invalid_reasons": {},
+    "normalized_wkb_duplicates": {
+      "distinct_non_null": 140208,
+      "duplicate_groups": 0,
+      "extra_rows_after_first": 0,
+      "rows_in_duplicate_groups": 0
+    },
+    "null": 0,
+    "out_of_range_or_nonfinite_bounds": 0,
+    "records_with_invalid_coordinate_vertices": 0,
+    "rows_in_topologically_equal_pairs": 0,
+    "topologically_equal_valid_polygon_pairs": 0,
+    "types": {
+      "MultiPolygon": 140208
+    }
+  },
+  "identifiers": {
+    "fid": {
+      "distinct_non_null": 140208,
+      "duplicate_groups": 0,
+      "extra_rows_after_first": 0,
+      "rows_in_duplicate_groups": 0
+    },
+    "s_fid": {
+      "distinct_non_null": 114027,
+      "duplicate_groups": 483,
+      "extra_rows_after_first": 26181,
+      "rows_in_duplicate_groups": 26664
+    },
+    "s_fid_excluding_manual": {
+      "distinct_non_null": 114026,
+      "duplicate_groups": 482,
+      "extra_rows_after_first": 493,
+      "rows_in_duplicate_groups": 975
+    },
+    "s_fid_manual_rows": 25689
+  },
+  "input": {
+    "bytes": 47853568,
+    "filename": "Noto_Peninsula_Damage_2_5.gpkg",
+    "md5": "280e9c53cb45086786c20ed0b2c21ffb",
+    "sha256": "1adf3ff883951db42728448e6f338f93c9d0343d11de11fd8274dabfc27aaf9d"
+  },
+  "municipality_city_town": {
+    "<NULL>": 22,
+    "七尾市": 43898,
+    "中能登町": 1643,
+    "志賀町": 20778,
+    "珠洲市": 23001,
+    "穴水町": 6989,
+    "能登町": 17177,
+    "輪島市": 26700
+  },
+  "municipality_native_unique_non_null": 863,
+  "output_sha256": {
+    "noto_2024/damage_by_mmi.csv": "18d6926e3ae3443bfd40c47c6185bc57c44f84f7f024b43540eb12c9a48e5c5c",
+    "noto_2024/damage_cross_tab.csv": "acd4382439f7dda0a40219159f54558bde11d09678bcf5443d25393fae736eef",
+    "noto_2024/municipality_damage.csv": "83832fab7249139797f50515d73efbfa60c507c45a1d863d907187e739dcc7fa",
+    "noto_2024/municipality_damage_no_secondary_flags.csv": "5abfba1235d826d75e58a42cfd218c587c657d825dfadd7ca9078e40602bb9fe",
+    "noto_2024/municipality_mmi.csv": "2e8027a8f0cdbf066c6313342965a5ca6c2096f9a1cb1326c28b9d8694ebc981",
+    "noto_2024/municipality_native_counts.csv": "f219be6c60f044290942d5a50720a1a26073c940255f6219eed7a50ecd6fa03a",
+    "noto_2024/native_counts.csv": "47897dcfe77e761c7244bb20baf6550c9f905ff4c7588c3e615edcdb39de8ee2",
+    "noto_2024/peril_combinations.csv": "091f602559898f9e2242779e19140cb407453d2958a1593ed82e4ecce87c700c"
+  },
+  "row_count": 140208,
+  "runtime": {
+    "GEOS": "3.13.1",
+    "geopandas": "1.1.1",
+    "matplotlib": "3.10.1",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "pyogrio": "0.13.0",
+    "shapely": "2.1.2"
+  },
+  "secondary_perils": {
+    "all_three_explicit_zero": 136310,
+    "any_flag": 3898,
+    "binary_target_no_flags": 112228,
+    "binary_target_no_flags_damage_val": {
+      "0": 109771,
+      "1": 2457
+    },
+    "flags": {
+      "GSI_fire": {
+        "0": 139897,
+        "1": 311
+      },
+      "GSI_slope_failure": {
+        "0": 140039,
+        "1": 169
+      },
+      "GSI_tsunami": {
+        "0": 136790,
+        "1": 3418
+      }
+    },
+    "interpretation": "No mapped secondary-peril intersection, not proof of shaking-only causation; liquefaction/unmapped hazards remain possible.",
+    "multiple_flags": 0,
+    "unexpected_flag_values": {
+      "GSI_fire": {},
+      "GSI_slope_failure": {},
+      "GSI_tsunami": {}
+    },
+    "unknown_without_positive_flag": 0
+  },
+  "unknown_damage_codes": {
+    "damage_2": {},
+    "damage_val": {}
+  },
+  "visualization": {
+    "method": "All valid nonempty centroids in EPSG:6675, no sampling; no external basemap",
+    "plotted_records": 140208,
+    "unplottable_records": 0
+  }
+}

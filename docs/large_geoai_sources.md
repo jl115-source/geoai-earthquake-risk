@@ -10,7 +10,7 @@ Authoritative source: Zenodo version 2.5.
 
 - **140,208** georeferenced building footprints.
 - CRS: **EPSG:4326**.
-- Building attributes include `damage`, technically validated `damage_val`,
+- Actual fields include `damage_2` (the advertised `damage` field is absent), `damage_val`,
   municipality, assessment confidence, GSI fire/slope-failure/tsunami flags,
   and **USGS MMI**.
 - File: `Noto_Peninsula_Damage_2_5.gpkg`, about 47.9 MB.
@@ -23,7 +23,11 @@ python -m src.data.acquire_large_geoai noto
 ```
 
 The file remains under ignored `data/raw/noto_2024/`; only manifests and
-aggregate audits should be versioned later.
+aggregate audits are versioned. Run `python -m src.data.audit_noto` for the
+[full measured audit](noto_2024_audit.md), all municipality counts and maps.
+There are 115,736 native survived/destroyed labels, of which 112,228 have no
+mapped secondary-peril flag. Survived is not equivalent to undamaged; the other
+24,472 records retain obscured/inconsistent status codes.
 
 ## xBD Mexico earthquake
 
@@ -59,8 +63,8 @@ xBD-S12 Mexico patches or generate our own common pre-event EO stack.
 
 ## Research status
 
-Noto can be acquired automatically and already supplies the three minimum
-building-level components:
+Noto supplies the three minimum building-level components for the classified
+subset; pre-event EO coverage and feature chronology remain unaudited:
 
 [
 	ext{footprint/location} + D + H_{mathrm{MMI}}

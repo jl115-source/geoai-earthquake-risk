@@ -1,0 +1,22 @@
+{
+  "tests": {
+    "command": "env -u PROJ_LIB -u PROJ_DATA python -m pytest -q",
+    "passed": 90,
+    "failed": 0,
+    "skipped": 0,
+    "new_noto_tests": 8
+  },
+  "determinism": {
+    "independent_process_runs": 2,
+    "byte_identical_files": 16,
+    "aggregate_csv_files": 8,
+    "png_figures": 7,
+    "execution_json": 1
+  },
+  "raw_and_row_level_outputs_ignored": true,
+  "all_seven_figures_visually_inspected": true,
+  "models_fitted": false,
+  "target_harmonization": false,
+  "post_event_predictor_imagery": false,
+  "environment_note": "Inherited conda PROJ_LIB referred to an incompatible database; unset for full suite. Existing local audit data linked read-only in use for earlier milestone regression tests."
+}

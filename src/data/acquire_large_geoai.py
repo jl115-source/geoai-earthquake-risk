@@ -48,6 +48,9 @@ def download(url: str, path: Path, expected_md5: str | None = None) -> dict:
                         stream.write(chunk)
         if temporary.stat().st_size == 0:
             raise ValueError("Empty download")
+        if expected_md5 and digest(temporary, "md5") != expected_md5:
+            temporary.unlink()
+            raise ValueError(f"MD5 mismatch for downloaded {path.name}; rejected temporary file")
         temporary.replace(path)
     md5 = digest(path, "md5")
     if expected_md5 and md5 != expected_md5:
@@ -72,10 +75,11 @@ def acquire_noto() -> dict:
         "doi_family": "10.5281/zenodo.11055711",
         "file": result,
         "expected_fields": [
-            "fid", "s_fid", "damage", "source", "damage_val", "municipality",
+            "fid", "s_fid", "damage_2", "source", "damage_val", "municipality",
             "conf", "GSI_fire", "GSI_slope_failure", "GSI_tsunami", "USGS_MMI",
             "geometry",
         ],
+        "schema_note": "Pinned v2.5 contains damage_2, not the damage column advertised by the deposit. No alias or semantic equivalence is assumed.",
     }
     out = RAW / "noto_2024" / "acquisition.json"
     out.write_text(json.dumps(manifest, indent=2) + "\n")
